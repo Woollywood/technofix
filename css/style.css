@@ -2858,6 +2858,16 @@ html {
   background: #2e1a4c;
   height: 200vh;
 }
+
+.stages__title {
+	text-align: center;
+	padding-bottom: 49px;
+}
+
+.stages--gutter-fix {
+	
+}
+
 .stages__card {
   margin-left: 15px;
   padding: 32px 53px 44px 48px;

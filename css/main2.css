@@ -192,6 +192,27 @@
   right: 55px;
 }
 
+.order_img10 {
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	top: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.order_img10 img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: right;
+}
+
 .order_img2 {
   position: absolute;
   bottom: -73px;
@@ -209,6 +230,11 @@
 
 .order_width {
   max-width: 760px;
+}
+
+.order_width--fix {
+	position: relative;
+	z-index: 2;
 }
 
 .title_order {
@@ -500,6 +526,10 @@ ul.tabs li.active:before {
 
 .order_input_bg2 input {
   background: url(../images/images/order_input3.svg) 26px 50% no-repeat;
+}
+
+.order_input_bg3 input {
+  background: url(../images/images/order_input.svg) 26px 50% no-repeat;
 }
 
 .order_bg {

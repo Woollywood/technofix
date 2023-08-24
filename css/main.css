@@ -3679,7 +3679,7 @@ html {
 }
 
 .swiper {
-	/* display: none !important; */
+	display: none;
 
 	top: 100px;
 }

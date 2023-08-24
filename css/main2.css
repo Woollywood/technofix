@@ -170,6 +170,7 @@
 /*order*/
 
 .order {
+	position: relative;
 	padding: 67px 0 70px 0;
 	background: #20113a url(../images/images/order.svg) center 100% no-repeat;
 }
@@ -202,6 +203,23 @@
 	object-position: right;
 }
 
+.order_img11 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.order_img11 img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
 .order_img2 {
 	position: absolute;
 	bottom: -73px;
@@ -218,6 +236,8 @@
 }
 
 .order_width {
+	position: relative;
+	z-index: 1;
 	max-width: 760px;
 }
 

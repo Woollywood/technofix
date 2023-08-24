@@ -5855,6 +5855,12 @@ html {
 	}
 }
 
+@media (max-width: 860px) and (min-width: 660px) {
+	.profit__item-big__button {
+		justify-self: flex-start !important;
+	}
+}
+
 @media (max-width: 660px) {
 	.profit__item-big__button {
 		justify-self: center !important;

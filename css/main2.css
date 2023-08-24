@@ -175,6 +175,10 @@
 	background: #20113a url(../images/images/order.svg) center 100% no-repeat;
 }
 
+.order--gutter-top {
+	padding-top: 180px;
+}
+
 .order_img {
 	position: absolute;
 	bottom: -73px;

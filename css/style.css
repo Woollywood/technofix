@@ -1954,10 +1954,11 @@ html {
 }
 
 .swiper {
-  display: none !important;
+  /* display: none !important; */
 
   top: 100px;
 }
+
 .swiper-btns {
   top: 50%;
   transform: translateX(-50%);

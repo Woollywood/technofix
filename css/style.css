@@ -3342,21 +3342,41 @@ justify-self: flex-start;
 .seo-cards {
 	padding: 45px 0 50px;
 }
+
 .seo-cards__body {
 	display: grid;
 	gap: 20px;
-	grid-template-columns: repeat(3, 1fr);
 }
+
+@media (min-width: 375px) {
+	.seo-cards__item {
+		padding: 50px 100px 52px;
+	}
+}
+
+@media (min-width: 843px) {
+	.seo-cards__body {
+		display: grid;
+		gap: 20px;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.seo-cards__item {
+		padding: 58px 60px 42px;
+	}
+}
+
 .seo-cards__item {
 	border-radius: 22px;
+	padding: 30px 26px 40px;
 	backdrop-filter: blur(6px);
-	padding: 58px 60px 42px;
 	border: 1px solid #492c88;
 
 	display: grid;
 	gap: 20px;
 	grid-template-rows: auto auto 1fr;
 }
+
 .seo-cards__icon {
 	text-align: center;
 }

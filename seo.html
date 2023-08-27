@@ -9,10 +9,14 @@
 
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/range-input.css" />
+		<link rel="stylesheet" href="css/select.css" />
 		<link href="css/main.css" rel="stylesheet" />
 		<link href="css/media.css" rel="stylesheet" />
 		<link href="css/main2.css" rel="stylesheet" />
 		<link href="css/media2.css" rel="stylesheet" />
+		<link href="slick/slick.css" rel="stylesheet" />
+		<link href="slick/slick-theme.css" rel="stylesheet" />
 
 		<title>SEO</title>
 	</head>
@@ -599,7 +603,7 @@
 					</div>
 				</div>
 
-				<section class="bestburger border-top">
+				<section class="bestburger">
 					<div class="container">
 						<h2 class="title title_center">Хотите получить реальную прибыль?</h2>
 						<div class="bestburger_pd">
@@ -1208,7 +1212,7 @@
 						</div>
 					</div>
 
-					<div class="tarifsmm">
+					<div class="tarifsmm tarifsmm--second">
 						<div class="tarifsmm_icon">
 							<img src="images/images/tarifsmm_icon.svg" alt="" />
 						</div>
@@ -1267,42 +1271,33 @@
 									<div class="tarifsmm__item tarifsmm__item--icon tarifsmm__item--3">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
-											width="41"
+											width="40"
 											height="40"
-											viewBox="0 0 41 40"
+											viewBox="0 0 40 40"
 											fill="none">
 											<path
-												d="M39.9333 9.48014C39.7956 8.9681 39.4596 8.53157 39 8.26693C38.54 8.00098 37.9932 7.92904 37.4801 8.06673C36.9678 8.20475 36.5312 8.54036 36.2666 9L35.9333 9.58008C35.6165 9.39811 35.2119 9.50521 35.0267 9.82031L33.3333 12.7067L32.7533 12.3734C32.5996 12.2845 32.4167 12.2604 32.2454 12.3066C32.0739 12.3532 31.9281 12.4658 31.8398 12.6201C31.6592 12.9388 31.7692 13.3438 32.0866 13.5267L32.6667 13.86L27 23.68L25.5999 27.4202L24.9333 28.6667C24.543 29.3457 24.5846 30.1898 25.04 30.8268L23.54 32.6667L23.1201 31.6136C22.9307 31.1442 22.4922 30.8226 21.988 30.7832C21.4834 30.7435 21 30.9928 20.7399 31.4268L20.5 31.8333L20.2734 29.1667C20.2214 28.5358 19.7327 28.0286 19.1045 27.9525C18.4759 27.8766 17.8809 28.2533 17.68 28.8535L16.04 33.7734C15.9255 34.1214 16.113 34.4964 16.46 34.6136C16.5251 34.6439 16.5951 34.6621 16.6667 34.6667C16.9531 34.6676 17.2083 34.485 17.3001 34.2135L18.9333 29.2936L19.1667 32C19.2148 32.5775 19.6299 33.0576 20.1943 33.1885C20.7588 33.3193 21.3428 33.0706 21.64 32.5736L21.8867 32.1667L22.3001 33.2135C22.4756 33.6546 22.8724 33.9694 23.3421 34.0394C23.8118 34.1094 24.2832 33.9242 24.5801 33.5534L26.1335 31.5869C26.3053 31.6318 26.4824 31.6543 26.6602 31.6536C27.3747 31.6592 28.0381 31.2829 28.4001 30.6667L29.0667 29.5534L31.6068 26.4668L37.3333 16.5267L37.9134 16.86C38.068 16.9486 38.1807 17.0947 38.2266 17.2669C38.2728 17.4378 38.2487 17.6201 38.1602 17.7734L35.4935 22.3936C35.3929 22.5452 35.3587 22.7314 35.3991 22.9092C35.4395 23.0866 35.5505 23.2399 35.7067 23.3333C35.8604 23.4225 36.0433 23.4466 36.2145 23.4004C36.3861 23.3538 36.5319 23.2412 36.6201 23.0869L39.2868 18.4668C39.5527 18.0068 39.6247 17.46 39.4867 16.9469C39.3486 16.4346 39.013 15.998 38.5534 15.7334L37.9733 15.4001L39.64 12.5133C39.8219 12.1966 39.7148 11.7923 39.4001 11.6068L39.7334 11.0267C40.0065 10.5596 40.0788 10.0016 39.9333 9.48014ZM37.4199 9.66667C37.5081 9.51237 37.6546 9.39941 37.8268 9.35351C37.998 9.3112 38.179 9.33496 38.3333 9.42025C38.488 9.50846 38.6006 9.65495 38.6468 9.82682C38.6891 9.99805 38.6654 10.179 38.5801 10.3333L38.2467 10.9134L37.0866 10.2467L37.4199 9.66667ZM28.3333 28.2803L27.0133 27.5133L27.96 24.9801L30.0599 26.1934L28.3333 28.2803ZM26.3333 30.2067C26.0518 30.0104 25.9652 29.6328 26.1335 29.3333L26.4668 28.7536L27.6266 29.4202L27.2933 29.9935C27.1999 30.1556 27.043 30.2708 26.8604 30.3115C26.6777 30.3519 26.4867 30.3141 26.3333 30.2067ZM30.82 25.1003L28.5133 23.7669L33.8467 14.5267L36.1533 15.86L30.82 25.1003ZM36.82 14.7067L34.5133 13.3734L35.8467 11.0667L38.1533 12.4001L36.82 14.7067Z"
+												d="M16.7578 13.7095C16.7578 13.0489 16.6406 11.6406 15.6622 10.1555C14.5488 8.46555 12.603 7.38281 10.4311 7.38281C8.55336 7.38281 6.76773 8.22945 5.56867 9.6682C4.67641 10.759 4.14062 12.1527 4.14062 13.6719C4.14062 17.1668 6.97383 20 10.4688 20C11.994 20 13.393 19.4602 14.4857 18.5615C15.8736 17.4004 16.7578 15.6566 16.7578 13.7095ZM9.84516 18.8301C7.27781 18.5381 5.27633 16.3537 5.27633 13.7095C5.27633 11.979 6.13438 10.4461 7.44641 9.5107L9.84516 13.8604V18.8301ZM8.47141 8.94266C9.07594 8.6932 9.7375 8.55469 10.4311 8.55469C12.0517 8.55469 13.4992 9.30711 14.4449 10.4802L10.6439 12.882L8.47141 8.94266ZM11.017 18.8301V14.0323L15.0731 11.4694C15.4016 12.1472 15.5859 12.9072 15.5859 13.7095C15.5859 16.3538 13.5844 18.5381 11.017 18.8301Z"
 												fill="white" />
 											<path
-												d="M10.5199 29.8734L8.16016 32.2269L6.74675 30.8135C6.48665 30.555 6.06673 30.555 5.80664 30.8135C5.68034 30.9388 5.60938 31.1091 5.60938 31.2868C5.60938 31.4645 5.68034 31.6351 5.80664 31.7601L7.22005 33.1735C7.47005 33.4216 7.80794 33.5606 8.16016 33.5602C8.51432 33.5622 8.85514 33.4232 9.10677 33.1735L11.46 30.8135C11.6865 30.5488 11.6712 30.1546 11.4251 29.9085C11.1787 29.6621 10.7845 29.6468 10.5199 29.8734Z"
+												d="M36.6138 3.09789H24.1841V0.585938C24.1841 0.262344 23.9218 0 23.5981 0H16.402C16.0783 0 15.816 0.262344 15.816 0.585938V3.09789H8.98438C8.22852 3.09789 8.22852 4.26977 8.98438 4.26977H36.6139C37.8348 4.26977 38.8282 5.26305 38.8282 6.48406V26.8922C38.8282 28.0873 37.8556 29.0234 36.6139 29.0234H3.38617C2.14445 29.0234 1.17188 28.0873 1.17188 26.8922V6.48406C1.17188 5.26312 2.16523 4.26977 3.38617 4.26977H5.78125C6.53711 4.26977 6.53711 3.09789 5.78125 3.09789H3.38617C1.51898 3.09789 0 4.61695 0 6.48406V26.8922C0 28.7444 1.48734 30.1953 3.38617 30.1953H3.47656V30.8339C3.47656 32.0326 4.45172 33.0078 5.65047 33.0078H19.2578V35.785C18.3572 36.0408 17.6953 36.8701 17.6953 37.8516C17.6953 39.0363 18.6591 40 19.8438 40C21.0284 40 21.9922 39.0363 21.9922 37.8516C21.9922 36.8701 21.3303 36.0408 20.4297 35.785V33.0078H28.9844C29.7402 33.0078 29.7402 31.8359 28.9844 31.8359H5.65047C5.09797 31.8359 4.64844 31.3864 4.64844 30.8339V30.1953H35.3516V30.8339C35.3516 31.3864 34.902 31.8359 34.3495 31.8359H32.0312C31.2755 31.8359 31.2755 33.0078 32.0312 33.0078H34.3495C35.5483 33.0078 36.5234 32.0326 36.5234 30.8339V30.1953H36.6138C38.5127 30.1953 40 28.7444 40 26.8922V6.48406C40 4.61695 38.481 3.09789 36.6138 3.09789ZM16.9878 3.09789V1.17188H23.0121V3.09789H16.9878ZM20.8203 37.8516C20.8203 38.3901 20.3823 38.8281 19.8438 38.8281C19.3052 38.8281 18.8672 38.3901 18.8672 37.8516C18.8672 37.313 19.3052 36.875 19.8438 36.875C20.3823 36.875 20.8203 37.313 20.8203 37.8516Z"
 												fill="white" />
 											<path
-												d="M2.66667 31.6667C2.66667 34.7965 5.20378 37.3333 8.33333 37.3333C11.4629 37.3333 14 34.7965 14 31.6667C14 31.2985 13.7015 31 13.3333 31C12.9652 31 12.6667 31.2985 12.6667 31.6667C12.6667 34.0599 10.7266 36 8.33333 36C5.9401 36 4 34.0599 4 31.6667C4 29.2734 5.9401 27.3333 8.33333 27.3333C9.27148 27.3307 10.1846 27.6351 10.9333 28.2002C11.2279 28.4212 11.6458 28.3613 11.8665 28.0667C12.0876 27.7721 12.028 27.3545 11.7334 27.1335C10.0163 25.8457 7.71875 25.6387 5.79915 26.5983C3.87923 27.5583 2.66667 29.5205 2.66667 31.6667Z"
+												d="M16.7578 22.2293C16.7578 21.9057 16.4955 21.6434 16.1719 21.6434H4.69031C3.95703 21.6434 3.92367 22.8152 4.69031 22.8152H16.1719C16.4955 22.8152 16.7578 22.5529 16.7578 22.2293Z"
 												fill="white" />
 											<path
-												d="M24 5.33333C24.3682 5.33333 24.6667 5.03516 24.6667 4.66667C24.6667 4.2985 24.3682 4 24 4H6.66667C6.2985 4 6 4.2985 6 4.66667V7.33333C6 7.70182 6.2985 8 6.66667 8H24C24.3682 8 24.6667 7.70182 24.6667 7.33333C24.6667 6.96517 24.3682 6.66667 24 6.66667H7.33333V5.33333H24Z"
+												d="M4.69031 24.4223C3.95703 24.4223 3.92367 25.5942 4.69031 25.5942H12.5153C13.2486 25.5942 13.282 24.4223 12.5153 24.4223H4.69031Z"
 												fill="white" />
 											<path
-												d="M8.66667 9.33333C8.2985 9.33333 8 9.63184 8 10C8 10.3685 8.2985 10.6667 8.66667 10.6667H22C22.3682 10.6667 22.6667 10.3685 22.6667 10C22.6667 9.63184 22.3682 9.33333 22 9.33333H8.66667Z"
+												d="M20.5831 15.1562V25.0083C20.5831 25.3319 20.8454 25.5942 21.1691 25.5942H24.2252C24.5489 25.5942 24.8112 25.3319 24.8112 25.0083V15.1562C24.8112 14.8327 24.5489 14.5703 24.2252 14.5703H21.1691C20.8454 14.5703 20.5831 14.8327 20.5831 15.1562ZM21.755 15.7422H23.6393V24.4223H21.755V15.7422Z"
 												fill="white" />
 											<path
-												d="M26 14H11.3333C10.9652 14 10.6667 14.2985 10.6667 14.6667C10.6667 15.0352 10.9652 15.3333 11.3333 15.3333H26C26.3682 15.3333 26.6667 15.0352 26.6667 14.6667C26.6667 14.2985 26.3682 14 26 14Z"
+												d="M32.6107 12.7427V25.0083C32.6107 25.3319 32.873 25.5942 33.1966 25.5942H36.2528C36.5765 25.5942 36.8388 25.3319 36.8388 25.0083V12.7427C36.8388 12.4191 36.5765 12.1567 36.2528 12.1567H33.1966C32.873 12.1567 32.6107 12.4191 32.6107 12.7427ZM33.7826 13.3286H35.6669V24.4223H33.7826V13.3286Z"
 												fill="white" />
 											<path
-												d="M19.3333 18.6667C19.3333 18.2985 19.0348 18 18.6667 18H5.33333C4.96517 18 4.66667 18.2985 4.66667 18.6667C4.66667 19.0352 4.96517 19.3333 5.33333 19.3333H18.6667C19.0348 19.3333 19.3333 19.0352 19.3333 18.6667Z"
+												d="M27.1828 17.313C26.8591 17.313 26.5969 17.5753 26.5969 17.8989V25.0083C26.5969 25.3319 26.8591 25.5942 27.1828 25.5942H30.239C30.5627 25.5942 30.8249 25.3319 30.8249 25.0083V17.8989C30.8249 17.5753 30.5627 17.313 30.239 17.313H27.1828ZM29.6531 24.4223H27.7687V18.4848H29.653V24.4223H29.6531Z"
 												fill="white" />
 											<path
-												d="M26 18H21.3333C20.9652 18 20.6667 18.2985 20.6667 18.6667C20.6667 19.0352 20.9652 19.3333 21.3333 19.3333H26C26.3682 19.3333 26.6667 19.0352 26.6667 18.6667C26.6667 18.2985 26.3682 18 26 18Z"
-												fill="white" />
-											<path
-												d="M12 22.6667C12.3682 22.6667 12.6667 22.3685 12.6667 22C12.6667 21.6318 12.3682 21.3333 12 21.3333H5.33333C4.96517 21.3333 4.66667 21.6318 4.66667 22C4.66667 22.3685 4.96517 22.6667 5.33333 22.6667H12Z"
-												fill="white" />
-											<path
-												d="M14.6667 22.6667H19.3333C19.7015 22.6667 20 22.3685 20 22C20 21.6318 19.7015 21.3333 19.3333 21.3333H14.6667C14.2985 21.3333 14 21.6318 14 22C14 22.3685 14.2985 22.6667 14.6667 22.6667Z"
-												fill="white" />
-											<path
-												d="M30 30.6667C29.6318 30.6667 29.3333 30.9652 29.3333 31.3333V38C29.3333 38.3685 29.0348 38.6667 28.6667 38.6667H2C1.63184 38.6667 1.33333 38.3685 1.33333 38V2C1.33333 1.63184 1.63184 1.33333 2 1.33333H28.6667C29.0348 1.33333 29.3333 1.63184 29.3333 2V14.5202C29.3333 14.8883 29.6318 15.1868 30 15.1868C30.3682 15.1868 30.6667 14.8883 30.6667 14.5202V2C30.6667 0.895508 29.7712 0 28.6667 0H2C0.895508 0 0 0.895508 0 2V38C0 39.1048 0.895508 40 2 40H28.6667C29.7712 40 30.6667 39.1048 30.6667 38V31.3333C30.6667 30.9652 30.3682 30.6667 30 30.6667Z"
+												d="M22.6971 8.55469C21.814 8.55469 21.0955 9.27312 21.0955 10.1562C21.0955 11.0394 21.814 11.7578 22.6971 11.7578C23.0151 11.7578 23.3109 11.6636 23.5603 11.5031L27.1365 14.088C27.1196 14.1813 27.1094 14.277 27.1094 14.375C27.1094 15.2581 27.8278 15.9766 28.7109 15.9766C29.5941 15.9766 30.3125 15.2581 30.3125 14.375C30.3125 14.1865 30.278 14.0063 30.218 13.8382L34.2109 9.64047C34.3725 9.69539 34.5448 9.72656 34.7248 9.72656C35.6079 9.72656 36.3263 9.00813 36.3263 8.125C36.3263 7.24188 35.6079 6.52344 34.7248 6.52344C33.8416 6.52344 33.1232 7.24188 33.1232 8.125C33.1232 8.39898 33.1926 8.65695 33.3144 8.88273L29.4433 12.9523C29.2235 12.8387 28.9749 12.7734 28.711 12.7734C28.3538 12.7734 28.0245 12.8925 27.7578 13.091L24.247 10.5534C24.2796 10.4261 24.2988 10.2935 24.2988 10.1562C24.2987 9.27312 23.5802 8.55469 22.6971 8.55469ZM22.6971 10.5859C22.4602 10.5859 22.2674 10.3932 22.2674 10.1562C22.2674 9.9193 22.4602 9.72656 22.6971 9.72656C22.9341 9.72656 23.1268 9.9193 23.1268 10.1562C23.1268 10.3932 22.9341 10.5859 22.6971 10.5859ZM34.7248 7.69531C34.9617 7.69531 35.1545 7.88805 35.1545 8.125C35.1545 8.36195 34.9617 8.55469 34.7248 8.55469C34.4991 8.55469 34.2951 8.34969 34.2951 8.125C34.2951 7.88805 34.4877 7.69531 34.7248 7.69531ZM28.7109 13.9453C28.9405 13.9453 29.1406 14.1438 29.1406 14.375C29.1406 14.612 28.9479 14.8047 28.7109 14.8047C28.474 14.8047 28.2812 14.612 28.2812 14.375C28.2812 14.138 28.474 13.9453 28.7109 13.9453Z"
 												fill="white" />
 										</svg>
 										<div class="tarifsmm__item-text">
@@ -1311,7 +1306,9 @@
 										</div>
 									</div>
 								</div>
-								<div class="tarifsmm_button tarifsmm_button--custom">
+								<div
+									class="tarifsmm_button tarifsmm_button--custom"
+									data-da=".tarifsmm_left.tarifsmm_left--custom, 991">
 									<button>SEO-аудит</button>
 								</div>
 							</div>
@@ -1320,12 +1317,169 @@
 				</div>
 			</section>
 
-			<div class="work-stages work-stages--cases-2">
+			<section class="calculator">
 				<div class="container">
-					<h2 class="work-stages__title title text-center">Этапы работ</h2>
+					<div class="calculator__body">
+						<div class="calculator__body-left">
+							<h2 class="calculator__title title" data-da=".calculator__body, 1110, 0">
+								Калькулятор стоимости продвижения
+							</h2>
+							<form class="calculator__form" action="#">
+								<div class="calculator__form-left">
+									<div class="calculator__form-title">Выбрать тип продвижения</div>
+									<div class="calculator__options options">
+										<div class="options__item">
+											<input
+												id="calculator-option-1"
+												class="options__input"
+												checked
+												type="radio"
+												value="1"
+												name="option" />
+											<label for="calculator-option-1" class="options__label"
+												><span class="options__text">По позициям</span></label
+											>
+										</div>
+										<div class="options__item">
+											<input
+												id="calculator-option-2"
+												class="options__input"
+												type="radio"
+												value="2"
+												name="option" />
+											<label for="calculator-option-2" class="options__label"
+												><span class="options__text">По трафику</span></label
+											>
+										</div>
+										<div class="options__item">
+											<input
+												id="calculator-option-3"
+												class="options__input"
+												type="radio"
+												value="2"
+												name="option" />
+											<label for="calculator-option-3" class="options__label"
+												><span class="options__text">По конверсии</span></label
+											>
+										</div>
+									</div>
+									<div class="calculator__ranges">
+										<div class="calculator__range">
+											<div class="calculator__range-title calculator__form-title">
+												Количество запросов в ТОП
+											</div>
+											<div class="calculator__range-input-wrapper">
+												<input
+													class="calculator__range-input styled-slider slider-progress"
+													type="range" />
+												<div class="calculator__range-input-scale">
+													<img src="/images/calculator/scale-01.svg" alt="" />
+												</div>
+											</div>
+										</div>
+										<div class="calculator__range">
+											<div class="calculator__range-title calculator__form-title">
+												Возраст сайта, лет
+											</div>
+											<div class="calculator__range-input-wrapper">
+												<input
+													class="calculator__range-input styled-slider slider-progress"
+													type="range" />
+												<div class="calculator__range-input-scale">
+													<img src="/images/calculator/scale-01.svg" alt="" />
+												</div>
+											</div>
+										</div>
+										<div class="calculator__range">
+											<div class="calculator__range-title calculator__form-title">Тематика</div>
+											<select name="form[]" data-class-modif="form">
+												<option value="1" selected>Интернет-магазин</option>
+												<option value="2">Интернет-магазин</option>
+												<option value="3">Интернет-магазин</option>
+												<option value="4">Интернет-магазин</option>
+												<option value="4">Интернет-магазин</option>
+												<option value="5">Интернет-магазин</option>
+												<option value="6">Интернет-магазин</option>
+												<option value="7">Интернет-магазин</option>
+												<option value="8">Интернет-магазин</option>
+												<option value="9">Интернет-магазин</option>
+											</select>
+										</div>
+									</div>
+									<div class="calculator__actions">
+										<button class="calculator__button" type="submit">Рассчитать стоимость</button>
+										<div class="calculator__actions-text">*Стоимость является ориентировочной</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="calculator__body-right">
+							<div class="calculator__calculator-img">
+								<img src="/images/calculator/calculator.svg" alt="" />
+								<span class="calculator__calculator-sum">60 000</span>
+							</div>
+							<div class="calculator__calculator--mobile">
+								<div class="calculator__calculator-sum--mobile">
+									Ориентировочная стоимость от 60 000 ₽
+								</div>
+								<div class="calculator__calculator-text">
+									Для точного расчета <br />
+									оставьте контакты
+								</div>
+							</div>
+						</div>
+					</div>
+					<section class="order order--calculator">
+						<div class="container">
+							<div class="order_ralative">
+								<h2 class="title">Продвинуть сайт в ТОП</h2>
+								<div class="title_order title_order_width">
+									Отправиьте заявку прямо сейчас и получите скидку
+								</div>
+								<form class="order_form">
+									<div class="order_form-top">
+										<div class="order_input order_input_bg12">
+											<input type="text" size="40" placeholder="Сайт" />
+										</div>
+									</div>
+									<div class="order_form-bottom">
+										<div class="order_input order_input_bg3">
+											<input type="text" size="40" placeholder="Ваше имя" />
+										</div>
+										<div class="order_input order_input_bg">
+											<input
+												type="tel"
+												inputmode="tel"
+												data-phone-pattern
+												placeholder="Ваш телефон" />
+										</div>
+									</div>
+									<div class="order_inner">
+										<div class="order_button">
+											<button class="button_class2">Отправить</button>
+										</div>
+										<div class="order_inner_title">
+											Нажимая кнопку отправить вы соглашаетесь <br />с нашей
+											<a href="#">политикой конфиденциальности.</a>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</section>
+				</div>
+			</section>
+
+			<div class="work-stages work-stages--seo">
+				<div class="container">
+					<h2 class="work-stages__title title text-center" data-da=".work-stages__slider-wrapper-outer, 1068, 1">
+						Этапы работ
+					</h2>
 					<div class="work-stages__content">
 						<div class="work-stages__col">
-							<div class="work-stages__block block-stages block-stages--active">
+							<div
+								class="work-stages__block block-stages block-stages--active"
+								data-da=".work-stages__slide[data-slide-index='1'], 1068">
 								<div class="block-stages__title">Шаг 1.</div>
 								<div class="block-stages__sub-title">
 									Выбор индивидуальной стратегии <br />
@@ -1418,7 +1572,9 @@
 									</div>
 								</div>
 							</div>
-							<div class="work-stages__block block-stages">
+							<div
+								class="work-stages__block block-stages"
+								data-da=".work-stages__slide[data-slide-index='3'], 1068">
 								<div class="block-stages__title">Шаг 3.</div>
 								<div class="block-stages__sub-title">
 									Оптимизация сайта в первые <br />
@@ -1514,7 +1670,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="work-stages__progress progress-stages">
+						<div class="work-stages__progress progress-stages" data-da=".work-stages__slider-wrapper, 1068, 0">
 							<div class="progress-stages__line"></div>
 							<div class="progress-stages__circle progress-stages__circle--1">
 								<div class="progress-stages__circle-line"></div>
@@ -1595,7 +1751,9 @@
 							<div class="progress-stages__scale"></div>
 						</div>
 						<div class="work-stages__col">
-							<div class="work-stages__block block-stages">
+							<div
+								class="work-stages__block block-stages"
+								data-da=".work-stages__slide[data-slide-index='2'], 1068">
 								<div class="block-stages__title">Шаг 2.</div>
 								<div class="block-stages__sub-title">
 									Заключение договора <br />
@@ -1718,7 +1876,9 @@
 									</div>
 								</div>
 							</div>
-							<div class="work-stages__block block-stages">
+							<div
+								class="work-stages__block block-stages"
+								data-da=".work-stages__slide[data-slide-index='4'], 1068">
 								<div class="block-stages__title">Шаг 4.</div>
 								<div class="block-stages__sub-title">Ежемесячные задачи и отчетность</div>
 								<div class="block-stages__content">
@@ -1780,6 +1940,37 @@
 								</div>
 							</div>
 						</div>
+						<div class="work-stages__slider-wrapper-outer">
+							<div class="work-stages__navigation" data-da=".work-stages__slider-wrapper-outer, 568, 2">
+								<button class="work-stages__button-prev">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="44"
+										height="44"
+										viewBox="0 0 44 44">
+										<circle class="work-stages__button-circle" cx="22" cy="22" r="22" transform="rotate(-180 22 22)" />
+										<path
+											class="work-stages__button-arrow"
+											d="M23.4506 16C23.7572 15.9979 24.0574 16.0887 24.3128 16.2609C24.5681 16.433 24.767 16.6785 24.8839 16.9661C25.0007 17.2536 25.0302 17.57 24.9686 17.8747C24.907 18.1793 24.7571 18.4584 24.5381 18.676L21.2257 22.018L24.5381 25.3749C24.8099 25.6708 24.9579 26.0622 24.9509 26.4666C24.9438 26.871 24.7823 27.2568 24.5004 27.5428C24.2184 27.8288 23.838 27.9926 23.4393 27.9998C23.0406 28.0069 22.6548 27.8568 22.363 27.581L17.0867 22.2291C17.0592 22.2015 17.0374 22.1686 17.0225 22.1323C17.0077 22.0961 17 22.0573 17 22.018C17 21.9787 17.0077 21.9399 17.0225 21.9037C17.0374 21.8674 17.0592 21.8345 17.0867 21.8069L22.363 16.455C22.652 16.1635 23.043 15.9999 23.4506 16Z"/>
+									</svg>
+								</button>
+								<button class="work-stages__button-next">
+									<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+										<circle class="work-stages__button-circle" cx="22" cy="22" r="22"/>
+										<path class="work-stages__button-arrow" d="M20.5495 28C20.2428 28.0021 19.9426 27.9113 19.6872 27.7391C19.4319 27.567 19.233 27.3215 19.1161 27.0339C18.9993 26.7464 18.9698 26.43 19.0314 26.1253C19.093 25.8207 19.2429 25.5416 19.4619 25.324L22.7743 21.982L19.4619 18.6251C19.1901 18.3292 19.0421 17.9378 19.0491 17.5334C19.0562 17.129 19.2177 16.7432 19.4997 16.4572C19.7816 16.1712 20.162 16.0074 20.5607 16.0002C20.9594 15.9931 21.3452 16.1432 21.637 16.419L26.9133 21.7709C26.9408 21.7985 26.9626 21.8314 26.9775 21.8677C26.9923 21.9039 27 21.9427 27 21.982C27 22.0213 26.9923 22.0601 26.9775 22.0963C26.9626 22.1326 26.9408 22.1655 26.9133 22.1931L21.637 27.545C21.348 27.8365 20.957 28.0001 20.5495 28Z"/>
+									</svg>
+								</button>
+							</div>
+
+							<div class="work-stages__slider swiper">
+								<div class="work-stages__slider-wrapper swiper-wrapper">
+									<div class="work-stages__slide swiper-slide"></div>
+									<div class="work-stages__slide swiper-slide"></div>
+									<div class="work-stages__slide swiper-slide"></div>
+									<div class="work-stages__slide swiper-slide"></div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -1791,6 +1982,13 @@
 						<button class="seo-increase__button">Комплексный Digital</button>
 						<button class="seo-increase__button seo-increase__button--active">SEO - продвижения</button>
 						<button class="seo-increase__button">Котекстная реклама</button>
+					</div>
+					<div class="seo-increase__buttons--mobile">
+						<select name="form[]" data-class-modif="seo-increase">
+							<option value="1" selected>SEO - продвижения</option>
+							<option value="2">Комплексный Digital</option>
+							<option value="3">Котекстная реклама</option>
+						</select>
 					</div>
 					<div class="seo-increase__content">
 						<div class="seo-increase__text">
@@ -1849,11 +2047,11 @@
 								</form>
 							</div>
 							<div class="seo-increase__right">
-								<div class="seo-increase__diagram">
-									<img src="/images/seo-increase/diagram.svg" alt="">
+								<div class="seo-increase__diagram" data-da=".seo-increase__left, 1026, 1">
+									<img src="/images/seo-increase/diagram.svg" alt="" />
 								</div>
-								<div class="seo-increase__policy">
-									Нажимая кнопку отправить вы соглашаетесь с нашей <br>
+								<div class="seo-increase__policy" data-da=".seo-increase__left, 1026">
+									Нажимая кнопку отправить вы соглашаетесь с нашей <br />
 									<a href="#">политикой конфиденциальности</a>.
 								</div>
 							</div>
@@ -1895,7 +2093,7 @@
 					</div>
 				</div>
 				<div class="order_img11">
-					<img src="/images/images/order_img11.svg" alt="">
+					<img src="/images/images/order_img11.svg" alt="" />
 				</div>
 			</section>
 
@@ -2122,7 +2320,23 @@
 			</footer>
 		</div>
 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="slick/slick.min.js"></script>
+		<script src="range-input.js"></script>
+
+		<script>
+			for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
+				e.style.setProperty('--value', e.value);
+				e.style.setProperty('--min', e.min == '' ? '0' : e.min);
+				e.style.setProperty('--max', e.max == '' ? '100' : e.max);
+				e.addEventListener('input', () => e.style.setProperty('--value', e.value));
+			}
+		</script>
+
 		<script src="js/swiper-bondel.min.js"></script>
+		<script src="js/slider-script.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 		<script src="js/script.js"></script>
+		<script src="js/select.js"></script>
 	</body>
 </html>

@@ -67,3 +67,58 @@ if (document.querySelector(".our-clients__slider")) {
 				},
 	});
 }
+
+if (document.querySelector(".work-stages__slider")) {
+	let swiperTop = new Swiper('.work-stages__slider', {
+		// Указываем класс нужного слайдера
+				// Подключаем модули слайдера
+				// для конкретного случая
+				observer: true,
+				observeParents: true,
+				// autoHeight: true,
+				speed: 800,
+	
+				navigation: {
+					prevEl: ".work-stages__button-prev",
+					nextEl: ".work-stages__button-next",
+				},
+				
+				breakpoints: {
+					320: {
+						slidesPerView: 1,
+						spaceBetween: 20,
+					},
+					726: {
+						slidesPerView: 1.5,
+						spaceBetween: 25,
+					},
+				},
+				on: {
+					init: function(e) {
+						let slides = e.slides;
+						let dataIndex = [];
+						slides.forEach(slide => {
+							dataIndex.push(slide.ariaLabel.split('/').map(slide => slide.trim())[0]);
+						})
+
+						slides.forEach((slide, index) => slide.dataset.slideIndex = dataIndex[index]);
+
+						if (window.innerWidth <= 1068) {
+							let wrapperWidth = slides.reduce((width, slide) => width += (slide.clientWidth + Number.parseInt(slide.style.marginRight)), 0);
+							slides[0].parentNode.style.cssText += `--wrapper-width: ${wrapperWidth}px`;
+							slides[0].parentNode.style.cssText += `--slide-width: ${slides[0].clientWidth}px`;
+							document.querySelector('.work-stages__slider-wrapper-outer').style.cssText += slides[0].parentNode.style.cssText += `--slide-width: ${slides[0].clientWidth}px`;
+						}
+
+						window.addEventListener('resize', resizeEv => {
+							if (window.innerWidth <= 1068) {
+								let wrapperWidth = slides.reduce((width, slide) => width += (slide.clientWidth + Number.parseInt(slide.style.marginRight)), 0);
+								slides[0].parentNode.style.cssText += `--wrapper-width: ${wrapperWidth}px`;
+								slides[0].parentNode.style.cssText += `--slide-width: ${slides[0].clientWidth}px`;
+								document.querySelector('.work-stages__slider-wrapper-outer').style.cssText += slides[0].parentNode.style.cssText += `--slide-width: ${slides[0].clientWidth}px`;
+							}
+						})
+					},
+				}
+	});
+}

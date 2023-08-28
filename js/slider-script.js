@@ -68,6 +68,32 @@ if (document.querySelector('.our-clients__slider')) {
 	});
 }
 
+if (document.querySelector('.swiper2')) {
+	let swiper1 = new Swiper('.swiper2', {
+		spaceBetween: 20,
+		// centeredSlides: true,
+		slidesPerView: 'auto',
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		breakpoints: {
+			1024: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			834: {
+				slidesPerView: 1.5,
+				spaceBetween: 80,
+			},
+			425: {
+				slidesPerView: 1,
+				spaceBetween: 40,
+			},
+		},
+	});
+}
+
 if (document.querySelector('.work-stages__slider')) {
 	let swiperTop = new Swiper('.work-stages__slider', {
 		// Указываем класс нужного слайдера

@@ -95,6 +95,8 @@ if (document.querySelector('.swiper2')) {
 }
 
 if (document.querySelector('.work-stages__slider')) {
+	let progressWidth = 0;
+
 	let swiperTop = new Swiper('.work-stages__slider', {
 		// Указываем класс нужного слайдера
 		// Подключаем модули слайдера
@@ -114,8 +116,8 @@ if (document.querySelector('.work-stages__slider')) {
 				slidesPerView: 1,
 				spaceBetween: 20,
 			},
-			726: {
-				slidesPerView: 1.5,
+			526: {
+				slidesPerView: 1.3,
 				spaceBetween: 25,
 			},
 		},
@@ -136,6 +138,7 @@ if (document.querySelector('.work-stages__slider')) {
 					);
 					slides[0].parentNode.style.cssText += `--wrapper-width: ${wrapperWidth}px`;
 					slides[0].parentNode.style.cssText += `--slide-width: ${slides[0].clientWidth}px`;
+					slides[0].parentNode.style.cssText += `--progress-width: ${slides[0].clientWidth + 25 + 40}px`;
 					document.querySelector('.work-stages__slider-wrapper-outer').style.cssText +=
 						slides[0].parentNode.style.cssText += `--slide-width: ${slides[0].clientWidth}px`;
 				}
@@ -152,6 +155,16 @@ if (document.querySelector('.work-stages__slider')) {
 							slides[0].parentNode.style.cssText += `--slide-width: ${slides[0].clientWidth}px`;
 					}
 				});
+			},
+
+			slideNextTransitionStart: function (e) {
+				let slides = e.slides;
+				slides[0].parentNode.style.cssText += `--progress-width: ${(slides[0].clientWidth + 25) * (e.activeIndex + 1) + 40}px`;
+			},
+
+			slidePrevTransitionStart: function (e) {
+				let slides = e.slides;
+				slides[0].parentNode.style.cssText += `--progress-width: ${(slides[0].clientWidth + 25) * (e.activeIndex + 1) + 40}px`;
 			},
 		},
 	});

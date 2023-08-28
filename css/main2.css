@@ -2411,7 +2411,7 @@ ul.tabs2 li.active:before {
 	content: '';
 	width: 25px;
 	height: 23px;
-	background: url(../images/images/vi_reklama_li.svg) 0 0 no-repeat;
+	background: url(../images/vi_reklama/li.svg) 0 0 no-repeat;
 }
 
 .vi_reklama_li p {
@@ -2899,26 +2899,6 @@ ul.tabs2 li.active:before {
 	position: relative;
 	width: 20%;
 	padding: 0 7px;
-}
-
-.kak_reklama_inner_tippy {
-	position: absolute;
-	z-index: 1;
-	top: -38px;
-	left: 28%;
-	width: 100%;
-	height: auto;
-	padding: 6px 10px 14px 12px;
-
-	color: #d0c1e8;
-	text-align: center;
-	font-family: Inter;
-	font-size: 13px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 109.023%; /* 14.173px */
-
-	background: url(../images/kak_reklama/typpy-background.svg) center center no-repeat;
 }
 
 .kak_reklama_inner_border {

@@ -27,6 +27,7 @@
 
 	.social__fixed {
 		position: fixed;
+		z-index: 100;
 		left: 25px;
 	}
 

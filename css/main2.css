@@ -1203,6 +1203,11 @@ ul.tabs li.active:before {
 
 	width: 260px;
 	height: 65px;
+	transition: all 0.3s ease;
+}
+
+.seo-increase__button:hover {
+	transform: scale(1.05);
 }
 
 .seo-increase__button--active {
@@ -1357,6 +1362,14 @@ ul.tabs li.active:before {
 	}
 }
 
+.seo-increase__form-button {
+	transition: all 0.3s ease;
+}
+
+.seo-increase__form-button:hover {
+	transform: scale(1.05);
+}
+
 @media (max-width: 568px) {
 	.seo-increase__row {
 		grid-template-columns: 20% 1fr 1fr;
@@ -1402,6 +1415,14 @@ ul.tabs li.active:before {
 	font-style: normal;
 	font-weight: 400;
 	line-height: 133.023%; /* 18.623px */
+}
+
+.seo-increase__policy a {
+	transition: all 0.3s ease;
+}
+
+.seo-increase__policy a:hover {
+	color: #E63114;
 }
 
 .seo-increase__policy a {

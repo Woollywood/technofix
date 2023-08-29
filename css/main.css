@@ -6769,6 +6769,25 @@ html {
 	}
 }
 
+/* .approach__line {
+	animation: 15s linear 2s infinite blueline;
+}
+
+@keyframes blueline {
+  0% {
+    transform: rotateX(0deg) skewY(0deg);
+    stroke-opacity: 0.7;
+  }
+  50% {
+    transform: rotateX(30deg) skewY(2deg);
+    stroke-opacity: 1;
+  }
+  100% {
+    transform: rotateX(0deg) skewY(0deg);
+    stroke-opacity: 0.7;
+  }
+} */
+
 @media (min-width: 1432px) {
 	.approach__line--mobile {
 		display: none;
@@ -7082,6 +7101,15 @@ html {
 	display: flex;
 	gap: 44px;
 	align-items: center;
+}
+
+.calculator__button {
+	transition: all 0.3s ease;
+}
+
+.calculator__button:hover {
+	background: #fff;
+	color: #e63114;
 }
 
 @media (max-width: 842px) {

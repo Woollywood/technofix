@@ -2204,7 +2204,14 @@ html {
 	/* or 21px */
 
 	color: #ffffff;
+	transition: all 0.3s ease;
 }
+
+.digital__call-back:hover button {
+	background: #fff;
+	color: #e63114;
+}
+
 .digital__card-chart.active {
 	opacity: 1;
 
@@ -4277,7 +4284,7 @@ html {
 		width: 360px;
 	}
 	.swiper-slide {
-		width: auto !important;
+		width: auto;
 	}
 
 	.digital__card-chart.active {
@@ -5016,6 +5023,15 @@ html {
 	display: grid;
 }
 
+.for-whome__button {
+	transition: all 0.3s ease;
+}
+
+.for-whome__button:hover {
+	background: #fff;
+	color: #e63114;
+}
+
 @media (max-width: 991px) {
 	.for-whome__item-top-image,
 	.for-whome__button {
@@ -5388,6 +5404,15 @@ html {
 	@media (max-width: 560px) {
 		grid-template-columns: 1fr;
 	}
+}
+
+.our-services__item-bottom-button {
+	transition: all 0.3s ease;
+}
+
+.our-services__item-bottom-button:hover {
+	background: #fff;
+	color: #e63114;
 }
 
 .our-services__item-bottom--left {
@@ -5911,6 +5936,15 @@ html {
 	}
 }
 
+.profit__item-big__button {
+	transition: all 0.3s ease;
+}
+
+.profit__item-big__button:hover {
+	background: #fff;
+	color: #e63114;
+}
+
 @media (max-width: 860px) and (min-width: 660px) {
 	.profit__item-big__button {
 		justify-self: flex-start !important;
@@ -6047,6 +6081,10 @@ html {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.our-clients__slider-wrapper {
+	margin: 0 !important;
 }
 
 .our-clients__slide {

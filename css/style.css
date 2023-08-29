@@ -2551,7 +2551,7 @@ html {
     width: 360px;
   }
   .swiper-slide {
-    width: auto !important;
+    width: auto;
   }
 
   .digital__card-chart.active {
@@ -2617,6 +2617,7 @@ html {
     stroke-opacity: 0.7;
   }
 }
+
 .redline {
   position: absolute;
   top: 0x;
@@ -3330,6 +3331,12 @@ border-radius: 15px;
 padding: 20px 36px;
 background: #E63114;
 justify-self: flex-start;
+transition: all 0.3s ease;
+}
+
+.seo-main__button:hover {
+	background: #fff;
+	color: #e63114;
 }
 
 .seo-main__right {

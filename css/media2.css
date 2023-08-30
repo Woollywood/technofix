@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 
 
 @media screen and (max-width: 1550px) {
@@ -81,10 +88,15 @@
 
 	.sf_border {
 	    border: 1px solid #5418A3;
+	    display: -webkit-box;
+	    display: -ms-flexbox;
 	    display: flex;
 	    padding: 45px 60px;
-	    align-items: center;
+	    -webkit-box-align: center;
+	        -ms-flex-align: center;
+	            align-items: center;
 	    border-radius: 22px;
+	    background: -o-linear-gradient(113.09deg, rgba(12, 6, 29, 0.3) -74.44%, rgba(12, 6, 29, 0.099) 88.43%);
 	    background: linear-gradient(336.91deg, rgba(12, 6, 29, 0.3) -74.44%, rgba(12, 6, 29, 0.099) 88.43%);
 	}
 
@@ -130,6 +142,8 @@
 	}
 
 	.usl_reklama_audit_img {
+	    display: -webkit-box;
+	    display: -ms-flexbox;
 	    display: flex;
 	    margin: 0 0 0 0px;
 	}
@@ -137,15 +151,23 @@
 	.usl_reklama_audit_border {
 	    background: #3C176E;
 	    padding: 10px 50px 10px 20px;
+	    display: -webkit-box;
+	    display: -ms-flexbox;
 	    display: flex;
-	    align-items: center;
+	    -webkit-box-align: center;
+	        -ms-flex-align: center;
+	            align-items: center;
 	    border-radius: 22px;
 	}
 
 	.usl_reklama_audit_right {
 	    padding: 0 0 0 88px;
+	    display: -webkit-box;
+	    display: -ms-flexbox;
 	    display: flex;
-	    align-items: center;
+	    -webkit-box-align: center;
+	        -ms-flex-align: center;
+	            align-items: center;
 	}
 
 	.kak_reklama_block {
@@ -182,7 +204,8 @@
 
 @media screen and (max-width: 1400px) {
 	.blog_ul {
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 		padding: 11px 0 0 0;
 	}
 
@@ -224,13 +247,21 @@
 	    margin: 0 -100px 0 0;
 	    width: 100px;
 	    height: 100px;
+	    display: -webkit-box;
+	    display: -ms-flexbox;
 	    display: flex;
-	    align-items: center;
-	    justify-content: center;
+	    -webkit-box-align: center;
+	        -ms-flex-align: center;
+	            align-items: center;
+	    -webkit-box-pack: center;
+	        -ms-flex-pack: center;
+	            justify-content: center;
 	    border-radius: 50%;
 	    border: 1px solid #5E149E;
+	    background: -o-linear-gradient( 175.25deg, rgba(12, 6, 29, 0.5) 0%, rgba(12, 6, 29, 0.17) 100%);
 	    background: linear-gradient( -85.25deg, rgba(12, 6, 29, 0.5) 0%, rgba(12, 6, 29, 0.17) 100%);
-	    backdrop-filter: blur(6px);
+	    -webkit-backdrop-filter: blur(6px);
+	            backdrop-filter: blur(6px);
 	}
 
 	.tarifsmm_pd {
@@ -278,13 +309,15 @@
 	}
 
 	.sf_border {
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 		padding: 20px 20px;
 	}
 
 	.sf_left {
 		width: 100%;
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 
 	.sf_icon {
@@ -315,6 +348,8 @@
 	    border: 1px solid #492C88;
 	    border-radius: 22px;
 	    padding: 37px 60px 37px 41px;
+	    display: -webkit-box;
+	    display: -ms-flexbox;
 	    display: flex;
 	}
 
@@ -342,8 +377,12 @@
 
 	.usl_reklama_audit_right {
 	    padding: 0 0 0 30px;
+	    display: -webkit-box;
+	    display: -ms-flexbox;
 	    display: flex;
-	    align-items: center;
+	    -webkit-box-align: center;
+	        -ms-flex-align: center;
+	            align-items: center;
 	}
 
 	.usl_reklama_audit_suptitle {
@@ -393,12 +432,14 @@
 	}
 
 	.tarifsmm_border {
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 
 	.tarifsmm_left {
 		width: 100%;
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 
 	.tarifsmm_title {
@@ -430,11 +471,18 @@
 	.tarifsmm_border {
 	    width: 100%;
 	    padding: 25px 46px 25px 85px;
+	    display: -webkit-box;
+	    display: -ms-flexbox;
 	    display: flex;
-	    align-items: center;
-	    justify-content: space-between;
+	    -webkit-box-align: center;
+	        -ms-flex-align: center;
+	            align-items: center;
+	    -webkit-box-pack: justify;
+	        -ms-flex-pack: justify;
+	            justify-content: space-between;
 	    border: 1px solid #8A14E6;
 	    border-radius: 22px;
+	    background: -o-linear-gradient(113.09deg, rgba(129, 38, 200, 0) -74.44%, rgba(138, 20, 230, 0.0595) 88.43%);
 	    background: linear-gradient(336.91deg, rgba(129, 38, 200, 0) -74.44%, rgba(138, 20, 230, 0.0595) 88.43%);
 	}
 
@@ -471,7 +519,8 @@
 	}
 
 	.p_cases_wrap {
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 
 	.p_cases_block {
@@ -491,7 +540,8 @@
 	}
 
 	.pr_cases_wrap {
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 
 	.pr_cases_block {
@@ -513,7 +563,8 @@
 	}
 
 	.ripd_wrap {
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 
 	.ripd_block {
@@ -544,7 +595,8 @@
 	}
 
 	.sf_slayd_wrap {
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 
 	.sf_slayd_img {
@@ -563,8 +615,12 @@
 	}
 
 	.ot_link {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		justify-content: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 	}
 
 	.sf_sl .slick-list {
@@ -600,7 +656,8 @@
 	}
 
 	.usl_reklama_wrap {
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 		margin: 15px 0 0 0;
 	}
 
@@ -614,14 +671,20 @@
 	}
 
 	.usl_reklama_icon_mb {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 		
 		width: 246px;
 	}
 
 	.usl_reklama_inner {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		align-items: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
 	}
 
 	.usl_reklama_title {
@@ -649,6 +712,7 @@
 	}
 
 	.usl_reklama_border {
+	    background: -o-linear-gradient(113.09deg, rgba(129, 38, 200, 0) -74.44%, rgba(138, 20, 230, 0.0595) 88.43%);
 	    background: linear-gradient(336.91deg, rgba(129, 38, 200, 0) -74.44%, rgba(138, 20, 230, 0.0595) 88.43%);
 	    border: 1px solid #8A14E6;
 	    border-radius: 22px;
@@ -678,13 +742,18 @@
 	.usl_reklama_audit_border {
 	    background: #3C176E;
 	    padding: 10px 20px 10px 20px;
+	    display: -webkit-box;
+	    display: -ms-flexbox;
 	    display: flex;
-	    align-items: center;
+	    -webkit-box-align: center;
+	        -ms-flex-align: center;
+	            align-items: center;
 	    border-radius: 22px;
 	}
 
 	.kak_reklama_wrap {
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 
 	.kak_reklama_block {
@@ -710,7 +779,8 @@
 	}
 
 	.tss_reklama_wrap {
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 
 	.tss_reklama_block {
@@ -732,7 +802,8 @@
 	}
 
 	.kp_dagital_wrap {
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 		padding: 15px 0 0 0;
 		margin: 0;
 	}
@@ -743,8 +814,12 @@
 	}
 
 	.kp_dagital_border {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		align-items: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
 		padding: 30px 20px 30px 40px;
 	}
 
@@ -780,6 +855,8 @@
 	}
 
 	.tr_digital_wrap {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 	}
 
@@ -798,8 +875,12 @@
 	    padding: 41px 27px 41px 20px;
 	    border-radius: 22px 55px 55px 22px;
 	    background: rgb(30 6 69);
+	    display: -webkit-box;
+	    display: -ms-flexbox;
 	    display: flex;
-	    align-items: center;
+	    -webkit-box-align: center;
+	        -ms-flex-align: center;
+	            align-items: center;
 	}
 
 	.sermtarif_border_button_dg {
@@ -855,6 +936,8 @@
 	}
 
 	.chat_reklama_block {
+	    height: -webkit-fit-content;
+	    height: -moz-fit-content;
 	    height: fit-content;
 	    padding: 0 30px 0 0;
 	}
@@ -899,7 +982,8 @@
 	}
 
 	.stock_wrap {
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 		margin: 15px 0 0 0;
 	}
 
@@ -918,7 +1002,8 @@
 	}
 
 	.art_wrap {
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 
 	.art_mb {
@@ -932,13 +1017,17 @@
 	.art_block {
 		padding: 20px 0 0 0;
 		width: 100%;
-		order: 2;
+		-webkit-box-ordinal-group: 3;
+		    -ms-flex-order: 2;
+		        order: 2;
 	}
 
 	.art_block2 {
 		padding: 20px 0 24px 0;
 		width: 100%;
-		order: 1;
+		-webkit-box-ordinal-group: 2;
+		    -ms-flex-order: 1;
+		        order: 1;
 	}
 
 	.art_restagle {
@@ -965,6 +1054,8 @@
 	}
 
 	.art_naw {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 		overflow: auto;
 		padding: 0 29px !important;
@@ -997,14 +1088,21 @@
 		text-align: center;
 		padding: 20px 40px;
 		height: 100%;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		align-items: center;
-		justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 	}
 
 	.about_wrap {
 		margin: 16px 0 0 0;
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 
 	.about_block {
@@ -1033,6 +1131,7 @@
 	    border-radius: 22px;
 	    padding: 55px 2px 43px 2px;
 	    border: 1px solid rgba(84, 24, 163, 1);
+	    background: -o-linear-gradient(113.09deg, rgba(12, 6, 29, 0.3) -74.44%, rgba(12, 6, 29, 0.099) 88.43%);
 	    background: linear-gradient(336.91deg, rgba(12, 6, 29, 0.3) -74.44%, rgba(12, 6, 29, 0.099) 88.43%);
 	}
 
@@ -1067,7 +1166,8 @@
 	}
 
 	.w_rekalama_wrap {
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 
 	.raz_reklama_wrap_block_mb {
@@ -1086,8 +1186,12 @@
 
 	.cases_border_info {
 	    margin: 0 30px 0 0;
+	    display: -webkit-box;
+	    display: -ms-flexbox;
 	    display: flex;
-	    align-items: center;
+	    -webkit-box-align: center;
+	        -ms-flex-align: center;
+	            align-items: center;
 	}
 
 	.ot_text {
@@ -1116,6 +1220,8 @@
 	    height: 84px;
 	    left: 0;
 	    bottom: 0;
+	    background: -webkit-gradient(linear, left bottom, left top, color-stop(55.95%, #27104b), to(rgba(48, 29, 78, 0)));
+	    background: -o-linear-gradient(bottom, #27104b 55.95%, rgba(48, 29, 78, 0) 100%);
 	    background: linear-gradient(360deg, #27104b 55.95%, rgba(48, 29, 78, 0) 100%);
 	}
 
@@ -1146,10 +1252,14 @@
 	}
 
 	.chat_reklama_block {
+	    display: -webkit-box;
+	    display: -ms-flexbox;
 	    display: flex;
 	    width: 100%;
 	    padding: 0;
-	    justify-content: center;
+	    -webkit-box-pack: center;
+	        -ms-flex-pack: center;
+	            justify-content: center;
 	}
 
 	.chat_reklama_block2 {
@@ -1162,7 +1272,8 @@
 	}
 
 	.vi_reklama_wrap {
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 
 	.vi_reklama_block {
@@ -1218,10 +1329,15 @@
 	}
 
 	.order_inner {
+	    display: -webkit-box;
+	    display: -ms-flexbox;
 	    display: flex;
-	    align-items: center;
+	    -webkit-box-align: center;
+	        -ms-flex-align: center;
+	            align-items: center;
 	    padding: 20px 0 0 0;
-	    flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
 	}
 
 	.order_button {
@@ -1240,7 +1356,8 @@
 	}
 
 	.cases_border {
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 
 	.cases_img_hidden {
@@ -1276,7 +1393,8 @@
 	.cases_border_info {
 		margin: 0;
 		width: 50%;
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 
 	.cases_border_number {
@@ -1291,8 +1409,12 @@
 	}
 
 	.cases_border_inner {
+	    display: -webkit-box;
+	    display: -ms-flexbox;
 	    display: flex;
-	    align-items: center;
+	    -webkit-box-align: center;
+	        -ms-flex-align: center;
+	            align-items: center;
 	    padding: 12px 0 0 0;
 	} 
 
@@ -1309,9 +1431,15 @@
 	.clients_button button {
 	    width: 100%;
 	    height: 94px;
+	    display: -webkit-box;
+	    display: -ms-flexbox;
 	    display: flex;
-	    align-items: center;
-	    justify-content: center;
+	    -webkit-box-align: center;
+	        -ms-flex-align: center;
+	            align-items: center;
+	    -webkit-box-pack: center;
+	        -ms-flex-pack: center;
+	            justify-content: center;
 	    background: rgba(21, 7, 45, 0.4);
 	    padding: 0 30px;
 	    border-radius: 15px;
@@ -1334,11 +1462,18 @@
 	.tarifsmm_border {
 	    width: 100%;
 	    padding: 68px 30px 30px 30px;
+	    display: -webkit-box;
+	    display: -ms-flexbox;
 	    display: flex;
-	    align-items: center;
-	    justify-content: space-between;
+	    -webkit-box-align: center;
+	        -ms-flex-align: center;
+	            align-items: center;
+	    -webkit-box-pack: justify;
+	        -ms-flex-pack: justify;
+	            justify-content: space-between;
 	    border: 1px solid #8A14E6;
 	    border-radius: 22px;
+	    background: -o-linear-gradient(113.09deg, rgba(129, 38, 200, 0) -74.44%, rgba(138, 20, 230, 0.0595) 88.43%);
 	    background: linear-gradient(336.91deg, rgba(129, 38, 200, 0) -74.44%, rgba(138, 20, 230, 0.0595) 88.43%);
 	}
 
@@ -1355,7 +1490,8 @@
 	}
 
 	.w_cases_wrap {
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 
 	.w_cases_block {
@@ -1399,7 +1535,8 @@
 
 	.w_cases_inner {
 		margin: 16px 0 0 0;
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 
 	.w_cases_inner_block {
@@ -1408,7 +1545,8 @@
 	}
 
 	.p_cases_inner {
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 
 	.p_cases_icon {
@@ -1457,7 +1595,8 @@
 
 	.pr_cases_inner {
 		padding: 0;
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 
 	.pr_cases_inner_block {
@@ -1523,13 +1662,21 @@
 	.di_block2 {
 	    width: 18.5%;
 	    padding: 0;
+	    display: -webkit-box;
+	    display: -ms-flexbox;
 	    display: flex;
-	    align-items: center;
-	    justify-content: center;
+	    -webkit-box-align: center;
+	        -ms-flex-align: center;
+	            align-items: center;
+	    -webkit-box-pack: center;
+	        -ms-flex-pack: center;
+	            justify-content: center;
 	}
 
 	ul.tabs2 {
-		justify-content: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 	}
 
 	.ripd_inner {
@@ -1552,7 +1699,9 @@
 	}
 
 	.ripd_links {
-		justify-content: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 	}
 
 	.title_ripd_wd2 {
@@ -1576,10 +1725,13 @@
 	.ot_border {
 	    border: 1px solid #492C88;
 	    padding: 30px 20px 30px 20px;
+	    display: -webkit-box;
+	    display: -ms-flexbox;
 	    display: flex;
 	    border-radius: 22px;
 	    margin: 20px 0 0 0;
-	    flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
 	}
 
 	.ot_img {
@@ -1592,7 +1744,8 @@
 	}
 
 	.ot_top {
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 
 	.ot_name {
@@ -1603,7 +1756,9 @@
 	.ot_data {
 		padding: 20px 0 0 0;
 		width: 100%;
-		justify-content: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 	}
 
 	.ot_title {
@@ -1611,8 +1766,12 @@
 	}
 
 	.ot_link {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		justify-content: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 	}
 
 	.sf_wrap {
@@ -1628,6 +1787,8 @@
 	    border: 1px solid #492C88;
 	    border-radius: 22px;
 	    padding: 30px 20px 30px 20px;
+	    display: -webkit-box;
+	    display: -ms-flexbox;
 	    display: flex;
 	}
 
@@ -1677,7 +1838,8 @@
 	}
 
 	.dp_border {
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 		padding: 16px 15px 30px 15px;
 	}
 
@@ -1700,7 +1862,9 @@
 	}
 
 	.dp_inner {
-		justify-content: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 	}
 
 	.title2 {
@@ -1720,7 +1884,8 @@
 	}
 
 	.w_rekalama_inner {
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 		padding: 24px 0 0 0;
 		margin: 0;
 	}
@@ -1731,9 +1896,15 @@
 	}
 
 	.w_rekalama_inner_border {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		align-items: center;
-		justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 	}
 
 	.w_rekalama_inner_img_dk {
@@ -1742,6 +1913,8 @@
 
 	.w_rekalama_inner_img_mb {
 		padding: 0;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 	}
 
@@ -1783,6 +1956,8 @@
 	}
 
 	.usl_reklama_icon_dk {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 	}
 
@@ -1861,7 +2036,9 @@
 
 	.usl_reklama_audit_img {
 		width: 100%;
-		justify-content: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 	}
 
 	.usl_reklama_audit_right {
@@ -1884,7 +2061,8 @@
 	}
 
 	.raz_reklama_top {
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 
 	.raz_reklama_number {
@@ -1898,7 +2076,8 @@
 	}
 
 	.raz_reklama_wrap {
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 
 	.raz_reklama_wrap_block {
@@ -1907,6 +2086,7 @@
 	}
 
 	.raz_reklama_border {
+	    background: -o-linear-gradient(113.09deg, rgba(12, 6, 29, 0.5) -74.44%, rgba(12, 6, 29, 0.3) 88.43%);
 	    background: linear-gradient(336.91deg, rgba(12, 6, 29, 0.5) -74.44%, rgba(12, 6, 29, 0.3) 88.43%);
 	    position: relative;
 	    padding: 35px 20px 180px 20px;
@@ -1928,7 +2108,8 @@
 	}
 
 	.kak_reklama_form_wrap {
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 
 	.kak_reklama_form_block {
@@ -1945,8 +2126,11 @@
 	}
 
 	.kak_reklama_inner {
-		flex-wrap: wrap;
-		justify-content: center;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 		margin: 7px -7px 0 -7px;
 	}
 
@@ -2031,7 +2215,8 @@
 	}
 
 	.tr_digital_border {
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 
 	.tr_digital_border_img {
@@ -2046,13 +2231,16 @@
 	}
 
 	.tr_digital_border_wrap {
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 
 	.sermtarif_border_button_dg {
 		width: 100%;
 		padding: 20px 0 0 0;
-		order: 2;
+		-webkit-box-ordinal-group: 3;
+		    -ms-flex-order: 2;
+		        order: 2;
 	}
 
 	.sermtarif_ellipse2_dg {
@@ -2186,9 +2374,15 @@
 	    color: #D0C1E8;
 	    margin: 20px 0 0 0;
 	    min-height: auto;
+	    display: -webkit-box;
+	    display: -ms-flexbox;
 	    display: flex;
-	    align-items: center;
-	    justify-content: center;
+	    -webkit-box-align: center;
+	        -ms-flex-align: center;
+	            align-items: center;
+	    -webkit-box-pack: center;
+	        -ms-flex-pack: center;
+	            justify-content: center;
 	}
 
 	.tss_reklama_inner_border {

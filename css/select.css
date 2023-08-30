@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .select {
   min-width: 0;
   position: relative;
@@ -136,8 +143,15 @@ line-height: 130.023%; /* 18.203px */
   max-height: 360px;
 	width: 100%;
 
+	display: -webkit-box;
+
+	display: -ms-flexbox;
+
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 
 .select__option {
@@ -152,6 +166,8 @@ line-height: 130.023%; /* 18.203px */
 	font-style: normal;
 	font-weight: 400;
 	line-height: 119.523%; /* 16.733px */
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
 

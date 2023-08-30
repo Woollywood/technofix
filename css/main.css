@@ -7863,7 +7863,7 @@ html {
 
 	.work-stages {
 		padding-bottom: 0 !important;
-		margin-bottom: -280px;
+		/* margin-bottom: -280px; */
 	}
 
 	.cases2 .stages {
@@ -8077,7 +8077,7 @@ html {
 
 @media (max-width: 425px) {
 	.work-stages.work-stages--seo {
-		padding-bottom: 346px;
+		/* padding-bottom: 346px; */
 	}
 }
 

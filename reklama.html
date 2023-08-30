@@ -1343,7 +1343,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="approach__block approach__block--2 approach__block--active">
+					<div class="approach__block approach__block--2">
 						<div class="approach__block-title">День 3</div>
 						<div class="approach__block-sub-title">Запуск рекламных кампаний</div>
 						<div class="approach__block-steps">
@@ -1356,7 +1356,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="approach__block approach__block--3 approach__block--active">
+					<div class="approach__block approach__block--3">
 						<div class="approach__block-title">Неделя 2</div>
 						<div class="approach__block-sub-title">Рост числа заявок и звонков, получаемых с сайта</div>
 						<div class="approach__block-steps">
@@ -1369,7 +1369,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="approach__block approach__block--4 approach__block--active">
+					<div class="approach__block approach__block--4">
 						<div class="approach__block-title">Ежедневно</div>
 						<div class="approach__block-sub-title">Анализ и оптимизация РК</div>
 						<div class="approach__block-steps">
@@ -2340,18 +2340,10 @@
 		</footer>
 
 		<script src="js/anime.min.js"></script>
-		<script>
-			var path = document.querySelector('#path--state');
-
-			anime({
-				targets: path,
-				strokeDashoffset: [anime.setDashoffset, 0],
-				easing: 'easeInOutSine',
-				duration: 15000,
-				direction: 'alternate',
-				loop: true,
-			});
-		</script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/ScrollTrigger.min.js"></script>
+		<script src="js/gsap.js"></script>
+		
 
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<script>

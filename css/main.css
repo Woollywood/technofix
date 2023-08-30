@@ -7866,6 +7866,12 @@ html {
 		/* margin-bottom: -280px; */
 	}
 
+	.serm .work-stages,
+	.smm .work-stages,
+	.digital .work-stages {
+		padding-bottom: 240px !important;
+	}
+
 	.cases2 .stages {
 		margin-top: -420px;
 	}

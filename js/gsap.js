@@ -56,7 +56,7 @@ window.addEventListener('load', (e) => {
 		})
 	}
 
-	let path = document.querySelector('#path--state');
+	let path = document.querySelectorAll('.path--state');
 	if (path) {
 		anime({
 			targets: path,

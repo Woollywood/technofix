@@ -2169,6 +2169,11 @@ html {
 	}
 }
 
+.order_img10--fix {
+	position: static !important;
+	flex: 0 0 20%;
+}
+
 @media (max-width: 534px) {
 	.our-services__item-text {
 		font-size: 15px !important;

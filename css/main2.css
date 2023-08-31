@@ -261,6 +261,12 @@
 	position: relative;
 }
 
+.order_ralative--fix {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+}
+
 .order_width {
 	position: relative;
 	z-index: 1;
@@ -270,6 +276,7 @@
 .order_width--fix {
 	position: relative;
 	z-index: 2;
+	flex: 1 1 auto;
 }
 
 .title_order {

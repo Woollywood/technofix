@@ -43,17 +43,17 @@ window.addEventListener('load', (e) => {
 				start: 'top, 50%',
 				markers: true,
 				onEnter: () => {
-					blocks.forEach(block => {
+					blocks.forEach((block) => {
 						t1.to(block, {
 							duration: 3,
 							onComplete: () => {
 								block.classList.add('approach__block--active');
 							},
-						})
-					})
-				}
-			}
-		})
+						});
+					});
+				},
+			},
+		});
 	}
 
 	let path = document.querySelectorAll('.path--state');
@@ -80,15 +80,47 @@ window.addEventListener('load', (e) => {
 			translateY: -250,
 			translateX: 250,
 			direction: 'reverse',
-			easing: 'easeInOutSine'
-		  });
+			easing: 'easeInOutSine',
+		});
 
-		  anime({
+		anime({
 			targets: [path3, path4],
 			translateY: 250,
 			translateX: 250,
 			direction: 'reverse',
-			easing: 'easeInOutSine'
-		  });
+			easing: 'easeInOutSine',
+		});
+	}
+
+	if (document.querySelector('.order-animation')) {
+		let path1 = document.querySelectorAll('.order-path--01');
+		let path2 = document.querySelectorAll('.order-path--02');
+		let path3 = document.querySelectorAll('.order-path--03');
+
+		anime({
+			targets: path1,
+			opacity: [0, 1],
+			loop: true,
+			direction: 'alternate',
+			easing: 'easeInOutSine',
+		});
+
+		anime({
+			targets: path2,
+			opacity: [0, 1],
+			loop: true,
+			delay: 200,
+			direction: 'alternate',
+			easing: 'easeInOutSine',
+		});
+
+		anime({
+			targets: path3,
+			opacity: [0, 3],
+			loop: true,
+			delay: 400,
+			direction: 'alternate',
+			easing: 'easeInOutSine',
+		});
 	}
 });

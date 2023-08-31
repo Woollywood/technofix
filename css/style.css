@@ -4393,7 +4393,17 @@ transition: all 0.3s ease;
 	color: #e63114;
 }
 
+.seo-main__body {
+	
+}
+
 .seo-main__right {
+	
+}
+
+.seo-main__right svg {
+	overflow: visible;
+	max-width: 100%;
 }
 
 .border-top {

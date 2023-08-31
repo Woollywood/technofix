@@ -67,4 +67,28 @@ window.addEventListener('load', (e) => {
 			loop: true,
 		});
 	}
+
+	if (document.querySelector('.seo-main__right')) {
+		let path1 = document.querySelectorAll('.seo-path--01');
+		let path2 = document.querySelectorAll('.seo-path--02');
+
+		let path3 = document.querySelectorAll('.seo-path--03');
+		let path4 = document.querySelectorAll('.seo-path--04');
+
+		anime({
+			targets: [path1, path2],
+			translateY: -250,
+			translateX: 250,
+			direction: 'reverse',
+			easing: 'easeInOutSine'
+		  });
+
+		  anime({
+			targets: [path3, path4],
+			translateY: 250,
+			translateX: 250,
+			direction: 'reverse',
+			easing: 'easeInOutSine'
+		  });
+	}
 });

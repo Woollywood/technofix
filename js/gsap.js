@@ -34,37 +34,62 @@ window.addEventListener('load', (e) => {
 		});
 	});
 
+	let isAnimated = false;
 	if (document.querySelector('.approach')) {
 		let blocks = gsap.utils.toArray('.approach__block');
+
+		let circleStaticList = [];
+		let circleStaticList1 = document.querySelectorAll('.circle--static-1');
+		let circleStaticList2 = document.querySelectorAll('.circle--static-2');
+		let circleStaticList3 = document.querySelectorAll('.circle--static-3');
+		let circleStaticList4 = document.querySelectorAll('.circle--static-4');
+		circleStaticList.push(circleStaticList1);
+		circleStaticList.push(circleStaticList2);
+		circleStaticList.push(circleStaticList3);
+		circleStaticList.push(circleStaticList4);
+
+		let circleAnimatedList = [];
+		let circleAnimatedList1 = document.querySelectorAll('.circle--animated-1');
+		let circleAnimatedList2 = document.querySelectorAll('.circle--animated-2');
+		let circleAnimatedList3 = document.querySelectorAll('.circle--animated-3');
+		let circleAnimatedList4 = document.querySelectorAll('.circle--animated-4');
+		circleAnimatedList.push(circleAnimatedList1);
+		circleAnimatedList.push(circleAnimatedList2);
+		circleAnimatedList.push(circleAnimatedList3);
+		circleAnimatedList.push(circleAnimatedList4);
+
 		let t1 = gsap.timeline();
 		gsap.to('.approach', {
 			scrollTrigger: {
 				trigger: '.approach',
 				start: 'top, 50%',
-				markers: true,
 				onEnter: () => {
-					blocks.forEach((block) => {
+					const durationArray = [3.7, 1.7, 1.3, 1.1];
+
+					blocks.forEach((block, index) => {
 						t1.to(block, {
-							duration: 3,
+							duration: durationArray[index],
 							onComplete: () => {
 								block.classList.add('approach__block--active');
+								circleStaticList[index].forEach((circle) => (circle.style.display = 'none'));
+								circleAnimatedList[index].forEach((circle) => (circle.style.display = 'block'));
 							},
 						});
 					});
+
+					let path = document.querySelectorAll('.path--progress');
+					if (path && !isAnimated) {
+						anime({
+							targets: path,
+							strokeDashoffset: [anime.setDashoffset, 0],
+							easing: 'easeInOutSine',
+							duration: 12000,
+						});
+					}
+
+					isAnimated = true;
 				},
 			},
-		});
-	}
-
-	let path = document.querySelectorAll('.path--state');
-	if (path) {
-		anime({
-			targets: path,
-			strokeDashoffset: [anime.setDashoffset, 0],
-			easing: 'easeInOutSine',
-			duration: 15000,
-			direction: 'alternate',
-			loop: true,
 		});
 	}
 

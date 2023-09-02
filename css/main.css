@@ -7838,6 +7838,25 @@ html {
 	}
 }
 
+.path--state {
+	position: relative;
+	z-index: 1;
+}
+
+.path--progress {
+	position: relative;
+	z-index: 2;
+}
+
+.path--circle {
+	position: relative;
+	z-index: 3;
+}
+
+.circle--animated {
+	display: none;
+}
+
 @media (min-width: 421.98px) {
 	.stages {
 		display: none;
@@ -8561,9 +8580,27 @@ html {
 	left: 17.65%;
 }
 
+.approach__block-line {
+	position: absolute;
+	background: #462D6D;
+	width: 1px;
+}
+
+.approach__block--1 .approach__block-line {
+	top: 82.5%;
+	left: 2%;
+	height: 100px;
+}
+
 .approach__block--2 {
 	top: 21.8%;
 	left: 39.8%;
+}
+
+.approach__block--2 .approach__block-line {
+	top: 82.5%;
+	left: 2%;
+	height: 200px;
 }
 
 .approach__block--3 {
@@ -8571,13 +8608,29 @@ html {
 	left: 58.8%;
 }
 
+.approach__block--3 .approach__block-line {
+	top: -34%;
+	left: 2%;
+	height: 50px;
+}
+
 .approach__block--4 {
 	top: 3.6%;
 	left: 68.5%;
 }
 
+.approach__block--4 .approach__block-line {
+	top: 102%;
+	left: 2%;
+	height: 30px;
+}
+
 .approach__block--active .approach__block-title {
 	color: #e63114;
+}
+
+.approach__block--active .approach__block-line {
+	background: #e63114;
 }
 
 .approach__block--active .approach__block-step::before {

@@ -2591,15 +2591,15 @@
 							</div>
 							<div class="pr_cases_inner" data-watch>
 								<div class="pr_cases_inner_block">
-									<div class="pr_cases_inner_title" data-digits-counter>3.62</div>
+									<div class="pr_cases_inner_title" data-digits-counter data-digits-fraction="2">3.62</div>
 									<div class="pr_cases_inner_suptitle">средний CTR (%) с РСЯ</div>
 								</div>
 								<div class="pr_cases_inner_block">
-									<div class="pr_cases_inner_title" data-digits-counter>9.443</div>
+									<div class="pr_cases_inner_title" data-digits-counter data-digits-fraction="3">9.443</div>
 									<div class="pr_cases_inner_suptitle">итоговая стоимость целевой заявки</div>
 								</div>
 								<div class="pr_cases_inner_block">
-									<div class="pr_cases_inner_title"><span data-digits-counter>28.5</span>%</div>
+									<div class="pr_cases_inner_title"><span data-digits-counter data-digits-fraction="1">28.5</span>%</div>
 									<div class="pr_cases_inner_suptitle">конверсия из заявки в продажу</div>
 								</div>
 							</div>
@@ -2932,7 +2932,36 @@
 						<h2 class="title title_center2">Изменение доли поискового трафика</h2>
 						<div class="ripd_inner">
 							<div class="ripd_ellipse">
-								<img src="images/images/ripd_ellipse.svg" alt="" />
+								<svg width="327" height="327" viewBox="0 0 327 327" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path class="ellipse-path" d="M167.203 47.2509C137.399 46.3014 108.369 56.8357 86.1087 76.6776C63.8488 96.5195 50.0603 124.153 47.5913 153.87C45.1224 183.587 54.1617 213.118 72.842 236.361C91.5223 259.604 118.416 274.785 147.969 278.767L155.142 225.532C139.238 223.389 124.765 215.219 114.712 202.711C104.659 190.202 99.7943 174.31 101.123 158.318C102.452 142.325 109.872 127.454 121.851 116.776C133.831 106.098 149.454 100.429 165.493 100.94L167.203 47.2509Z" fill="url(#paint0_linear_22_19)"/>
+									<path class="ellipse-path" d="M276.706 136.816C270.757 111.579 256.546 89.0523 236.329 72.8161C216.112 56.5799 191.049 47.5649 165.123 47.2032L164.373 100.914C178.326 101.109 191.814 105.96 202.693 114.698C213.573 123.436 221.221 135.558 224.423 149.14L276.706 136.816Z" fill="url(#paint1_linear_22_19)"/>
+									<path class="ellipse-path" d="M274.591 197.944C281.451 175.82 281.548 152.151 274.871 129.972L223.435 145.456C227.029 157.393 226.976 170.13 223.285 182.036L274.591 197.944Z" fill="url(#paint2_linear_22_19)"/>
+									<path class="ellipse-path" d="M194.239 275.673C213.687 270.343 231.416 260.049 245.685 245.8C259.954 231.551 270.273 213.837 275.63 194.396L223.843 180.127C220.961 190.589 215.407 200.122 207.728 207.79C200.049 215.459 190.509 220.999 180.042 223.867L194.239 275.673Z" fill="url(#paint3_linear_22_19)"/>
+									<path class="ellipse-path" d="M137.442 276.852C158.4 281.67 180.284 280.583 200.662 273.712L183.499 222.811C172.533 226.509 160.756 227.094 149.477 224.501L137.442 276.852Z" fill="url(#paint4_linear_22_19)"/>
+									<defs>
+									<linearGradient id="paint0_linear_22_19" x1="66.5" y1="136.5" x2="260.5" y2="290" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#A9210C"/>
+									<stop offset="1" stop-color="#76180A"/>
+									</linearGradient>
+									<linearGradient id="paint1_linear_22_19" x1="272.5" y1="136.5" x2="151" y2="69" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#EC604A"/>
+									<stop offset="1" stop-color="#DE6652"/>
+									</linearGradient>
+									<linearGradient id="paint2_linear_22_19" x1="249" y1="190.5" x2="244.5" y2="139.5" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#E24E36"/>
+									<stop offset="1" stop-color="#C9442F"/>
+									</linearGradient>
+									<linearGradient id="paint3_linear_22_19" x1="204" y1="270.5" x2="249" y2="164" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#E63114"/>
+									<stop offset="1" stop-color="#BB2912"/>
+									</linearGradient>
+									<linearGradient id="paint4_linear_22_19" x1="148" y1="243.5" x2="228.5" y2="215" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#A9210C"/>
+									<stop offset="1" stop-color="#96210E"/>
+									</linearGradient>
+									</defs>
+									</svg>
+									
 							</div>
 							<div class="ripd_inner_info">
 								<div class="title_ripd title_ripd_wd">
@@ -3825,266 +3854,8 @@
 			});
 		</script>
 
-		<script>
-			function uniqArray(array) {
-				return array.filter(function (item, index, self) {
-					return self.indexOf(item) === index;
-				});
-			}
+		<script src="js/watcher.js"></script>
 
-			class ScrollWatcher {
-				constructor(props) {
-					let defaultConfig = {
-						logging: true,
-					};
-					this.config = Object.assign(defaultConfig, props);
-					this.observer;
-					!document.documentElement.classList.contains('watcher') ? this.scrollWatcherRun() : null;
-				}
-				// Обновляем конструктор
-				scrollWatcherUpdate() {
-					this.scrollWatcherRun();
-				}
-				// Запускаем конструктор
-				scrollWatcherRun() {
-					document.documentElement.classList.add('watcher');
-					this.scrollWatcherConstructor(document.querySelectorAll('[data-watch]'));
-				}
-				// Конструктор наблюдателей
-				scrollWatcherConstructor(items) {
-					if (items.length) {
-						this.scrollWatcherLogging(`Проснулся, слежу за объектами (${items.length})...`);
-						// Уникализируем параметры
-						let uniqParams = uniqArray(
-							Array.from(items).map(function (item) {
-								return `${
-									item.dataset.watchRoot ? item.dataset.watchRoot : null
-								}|${item.dataset.watchMargin ? item.dataset.watchMargin : '0px'}|${item.dataset.watchThreshold ? item.dataset.watchThreshold : 0}`;
-							})
-						);
-						// Получаем группы объектов с одинаковыми параметрами,
-						// создаем настройки, инициализируем наблюдатель
-						uniqParams.forEach((uniqParam) => {
-							let uniqParamArray = uniqParam.split('|');
-							let paramsWatch = {
-								root: uniqParamArray[0],
-								margin: uniqParamArray[1],
-								threshold: uniqParamArray[2],
-							};
-							let groupItems = Array.from(items).filter(function (item) {
-								let watchRoot = item.dataset.watchRoot ? item.dataset.watchRoot : null;
-								let watchMargin = item.dataset.watchMargin ? item.dataset.watchMargin : '0px';
-								let watchThreshold = item.dataset.watchThreshold ? item.dataset.watchThreshold : 0;
-								if (
-									String(watchRoot) === paramsWatch.root &&
-									String(watchMargin) === paramsWatch.margin &&
-									String(watchThreshold) === paramsWatch.threshold
-								) {
-									return item;
-								}
-							});
-
-							let configWatcher = this.getScrollWatcherConfig(paramsWatch);
-
-							// Инициализация наблюдателя со своими настройками
-							this.scrollWatcherInit(groupItems, configWatcher);
-						});
-					} else {
-						this.scrollWatcherLogging('Сплю, нет объектов для слежки. ZzzZZzz');
-					}
-				}
-				// Функция создания настроек
-				getScrollWatcherConfig(paramsWatch) {
-					//Создаем настройки
-					let configWatcher = {};
-					// Родитель, в котором ведется наблюдение
-					if (document.querySelector(paramsWatch.root)) {
-						configWatcher.root = document.querySelector(paramsWatch.root);
-					} else if (paramsWatch.root !== 'null') {
-						this.scrollWatcherLogging(`Эмм... родительского элемента ${paramsWatch.root} нет на странице`);
-					}
-					// Отступление срабатывания
-					configWatcher.rootMargin = paramsWatch.margin;
-					if (paramsWatch.margin.indexOf('px') < 0 && paramsWatch.margin.indexOf('%') < 0) {
-						this.scrollWatcherLogging(`Ой, настройку data-watch-margin нужно задавать в PX или %`);
-						return;
-					}
-					// Точки срабатывания
-					if (paramsWatch.threshold === 'prx') {
-						// Режим паралакса
-						paramsWatch.threshold = [];
-						for (let i = 0; i <= 1.0; i += 0.005) {
-							paramsWatch.threshold.push(i);
-						}
-					} else {
-						paramsWatch.threshold = paramsWatch.threshold.split(',');
-					}
-					configWatcher.threshold = paramsWatch.threshold;
-
-					return configWatcher;
-				}
-				// Функция создания нового наблюдателя со своими настройками
-				scrollWatcherCreate(configWatcher) {
-					this.observer = new IntersectionObserver((entries, observer) => {
-						entries.forEach((entry) => {
-							this.scrollWatcherCallback(entry, observer);
-						});
-					}, configWatcher);
-				}
-				// Функция инициализации наблюдателя со своими настройками
-				scrollWatcherInit(items, configWatcher) {
-					// Создание нового наблюдателя со своими настройками
-					this.scrollWatcherCreate(configWatcher);
-					// Передача наблюдателю элементов
-					items.forEach((item) => this.observer.observe(item));
-				}
-				// Функция обработки базовых действий точек срабатывания
-				scrollWatcherIntersecting(entry, targetElement) {
-					if (entry.isIntersecting) {
-						// Видим объект
-						// Добавляем класс
-						!targetElement.classList.contains('_watcher-view')
-							? targetElement.classList.add('_watcher-view')
-							: null;
-						this.scrollWatcherLogging(`Я вижу ${targetElement.classList}, добавил класс _watcher-view`);
-					} else {
-						// Не видим объект
-						// Забираем класс
-						targetElement.classList.contains('_watcher-view')
-							? targetElement.classList.remove('_watcher-view')
-							: null;
-						this.scrollWatcherLogging(`Я не вижу ${targetElement.classList}, убрал класс _watcher-view`);
-					}
-				}
-				// Функция отключения слежения за объектом
-				scrollWatcherOff(targetElement, observer) {
-					observer.unobserve(targetElement);
-					this.scrollWatcherLogging(`Я перестал следить за ${targetElement.classList}`);
-				}
-				// Функция вывода в консоль
-				scrollWatcherLogging(message) {
-					console.log(`[Наблюдатель]: ${message}`);
-				}
-				// Функция обработки наблюдения
-				scrollWatcherCallback(entry, observer) {
-					const targetElement = entry.target;
-					// Обработка базовых действий точек срабатывания
-					this.scrollWatcherIntersecting(entry, targetElement);
-					// Если есть атрибут data-watch-once убираем слежку
-					targetElement.hasAttribute('data-watch-once') && entry.isIntersecting
-						? this.scrollWatcherOff(targetElement, observer)
-						: null;
-					// Создаем свое событие обратной связи
-					document.dispatchEvent(
-						new CustomEvent('watcherCallback', {
-							detail: {
-								entry: entry,
-							},
-						})
-					);
-
-					/*
-		//Выбираем нужные объекты
-		if (targetElement.dataset.watch === 'some value') {
-			//пишем уникальную специфику
-		}
-		if (entry.isIntersecting) {
-			//Видим объект
-		} else {
-			//Не видим объект
-		}
-		*/
-				}
-			}
-
-			let watcher = new ScrollWatcher({});
-
-			function digitsCounter() {
-				// Обнуление
-				if (document.querySelectorAll('[data-digits-counter]').length) {
-					document.querySelectorAll('[data-digits-counter]').forEach((element) => {
-						element.dataset.digitsCounter = element.innerHTML;
-						element.innerHTML = `0`;
-					});
-				}
-
-				// Функция инициализации
-				function digitsCountersInit(digitsCountersItems) {
-					console.log('digitsCountersInit');
-
-					let digitsCounters = digitsCountersItems
-						? digitsCountersItems
-						: document.querySelectorAll('[data-digits-counter]');
-					if (digitsCounters.length) {
-						digitsCounters.forEach((digitsCounter) => {
-							digitsCountersAnimate(digitsCounter);
-						});
-					}
-				}
-				// Функция анимации
-				function digitsCountersAnimate(digitsCounter) {
-					console.log('digitsCountersAnimate');
-
-					let startTimestamp = null;
-					const duration = parseInt(digitsCounter.dataset.digitsCounterSpeed)
-						? parseInt(digitsCounter.dataset.digitsCounterSpeed)
-						: 1000;
-					const startValue = parseFloat(digitsCounter.dataset.digitsCounter);
-					const startPosition = 0;
-					const step = (timestamp) => {
-						if (!startTimestamp) startTimestamp = timestamp;
-						const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-						digitsCounter.innerHTML = (progress * (startPosition + startValue)).toFixed(2);
-						if (progress < 1) {
-							window.requestAnimationFrame(step);
-						}
-					};
-					window.requestAnimationFrame(step);
-				}
-				function digitsCounterAction(e) {
-					console.log('digitsCounterAction');
-
-					const entry = e.detail.entry;
-					const targetElement = entry.target;
-					if (targetElement.querySelectorAll('[data-digits-counter]').length) {
-						digitsCountersInit(targetElement.querySelectorAll('[data-digits-counter]'));
-					}
-				}
-
-				document.addEventListener('watcherCallback', digitsCounterAction);
-			}
-			digitsCounter();
-		</script>
-
-		<script>
-			document.addEventListener('DOMContentLoaded', function () {
-				var eventCalllback = function (e) {
-					var el = e.target,
-						clearVal = el.dataset.phoneClear,
-						pattern = el.dataset.phonePattern,
-						matrix_def = '+7(___) ___-__-__',
-						matrix = pattern ? pattern : matrix_def,
-						i = 0,
-						def = matrix.replace(/\D/g, ''),
-						val = e.target.value.replace(/\D/g, '');
-					if (clearVal !== 'false' && e.type === 'blur') {
-						if (val.length < matrix.match(/([\_\d])/g).length) {
-							e.target.value = '';
-							return;
-						}
-					}
-					if (def.length >= val.length) val = def;
-					e.target.value = matrix.replace(/./g, function (a) {
-						return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? '' : a;
-					});
-				};
-				var phone_inputs = document.querySelectorAll('[data-phone-pattern]');
-				for (let elem of phone_inputs) {
-					for (let ev of ['input', 'blur', 'focus']) {
-						elem.addEventListener(ev, eventCalllback);
-					}
-				}
-			});
-		</script>
+		<script src="js/phone-validate.js"></script>
 	</body>
 </html>

@@ -958,6 +958,12 @@ p {
 	background: #301d4e;
 }
 
+.ellipse-path:hover {
+	fill: linear-gradient(338deg, #EC604A 22.91%, #DE6652 68.73%);
+	stroke-width: 1px;
+	stroke: #FFF;
+}
+
 .article__wrap {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -968,6 +974,11 @@ p {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
+	transition: all 0.3s ease;
+}
+
+.article__wrap:hover {
+	border: 1px solid #E63114;
 }
 
 .article__title {
@@ -1004,6 +1015,15 @@ p {
 	display: -ms-flexbox;
 	display: flex;
 	margin: 22px 0 0 0;
+}
+
+.form__search input:hover {
+	border: 1px solid #E63114;
+}
+
+.form__search button:hover {
+	background: #fff !important;
+	color: #e63114;
 }
 
 .article__img img + img {
@@ -7575,18 +7595,31 @@ html {
 .profit__item-big {
 	height: 100%;
 	border-radius: 21.105px;
-	background: -o-linear-gradient(113deg, rgba(112, 20, 230, 0.4) 0%, rgba(230, 49, 20, 0.4) 100%);
-	background: linear-gradient(337deg, rgba(112, 20, 230, 0.4) 0%, rgba(230, 49, 20, 0.4) 100%);
-	-webkit-backdrop-filter: blur(3.8372461795806885px);
-	        backdrop-filter: blur(3.8372461795806885px);
 	padding: 26px 80px 37px;
 
-	display: -ms-grid;
+	background: -o-linear-gradient(83deg, rgba(112, 20, 230, 0.4) 0%, rgba(98, 37, 200, 0.4) 100%);
+	background: linear-gradient(7deg, rgba(112, 20, 230, 0.4) 0%, rgba(98, 37, 200, 0.4) 100%);
+	-webkit-backdrop-filter: blur(3.8372461795806885px);
+	        backdrop-filter: blur(3.8372461795806885px);
 
+	transition: all 0.3s ease;
+	display: -ms-grid;
 	display: grid;
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
+}
+
+.profit__item-big:hover {
+	background: -o-linear-gradient(113deg, rgba(112, 20, 230, 0.4) 0%, rgba(230, 49, 20, 0.4) 100%);
+	background: linear-gradient(337deg, rgba(112, 20, 230, 0.4) 0%, rgba(230, 49, 20, 0.4) 100%);
+	-webkit-backdrop-filter: blur(3.8372461795806885px);
+	        backdrop-filter: blur(3.8372461795806885px);
+}
+
+.profit__item-big:hover .profit__item-big-img {
+	-webkit-animation: float 4s ease-in-out infinite;
+	        animation: float 4s ease-in-out infinite;
 }
 
 @media (max-width: 860px) {
@@ -9473,6 +9506,15 @@ html {
 	position: relative;
 }
 
+.theory__button {
+	transition: all 0.3s ease;
+}
+
+.theory__button:hover {
+	color: #E63114;
+	background-color: #fff;
+}
+
 .theory__top {
 	position: relative;
 	height: 100%;
@@ -9616,6 +9658,24 @@ html {
 	   object-fit: cover;
 }
 
+.theory__background svg,
+.theory__body-background svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 400px;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+
+.theory__background-img--desktop-hover,
+.theory__background-img--tablet-hover,
+.theory__background-img--mobile-hover {
+	display: none;
+}
+
+
 @media (max-width: 1112px) {
 	.theory__background-img--desktop {
 		display: none;
@@ -9626,11 +9686,29 @@ html {
 	.theory__background-img--tablet {
 		display: none;
 	}
+
+	.theory__background:hover .theory__background-img--desktop {
+		display: none;
+	}
+
+	.theory__background:hover .theory__background-img--desktop-hover {
+		display: block;
+	}
 }
 
 @media (max-width: 784px) {
 	.theory__background-img--tablet {
 		display: none;
+	}
+}
+
+@media (min-width: 784px) and (max-width: 1112px) {
+	.theory__background:hover .theory__background-img--tablet {
+		display: none;
+	}
+
+	.theory__background:hover .theory__background-img--tablet-hover {
+		display: block;
 	}
 }
 

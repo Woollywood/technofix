@@ -3002,8 +3002,11 @@
 			</div>
 			<div class="theory__background">
 				<img class="theory__background-img--desktop" src="/images/theory/background.svg" alt="" />
+				<img class="theory__background-img--desktop-hover" src="/images/theory/background--hover.svg" alt="" />
 				<img class="theory__background-img--tablet" src="/images/theory/background--tablet.svg" alt="" />
+				<img class="theory__background-img--tablet-hover" src="/images/theory/background--tablet--hover.svg" alt="" />
 				<img class="theory__background-img--mobile" src="/images/theory/background--mobile.svg" alt="" />
+				<img class="theory__background-img--mobile-hover" src="/images/theory/background--mobile--hover.svg" alt="" />
 			</div>
 		</section>
 
@@ -3268,6 +3271,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/ScrollTrigger.min.js"></script>
 		<script src="js/gsap.js"></script>
+		<script src="js/phone-validate.js"></script>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="js/swiper-bondel.min.js"></script>
@@ -3293,37 +3297,6 @@
 				document.querySelector('.header__points-redline').classList.remove('active3');
 				document.querySelector('.header__points-redline').classList.remove('active2');
 				document.querySelector('.header__points-redline').classList.remove('active4');
-			});
-		</script>
-
-		<script>
-			document.addEventListener('DOMContentLoaded', function () {
-				var eventCalllback = function (e) {
-					var el = e.target,
-						clearVal = el.dataset.phoneClear,
-						pattern = el.dataset.phonePattern,
-						matrix_def = '+7(___) ___-__-__',
-						matrix = pattern ? pattern : matrix_def,
-						i = 0,
-						def = matrix.replace(/\D/g, ''),
-						val = e.target.value.replace(/\D/g, '');
-					if (clearVal !== 'false' && e.type === 'blur') {
-						if (val.length < matrix.match(/([\_\d])/g).length) {
-							e.target.value = '';
-							return;
-						}
-					}
-					if (def.length >= val.length) val = def;
-					e.target.value = matrix.replace(/./g, function (a) {
-						return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? '' : a;
-					});
-				};
-				var phone_inputs = document.querySelectorAll('[data-phone-pattern]');
-				for (let elem of phone_inputs) {
-					for (let ev of ['input', 'blur', 'focus']) {
-						elem.addEventListener(ev, eventCalllback);
-					}
-				}
 			});
 		</script>
 	</body>

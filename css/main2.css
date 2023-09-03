@@ -180,8 +180,10 @@
 
 .order {
 	position: relative;
+	z-index: 0;
 	padding: 67px 0 70px 0;
-	background: #20113a url(../images/images/order.svg) center 100% no-repeat;
+	background: #20113a url(../images/images/order.svg) center no-repeat;
+	background-size: cover;
 }
 
 .order--fix .order_input {
@@ -225,7 +227,7 @@
 
 .order_img11 {
 	position: absolute;
-	z-index: 0;
+	z-index: -1;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -995,7 +997,45 @@ ul.tabs li.active:before {
 }
 
 .our_clients_button {
+	position: relative;
 	text-align: center;
+}
+
+.our_clients_button:hover svg {
+	opacity: 1;
+	visibility: visible;
+}
+
+.our_clients_button:hover::before {
+	opacity: 1;
+	visibility: visible;
+}
+
+.our_clients_button svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	transition: all 0.3s ease;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.our_clients_button::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 15px;
+	border: 1px solid #E63114;
+	background: rgba(36, 17, 67, 0.80);
+
+	transition: all 0.3s ease;
+	opacity: 0;
+	visibility: hidden;
 }
 
 .our_clients_button button img {
@@ -1437,6 +1477,10 @@ ul.tabs li.active:before {
 	font-style: normal;
 	font-weight: 700;
 	line-height: 130.023%; /* 23.404px */
+
+	background-color: transparent;
+	max-width: 100%;
+	text-align: center;
 }
 
 .seo-increase__row-button {
@@ -1445,6 +1489,12 @@ ul.tabs li.active:before {
 	padding: 16px 12px;
 	border-radius: 15px;
 	background: #301d4e;
+	border: 1px solid transparent;
+	transition: all 0.3s ease;
+}
+
+.seo-increase__row-button:hover {
+	border: 1px solid #E63114;
 }
 
 .seo-increase__left-sub-text {
@@ -1467,7 +1517,12 @@ ul.tabs li.active:before {
 	        align-items: center;
 }
 
-.order_input {
+.order_input input:hover {
+	border: 1px solid #E63114;
+}
+
+.order_input input {
+	transition: all 0.3s ease;
 }
 
 .order_input_bg {
@@ -2010,6 +2065,12 @@ ul.tabs2 li.active:before {
 .di_block {
 	width: 26%;
 	padding: 30px 0 30px 40px;
+	border: 1px solid transparent;
+}
+
+.di_block:hover {
+	border: 1px solid #E63114;
+	background: rgba(36, 17, 67, 0.50);
 }
 
 .di_title {
@@ -2023,7 +2084,13 @@ ul.tabs2 li.active:before {
 	padding: 30px 0;
 	width: 18.5%;
 	text-align: center;
+	border: 1px solid transparent;
 	border-left: 1px solid #432c69;
+}
+
+.di_block2:hover {
+	border: 1px solid #E63114;
+	background: rgba(36, 17, 67, 0.50);
 }
 
 .di_wrap2 {
@@ -2390,6 +2457,11 @@ ul.tabs2 li.active:before {
 	border-radius: 22px;
 	background: -o-linear-gradient(113.09deg, rgba(12, 6, 29, 0.3) -74.44%, rgba(12, 6, 29, 0.099) 88.43%);
 	background: linear-gradient(336.91deg, rgba(12, 6, 29, 0.3) -74.44%, rgba(12, 6, 29, 0.099) 88.43%);
+	transition: all 0.3s ease;
+}
+
+.sf_border:hover {
+	border: 1px solid #E63114;
 }
 
 .sf_br_bottom {
@@ -2806,9 +2878,14 @@ ul.tabs2 li.active:before {
 
 .chat_reklama_border {
 	width: 432px;
-	background: url(../images/vi_reklama/background-left.svg) center center;
-	background-size: cover;
+	background: url(../images/vi_reklama/background-left.svg) center center no-repeat;
+	background-size: contain;
 	padding: 19px 32px 18px 64px;
+}
+
+.chat_reklama_border:hover {
+	background: url(../images/vi_reklama/background-left--hover.svg) center center no-repeat;
+	background-size: contain;
 }
 
 .chat_reklama_title {
@@ -3162,6 +3239,11 @@ ul.tabs2 li.active:before {
 	padding: 35px 53px 47px 53px;
 	border-radius: 22px;
 	border: 1px solid #5418a3;
+	transition: all 0.3s ease;
+}
+
+.raz_reklama_border:hover {
+	border: 1px solid #E63114;
 }
 
 .title_raz_reklama {
@@ -3202,6 +3284,8 @@ ul.tabs2 li.active:before {
 }
 
 .raz_reklama_wrap_block {
+	position: relative;
+	z-index: 5;;
 	margin: 0 70px 0 0;
 }
 
@@ -3233,6 +3317,12 @@ ul.tabs2 li.active:before {
 	color: #d0c1e8;
 	padding: 0 0 0 8px;
 	width: 95%;
+	transition: all 0.3s ease;
+}
+
+.raz_reklama_li p:hover {
+	color: #E63114;
+	text-decoration: underline;
 }
 
 .kak_reklama {
@@ -3311,12 +3401,19 @@ ul.tabs2 li.active:before {
 	padding: 0 7px;
 }
 
+.kak_reklama_inner_block:hover .kak_reklama_inner_border {
+	border: 1px solid #E63114;
+	background: linear-gradient(337deg, rgba(129, 38, 200, 0.00) -74.44%, rgba(138, 20, 230, 0.06) 88.43%);
+}
+
 .kak_reklama_inner_border {
 	background: #301d4e;
+	border: 1px solid transparent;
 	padding: 42px 0 27px 0;
 	height: 100%;
 	border-radius: 15px;
 	position: relative;
+	transition: all 0.3s ease;
 }
 
 .kak_reklama_inner_title {
@@ -3584,6 +3681,14 @@ ul.tabs2 li.active:before {
 	border-radius: 15px;
 	padding: 40px 0 30px 0;
 	height: 100%;
+	border: 2px solid transparent;
+	transition: all 0.3s ease;
+}
+
+.tss_reklama_inner_border:hover {
+	border-radius: 22px;
+	transform: scale(1.1);
+	border: 2px solid #E63114;
 }
 
 .tss_reklama_inner_icon {

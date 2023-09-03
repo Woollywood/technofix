@@ -6353,18 +6353,19 @@ html {
 
 	display: -ms-grid;
 
+	transition: all 0.3s ease;
 	display: grid;
 }
 
 .for-whome__button {
-	-webkit-transition: all 0.3s ease;
-	-o-transition: all 0.3s ease;
-	transition: all 0.3s ease;
+	position: relative;
 }
 
-.for-whome__button:hover {
-	background: #fff;
-	color: #e63114;
+.for-whome__button img {
+	position: absolute;
+	top: calc(100% - 40px);
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 @media (max-width: 991px) {
@@ -6569,11 +6570,16 @@ html {
 	}
 }
 
-.for-whome__item-top--active {
+.for-whome__item-top:hover {
 	background: -o-linear-gradient(83deg, rgba(230, 49, 20, 0.7) 0%, rgba(98, 37, 200, 0.7) 100%);
 	background: linear-gradient(7deg, rgba(230, 49, 20, 0.7) 0%, rgba(98, 37, 200, 0.7) 100%);
 	-webkit-backdrop-filter: blur(3.8372461795806885px);
 	        backdrop-filter: blur(3.8372461795806885px);
+}
+
+.for-whome__item-top:hover .for-whome__item-top-image {
+	-webkit-animation: float 4s ease-in-out infinite;
+	animation: float 4s ease-in-out infinite;
 }
 
 .for-whome__item-top-inner {
@@ -6608,11 +6614,6 @@ html {
 	        justify-content: center;
 
 	margin-bottom: 37px;
-}
-
-.for-whome__item-top-image:hover {
-	-webkit-animation: float 4s ease-in-out infinite;
-	        animation: float 4s ease-in-out infinite;
 }
 
 @-webkit-keyframes float {
@@ -6739,9 +6740,10 @@ html {
 	background: linear-gradient(24deg, rgba(112, 20, 230, 0.4) 0%, rgba(98, 37, 200, 0.03) 100%);
 	-webkit-backdrop-filter: blur(3.8372461795806885px);
 	        backdrop-filter: blur(3.8372461795806885px);
+	transition: all 0.3s ease;
 }
 
-.for-whome__item-bottom--active {
+.for-whome__item-bottom:hover {
 	background: -o-linear-gradient(83deg, rgba(230, 49, 20, 0.7) 0%, rgba(98, 37, 200, 0.7) 100%);
 	background: linear-gradient(7deg, rgba(230, 49, 20, 0.7) 0%, rgba(98, 37, 200, 0.7) 100%);
 	-webkit-backdrop-filter: blur(3.8372461795806885px);
@@ -6810,9 +6812,7 @@ html {
 	background: linear-gradient(319deg, rgba(12, 6, 29, 0.35) 0%, rgba(12, 6, 29, 0) 100%);
 
 	display: -webkit-box;
-
 	display: -ms-flexbox;
-
 	display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
@@ -6825,6 +6825,18 @@ html {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
+}
+
+.our-services__item::before {
+	content: '';
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../images/seocards__fone-svg.svg) no-repeat;
+	border-radius: 22px;
 }
 
 @media (max-width: 768px) {
@@ -6884,11 +6896,27 @@ html {
 .our-services__item-bottom {
 	padding: 50px 12px;
 	border-radius: 21.105px;
-
 	display: -ms-grid;
-
 	display: grid;
 	gap: 26px;
+	transition: all 0.3s ease;
+
+	background: -o-linear-gradient(83deg, rgba(112, 20, 230, 0.4) 0%, rgba(98, 37, 200, 0.4) 100%);
+	background: linear-gradient(7deg, rgba(112, 20, 230, 0.4) 0%, rgba(98, 37, 200, 0.4) 100%);
+	-webkit-backdrop-filter: blur(3.8372461795806885px);
+	        backdrop-filter: blur(3.8372461795806885px);
+}
+
+.our-services__item-bottom:hover {
+	background: -o-linear-gradient(83deg, rgba(230, 49, 20, 0.7) 0%, rgba(98, 37, 200, 0.7) 100%);
+	background: linear-gradient(7deg, rgba(230, 49, 20, 0.7) 0%, rgba(98, 37, 200, 0.7) 100%);
+	-webkit-backdrop-filter: blur(3.8372461795806885px);
+	        backdrop-filter: blur(3.8372461795806885px);
+}
+
+.our-services__item-bottom:hover .our-services__item-bottom-img {
+	-webkit-animation: float 4s ease-in-out infinite;
+	        animation: float 4s ease-in-out infinite;
 }
 
 @media (min-width: 991px) {
@@ -6931,13 +6959,6 @@ html {
 .our-services__item-bottom-button:hover {
 	background: #fff;
 	color: #e63114;
-}
-
-.our-services__item-bottom--left {
-	background: -o-linear-gradient(83deg, rgba(112, 20, 230, 0.4) 0%, rgba(98, 37, 200, 0.4) 100%);
-	background: linear-gradient(7deg, rgba(112, 20, 230, 0.4) 0%, rgba(98, 37, 200, 0.4) 100%);
-	-webkit-backdrop-filter: blur(3.8372461795806885px);
-	        backdrop-filter: blur(3.8372461795806885px);
 }
 
 @media (max-width: 991px) {
@@ -7020,13 +7041,6 @@ html {
 	}
 }
 
-.our-services__item-bottom--right {
-	background: -o-linear-gradient(83deg, rgba(230, 49, 20, 0.7) 0%, rgba(98, 37, 200, 0.7) 100%);
-	background: linear-gradient(7deg, rgba(230, 49, 20, 0.7) 0%, rgba(98, 37, 200, 0.7) 100%);
-	-webkit-backdrop-filter: blur(3.8372461795806885px);
-	        backdrop-filter: blur(3.8372461795806885px);
-}
-
 .our-services__item-bottom-img {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -7037,11 +7051,6 @@ html {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-}
-
-.our-services__item-bottom-img:hover {
-	-webkit-animation: float 4s ease-in-out infinite;
-	        animation: float 4s ease-in-out infinite;
 }
 
 .our-services__item-bottom-img img {
@@ -7301,6 +7310,7 @@ html {
 }
 
 .our-cases__card-title {
+	transition: all 0.3s ease;
 }
 
 .our-cases__link {
@@ -7400,13 +7410,22 @@ html {
 	border-top: 1px solid rgba(255, 255, 255, 0.09);
 }
 
-.our-cases__item {
+.our-cases__item:hover .our-cases__image {
+	border: 1px solid #E63114;
+	box-shadow: 0px 4px 33px 0px rgba(255, 255, 255, 0.09) inset;
+	filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.08));
+	backdrop-filter: blur(2px);
+}
+
+.our-cases__item:hover .our-cases__card-title {
+	color: #E63114;
 }
 
 .our-cases__image {
 	position: relative;
 	width: 100%;
 	padding-bottom: 70%;
+	border: 1px solid transparent;
 
 	border-radius: 12px;
 	overflow: hidden;
@@ -7507,6 +7526,7 @@ html {
 }
 
 .profit__item-small {
+	position: relative;
 	border-radius: 22px;
 	background: -o-linear-gradient(131deg, rgba(12, 6, 29, 0.35) 0%, rgba(12, 6, 29, 0) 100%);
 	background: linear-gradient(319deg, rgba(12, 6, 29, 0.35) 0%, rgba(12, 6, 29, 0) 100%);
@@ -7521,6 +7541,47 @@ html {
 	        justify-content: center;
 	-ms-grid-rows: auto 14px 1fr;
 	grid-template-rows: auto 1fr;
+}
+
+.profit__item-small::before {
+	content: '';
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../images/seocards__fone-svg.svg) no-repeat;
+	background-size: cover;
+	border-radius: 22px;
+}
+
+.profit__item-small::after {
+	-webkit-transition: 1s;
+	-o-transition: 1s;
+	transition: 1s;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	content: '';
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../images/background--active.svg) no-repeat;
+	background-size: cover;
+	border-radius: 22px;
+}
+
+.profit__item-small:hover::after {
+	opacity: 1;
+	visibility: visible;
+}
+
+.profit__item-small:hover::before {
+	opacity: 0;
+	visibility: hidden;
 }
 
 .profit__item-small-img {
@@ -7576,16 +7637,31 @@ html {
 .profit__item-big {
 	height: 100%;
 	border-radius: 21.105px;
-	background: -o-linear-gradient(113deg, rgba(112, 20, 230, 0.4) 0%, rgba(230, 49, 20, 0.4) 100%);
-	background: linear-gradient(337deg, rgba(112, 20, 230, 0.4) 0%, rgba(230, 49, 20, 0.4) 100%);
+	padding: 26px 80px 37px;
+
+	background: -o-linear-gradient(83deg, rgba(112, 20, 230, 0.4) 0%, rgba(98, 37, 200, 0.4) 100%);
+	background: linear-gradient(7deg, rgba(112, 20, 230, 0.4) 0%, rgba(98, 37, 200, 0.4) 100%);
 	-webkit-backdrop-filter: blur(3.8372461795806885px);
 	        backdrop-filter: blur(3.8372461795806885px);
-	padding: 26px 80px 37px;
+
+	transition: all 0.3s ease;
 	display: -ms-grid;
 	display: grid;
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
+}
+
+.profit__item-big:hover {
+	background: -o-linear-gradient(113deg, rgba(112, 20, 230, 0.4) 0%, rgba(230, 49, 20, 0.4) 100%);
+	background: linear-gradient(337deg, rgba(112, 20, 230, 0.4) 0%, rgba(230, 49, 20, 0.4) 100%);
+	-webkit-backdrop-filter: blur(3.8372461795806885px);
+	        backdrop-filter: blur(3.8372461795806885px);
+}
+
+.profit__item-big:hover .profit__item-big-img {
+	-webkit-animation: float 4s ease-in-out infinite;
+	        animation: float 4s ease-in-out infinite;
 }
 
 @media (max-width: 860px) {
@@ -7670,11 +7746,6 @@ html {
 	.profit__item-big-img {
 		margin-bottom: 30px;
 	}
-}
-
-.profit__item-big-img:hover {
-	-webkit-animation: float 4s ease-in-out infinite;
-	        animation: float 4s ease-in-out infinite;
 }
 
 .profit__item-big-img img {
@@ -7799,6 +7870,12 @@ html {
 	    -ms-flex-align: center;
 	        align-items: center;
 	min-height: 143px;
+	transition: all 0.3s ease;
+	border: 1px solid transparent;
+}
+
+.our-clients__slide:hover {
+	border: 1px solid #E63114;
 }
 
 .our-clients__img {

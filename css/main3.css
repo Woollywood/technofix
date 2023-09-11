@@ -6872,43 +6872,23 @@ html {
 }
 
 .our-services__item::before {
-	content: '';
-	position: absolute;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: url(../images/seocards__fone-svg.svg) no-repeat;
-	border-radius: 22px;
-}
-
-.our-services__item::after {
-	-webkit-transition: 1s;
-	-o-transition: 1s;
-	transition: 1s;
-	opacity: 0;
-	visibility: hidden;
-	position: absolute;
-	content: '';
-	z-index: 2;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: url(../images/our-services/border--hover.svg) no-repeat;
-	background-size: cover;
-	border-radius: 22px;
-}
-
-.our-services__item:hover::after {
-	opacity: 1;
-	visibility: visible;
+	content: "";
+  position: absolute;
+  inset: calc(0px - 2px);
+  border-radius: 22px;
+  padding: 1px;
+  background: linear-gradient(180deg, #5418A3 60%, rgba(55, 11, 33, 0) 80%, rgba(55, 11, 33, 0));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+	transition: all 0.3s ease;
 }
 
 .our-services__item:hover::before {
-	opacity: 0;
-	visibility: hidden;
+	opacity: 1;
+	visibility: visible;
+	background: linear-gradient(225deg, #E63114 60%, rgba(15, 08, 58, 0.7) 80%, rgba(15, 08, 58, 0.7));
 }
 
 @media (max-width: 768px) {
@@ -7618,44 +7598,23 @@ html {
 }
 
 .profit__item-small::before {
-	content: '';
-	position: absolute;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: url(../images/seocards__fone-svg.svg) no-repeat;
-	background-size: cover;
-	border-radius: 22px;
-}
-
-.profit__item-small::after {
-	-webkit-transition: 1s;
-	-o-transition: 1s;
-	transition: 1s;
-	opacity: 0;
-	visibility: hidden;
-	position: absolute;
-	content: '';
-	z-index: 2;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: url(../images/background--active.svg) no-repeat;
-	background-size: cover;
-	border-radius: 22px;
-}
-
-.profit__item-small:hover::after {
-	opacity: 1;
-	visibility: visible;
+	content: "";
+  position: absolute;
+  inset: calc(0px - 2px);
+  border-radius: 22px;
+  padding: 1px;
+  background: linear-gradient(180deg, #5418A3 60%, rgba(55, 11, 33, 0) 80%, rgba(55, 11, 33, 0));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+	transition: all 0.3s ease;
 }
 
 .profit__item-small:hover::before {
-	opacity: 0;
-	visibility: hidden;
+	opacity: 1;
+	visibility: visible;
+	background: linear-gradient(225deg, #E63114 60%, rgba(15, 08, 58, 0.7) 80%, rgba(15, 08, 58, 0.7));
 }
 
 .profit__item-small-img {

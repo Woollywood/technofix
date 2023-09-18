@@ -4801,8 +4801,6 @@ html {
 	-webkit-transition: 0.5s;
 	-o-transition: 0.5s;
 	transition: 0.5s;
-	opacity: 0;
-	visibility: hidden;
 }
 .header__servicosi {
 	-webkit-transition: 0.5s;

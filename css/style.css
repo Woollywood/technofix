@@ -2675,9 +2675,13 @@ html {
 	-webkit-transition: 0.5s;
 	-o-transition: 0.5s;
 	transition: 0.5s;
-	opacity: 0;
-	visibility: hidden;
 }
+
+.header__servicosi svg path {
+	transition: all 0.3s ease;
+	fill: #fff;
+}
+
 .header__servicosi {
 	-webkit-transition: 0.5s;
 	-o-transition: 0.5s;
@@ -2704,6 +2708,10 @@ html {
 .header__servicosi.active svg {
 	opacity: 1;
 	visibility: visible;
+}
+
+.header__servicosi.active svg path {
+	fill: #e63114;
 }
 
 .header__servicosi {

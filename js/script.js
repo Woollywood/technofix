@@ -137,7 +137,6 @@ setTimeout(() => {
 	}
 }, 2000);
 
-
 setTimeout(() => {
 	let cardLinegrafik = document.querySelector('.digital__card-line100');
 	cardLinegrafik.classList.add('active');
@@ -583,28 +582,28 @@ swiper.on('slideChange', function (e) {
 	}
 });
 
-var swiper1 = new Swiper(".swiper2", {
-  spaceBetween: 20,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    },
-    834: {
-      slidesPerView: 1.5,
-      spaceBetween: 80,
-    },
-    425: {
-      slidesPerView: 1,
-      spaceBetween: 40,
-    },
-  },
+var swiper1 = new Swiper('.swiper2', {
+	spaceBetween: 20,
+	centeredSlides: true,
+	slidesPerView: 'auto',
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	breakpoints: {
+		1024: {
+			slidesPerView: 3,
+			spaceBetween: 20,
+		},
+		834: {
+			slidesPerView: 1.5,
+			spaceBetween: 80,
+		},
+		425: {
+			slidesPerView: 1,
+			spaceBetween: 40,
+		},
+	},
 });
 if (window.innerWidth < 768) {
 	document.querySelector('.ripple__bundle22').classList.add('active');

@@ -2252,14 +2252,6 @@ p {
 html {
 	scroll-behavior: smooth;
 }
-.wrapper {
-	background: url(../images/fone2000.png) no-repeat;
-}
-@media (max-width: 1920px) {
-	.wrapper {
-		background: url(../images/fone.png) no-repeat;
-	}
-}
 
 /*------------------ПОДКЛЮЧЕНИЕ ШРИФТОВ---------------------------------------------*/
 
@@ -4536,9 +4528,7 @@ html {
 		bottom: -140px;
 		left: 16.65%;
 	}
-	.first__block {
-		background: url(../images/fone1440.png);
-	}
+	
 	.seocards__block {
 		position: absolute;
 
@@ -5240,9 +5230,7 @@ html {
 	.digital__cards {
 		top: 60px;
 	}
-	.first__block {
-		background: url(../images/fone834.png);
-	}
+	
 	.digital__card3 {
 		padding: 10px 15px 22px 20px;
 	}
@@ -6822,6 +6810,8 @@ html {
 }
 
 .our-services {
+	position: relative;
+	z-index: 5;
 	padding-top: 42px;
 	border-top: 1px solid rgba(255, 255, 255, 0.09);
 	margin-bottom: 40px;

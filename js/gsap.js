@@ -148,4 +148,28 @@ window.addEventListener('load', (e) => {
 			easing: 'easeInOutSine',
 		});
 	}
+
+	if (document.querySelector('.gsap-row')) {
+		gsap.from('.gsap--from-right', {
+			xPercent: 100,
+			opacity: 0,
+			duration: 3,
+			ease: 'sine',
+			scrollTrigger: {
+				trigger: 'gsap-row',
+				start: 'center center',
+			},
+		});
+
+		gsap.from('.gsap--from-left', {
+			xPercent: -100,
+			opacity: 0,
+			duration: 3,
+			ease: 'sine',
+			scrollTrigger: {
+				trigger: 'gsap-row',
+				start: 'center center',
+			},
+		});
+	}
 });

@@ -1089,6 +1089,15 @@ p {
 	left: 35px;
 }
 
+.social__fixed a {
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.social__fixed a:hover {
+  transform: translateX(80%);
+}
+
 .social__fixed ul li {
 	margin: 40px 0;
 }

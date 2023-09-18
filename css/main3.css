@@ -1058,6 +1058,15 @@ p {
 	left: 35px;
 }
 
+.social__fixed a {
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.social__fixed a:hover {
+  transform: translateX(80%);
+}
+
 .social__fixed ul li {
 	margin: 40px 0;
 }
@@ -2185,6 +2194,18 @@ html {
 	font-style: normal;
 	font-weight: 400;
 	line-height: 130.023%; /* 19.503px */
+
+	animation: text-appearance 0.2s cubic-bezier(1,-0.02,1,-0.04);
+}
+
+@keyframes text-appearance {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
 }
 
 ._hover .our-services__item-subtext {
@@ -7040,6 +7061,10 @@ html {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
+}
+
+.our-services__item * {
+	transition: none !important;
 }
 
 @media (min-width: 968px) {

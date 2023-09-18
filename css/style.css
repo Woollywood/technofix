@@ -2693,6 +2693,11 @@ html {
 	-ms-flex-align: center;
 	align-items: center;
 }
+
+.header__servicosi:hover {
+	
+}
+
 .header__servicosi.active span {
 	color: #e63114;
 }

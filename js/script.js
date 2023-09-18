@@ -402,10 +402,20 @@ window.onload = function () {
 	path4.style.strokeDasharray = length4;
 	path4.style.strokeDashoffset = length4;
 };
-document.querySelector('.header__servicosi').addEventListener('click', function () {
-	document.querySelector('.popup__servicios').classList.toggle('active');
-	document.querySelector('.header__servicosi').classList.toggle('active');
-});
+
+let headerButton = document.querySelector('.header__servicosi');
+if (headerButton) {
+	headerButton.addEventListener('mouseenter', (e) => {
+		document.querySelector('.popup__servicios').classList.add('active');
+		document.querySelector('.header__servicosi').classList.add('active');
+	});
+
+	let header = document.querySelector('.header');
+	header.addEventListener('mouseleave', (e) => {
+		document.querySelector('.popup__servicios').classList.remove('active');
+		document.querySelector('.header__servicosi').classList.remove('active');
+	});
+}
 
 document.querySelector('.header__burger').addEventListener('click', function () {
 	document.querySelector('.header__burger').classList.toggle('active');

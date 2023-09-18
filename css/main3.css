@@ -1067,6 +1067,29 @@ p {
   transform: translateX(80%);
 }
 
+.first-block__top-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 778px;
+	height: 843px;
+}
+
+@media (max-width: 1268px) {
+	.first-block__top-background {
+		display: none;
+	}
+}
+
+.first-block__top-background img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
+
 .social__fixed ul li {
 	margin: 40px 0;
 }

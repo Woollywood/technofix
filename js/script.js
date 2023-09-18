@@ -1,3 +1,17 @@
+let headerButton = document.querySelector('.header__servicosi');
+if (headerButton) {
+	headerButton.addEventListener('mouseenter', (e) => {
+		document.querySelector('.popup__servicios').classList.add('active');
+		document.querySelector('.header__servicosi').classList.add('active');
+	});
+
+	let header = document.querySelector('.header');
+	header.addEventListener('mouseleave', (e) => {
+		document.querySelector('.popup__servicios').classList.remove('active');
+		document.querySelector('.header__servicosi').classList.remove('active');
+	});
+}
+
 class DynamicAdapt {
 	constructor(type) {
 		this.type = type;
@@ -402,20 +416,6 @@ window.onload = function () {
 	path4.style.strokeDasharray = length4;
 	path4.style.strokeDashoffset = length4;
 };
-
-let headerButton = document.querySelector('.header__servicosi');
-if (headerButton) {
-	headerButton.addEventListener('mouseenter', (e) => {
-		document.querySelector('.popup__servicios').classList.add('active');
-		document.querySelector('.header__servicosi').classList.add('active');
-	});
-
-	let header = document.querySelector('.header');
-	header.addEventListener('mouseleave', (e) => {
-		document.querySelector('.popup__servicios').classList.remove('active');
-		document.querySelector('.header__servicosi').classList.remove('active');
-	});
-}
 
 document.querySelector('.header__burger').addEventListener('click', function () {
 	document.querySelector('.header__burger').classList.toggle('active');

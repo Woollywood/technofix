@@ -2500,7 +2500,7 @@ html {
 
 .digital__block-light {
 	position: absolute;
-	z-index: 4;
+	z-index: 2;
 	top: 0;
 	right: 0;
 	width: 1060px;

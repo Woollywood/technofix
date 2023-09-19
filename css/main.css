@@ -1094,7 +1094,7 @@ p {
 	transition: all 0.3s ease;
 }
 
-.social__fixed a:hover {
+.social__fixed li:hover a {
   transform: translateX(80%);
 }
 

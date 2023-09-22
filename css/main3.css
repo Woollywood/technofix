@@ -1064,7 +1064,7 @@ p {
 }
 
 .social__fixed li:hover a {
-	transform: translateX(80%);
+	padding-left: 20px;
 }
 
 .first-block__top-background {

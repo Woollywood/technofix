@@ -184,7 +184,7 @@ function digitsCounter() {
 		let startTimestamp = null;
 		const duration = parseInt(digitsCounter.dataset.digitsCounterSpeed)
 			? parseInt(digitsCounter.dataset.digitsCounterSpeed)
-			: 1000;
+			: 2600;
 		const startValue = parseFloat(digitsCounter.dataset.digitsCounter);
 		const startPosition = 0;
 		const fractionDigits = digitsCounter.dataset.digitsFraction;

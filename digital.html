@@ -13,12 +13,17 @@
 		<!-- CSS -->
 
 		<link href="css/main.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/effects.css" />
 		<link href="css/media.css" rel="stylesheet" />
 		<link href="slick/slick.css" rel="stylesheet" />
 		<link href="slick/slick-theme.css" rel="stylesheet" />
 		<link rel="stylesheet" href="css/swiper.min.css" />
 		<link href="css/main2.css" rel="stylesheet" />
 		<link href="css/media2.css" rel="stylesheet" />
+
+		<script
+			src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+			type="module"></script>
 	</head>
 
 	<body class="digital">
@@ -427,7 +432,14 @@
 						</div>
 					</div>
 					<div class="serm_head_block">
-						<div class="h_serm_img"><img src="images/h-serm-img2.svg" alt="" /></div>
+						<dotlottie-player
+							class="h_serm_img"
+							src="./lottie/digital/media.json"
+							background="transparent"
+							speed="0.4"
+							direction="1"
+							mode="normal"
+							autoplay></dotlottie-player>
 					</div>
 				</div>
 			</div>
@@ -491,7 +503,7 @@
 					</div>
 					<div class="kp_dagital_wrap kp_dagital_wrap_none">
 						<div class="kp_dagital_block">
-							<div class="kp_dagital_border">
+							<div class="kp_dagital_border hover-border">
 								<div class="kp_dagital_icon">
 									<img src="images/images/kp_dagital_icon.svg" alt="" />
 								</div>
@@ -505,7 +517,7 @@
 							</div>
 						</div>
 						<div class="kp_dagital_block">
-							<div class="kp_dagital_border">
+							<div class="kp_dagital_border hover-border">
 								<div class="kp_dagital_icon kp_dagital_icon_mr">
 									<img src="images/images/kp_dagital_icon2.svg" alt="" />
 								</div>
@@ -519,7 +531,7 @@
 							</div>
 						</div>
 						<div class="kp_dagital_block">
-							<div class="kp_dagital_border">
+							<div class="kp_dagital_border hover-border">
 								<div class="kp_dagital_icon kp_dagital_icon_mr">
 									<img src="images/images/kp_dagital_icon3.svg" alt="" />
 								</div>
@@ -536,7 +548,7 @@
 				</div>
 			</section>
 
-			<div class="work-stages work-stages--adv">
+			<div class="work-stages work-stages--adv" style="background-color: transparent">
 				<div class="container">
 					<h2
 						class="work-stages__title title text-center"
@@ -2172,7 +2184,7 @@
 					<h2 class="title title_center">Преимущества</h2>
 					<div class="kp_dagital_wrap">
 						<div class="kp_dagital_block">
-							<div class="kp_dagital_border">
+							<div class="kp_dagital_border hover-border">
 								<div class="kp_dagital_icon kp_dagital_icon_mr2">
 									<img src="images/images/kp_dagital_icon4.svg" alt="" />
 								</div>
@@ -2188,7 +2200,7 @@
 							</div>
 						</div>
 						<div class="kp_dagital_block">
-							<div class="kp_dagital_border">
+							<div class="kp_dagital_border hover-border">
 								<div class="kp_dagital_icon kp_dagital_icon_mr">
 									<img src="images/images/kp_dagital_icon5.svg" alt="" />
 								</div>
@@ -2204,7 +2216,7 @@
 							</div>
 						</div>
 						<div class="kp_dagital_block">
-							<div class="kp_dagital_border">
+							<div class="kp_dagital_border hover-border">
 								<div class="kp_dagital_icon kp_dagital_icon_mr">
 									<img src="images/images/kp_dagital_icon6.svg" alt="" />
 								</div>
@@ -2726,7 +2738,7 @@
 				</div>
 			</div>
 			<div class="container">
-				<div class="tr_digital_border">
+				<div class="tr_digital_border hover-border">
 					<div class="tr_digital_border_img">
 						<img src="images/images/tr_digital_border_img.svg" alt="" />
 					</div>
@@ -2756,217 +2768,708 @@
 							Ответьте на четыре простых вопрос, чтобы узнать стоимость тарифа, который подойдет именно
 							вам.
 						</div>
-						<div class="fare-cost__form">
-							<div class="fare-cost__form-title">Сфера деятельности вашей компании</div>
-							<div class="fare-cost__options">
-								<div class="options">
-									<div class="options__item">
-										<input
-											id="fare-cost-1"
-											class="options__input"
-											checked
-											type="radio"
-											value="1"
-											name="option" />
-										<label for="fare-cost-1" class="options__label"
-											><span class="options__text">Инфобизнес</span></label
-										>
-									</div>
-									<div class="options__item">
-										<input
-											id="fare-cost-2"
-											class="options__input"
-											checked
-											type="radio"
-											value="1"
-											name="option" />
-										<label for="fare-cost-2" class="options__label"
-											><span class="options__text">Розничная торговля</span></label
-										>
-									</div>
-									<div class="options__item">
-										<input
-											id="fare-cost-3"
-											class="options__input"
-											checked
-											type="radio"
-											value="1"
-											name="option" />
-										<label for="fare-cost-3" class="options__label"
-											><span class="options__text">Оптовая торговля, B2B</span></label
-										>
-									</div>
-									<div class="options__item">
-										<input
-											id="fare-cost-4"
-											class="options__input"
-											checked
-											type="radio"
-											value="1"
-											name="option" />
-										<label for="fare-cost-4" class="options__label"
-											><span class="options__text"
-												>Производство товаров повседневного спроса</span
-											></label
-										>
-									</div>
-									<div class="options__item">
-										<input
-											id="fare-cost-5"
-											class="options__input"
-											checked
-											type="radio"
-											value="1"
-											name="option" />
-										<label for="fare-cost-5" class="options__label"
-											><span class="options__text"
-												>Производство сложных товаров и оборудования</span
-											></label
-										>
-									</div>
-									<div class="options__item">
-										<input
-											id="fare-cost-6"
-											class="options__input"
-											checked
-											type="radio"
-											value="1"
-											name="option" />
-										<label for="fare-cost-6" class="options__label"
-											><span class="options__text"
-												>Изготовление кухонь, пластиковые окна, жалюзи</span
-											></label
-										>
-									</div>
-									<div class="options__item">
-										<input
-											id="fare-cost-7"
-											class="options__input"
-											checked
-											type="radio"
-											value="1"
-											name="option" />
-										<label for="fare-cost-7" class="options__label"
-											><span class="options__text">HoReCa, общественное питание</span></label
-										>
-									</div>
-									<div class="options__item">
-										<input
-											id="fare-cost-8"
-											class="options__input"
-											checked
-											type="radio"
-											value="1"
-											name="option" />
-										<label for="fare-cost-8" class="options__label"
-											><span class="options__text">Медицина</span></label
-										>
+						<div class="fare-cost__slider swiper">
+							<div class="fare-cost__slider-wrapper swiper-wrapper">
+								<div class="fare-cost__slide fare-cost__form swiper-slide">
+									<div class="fare-cost__form-title">Сфера деятельности вашей компании</div>
+									<div class="fare-cost__options">
+										<div class="options">
+											<div class="options__item">
+												<input
+													id="fare-cost-1"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-1" class="options__label"
+													><span class="options__text">Инфобизнес</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-2"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-2" class="options__label"
+													><span class="options__text">Розничная торговля</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-3"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-3" class="options__label"
+													><span class="options__text">Оптовая торговля, B2B</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-4"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-4" class="options__label"
+													><span class="options__text"
+														>Производство товаров повседневного спроса</span
+													></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-5"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-5" class="options__label"
+													><span class="options__text"
+														>Производство сложных товаров и оборудования</span
+													></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-6"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-6" class="options__label"
+													><span class="options__text"
+														>Изготовление кухонь, пластиковые окна, жалюзи</span
+													></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-7"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-7" class="options__label"
+													><span class="options__text"
+														>HoReCa, общественное питание</span
+													></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-8"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-8" class="options__label"
+													><span class="options__text">Медицина</span></label
+												>
+											</div>
+										</div>
+										<div class="options">
+											<div class="options__item">
+												<input
+													id="fare-cost-9"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-9" class="options__label"
+													><span class="options__text">Туристический бизнес</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-10"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-10" class="options__label"
+													><span class="options__text">Бьюти сфера</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-11"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-11" class="options__label"
+													><span class="options__text"
+														>Строительство, недвижимость, ремонт</span
+													></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-12"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-12" class="options__label"
+													><span class="options__text">Сельское хозяйство</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-13"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-13" class="options__label"
+													><span class="options__text">Предоставление услуг</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-14"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-14" class="options__label"
+													><span class="options__text">IT-решения</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-15"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-15" class="options__label"
+													><span class="options__text"
+														>Спорт, творчество, образование</span
+													></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-16"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-16" class="options__label"
+													><span class="options__text">Игры, приложения</span></label
+												>
+											</div>
+										</div>
 									</div>
 								</div>
-								<div class="options">
-									<div class="options__item">
-										<input
-											id="fare-cost-9"
-											class="options__input"
-											checked
-											type="radio"
-											value="1"
-											name="option" />
-										<label for="fare-cost-9" class="options__label"
-											><span class="options__text">Туристический бизнес</span></label
-										>
+								<div class="fare-cost__slide fare-cost__form swiper-slide">
+									<div class="fare-cost__form-title">Сфера деятельности вашей компании</div>
+									<div class="fare-cost__options">
+										<div class="options">
+											<div class="options__item">
+												<input
+													id="fare-cost-1"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-1" class="options__label"
+													><span class="options__text">Инфобизнес</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-2"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-2" class="options__label"
+													><span class="options__text">Розничная торговля</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-3"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-3" class="options__label"
+													><span class="options__text">Оптовая торговля, B2B</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-4"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-4" class="options__label"
+													><span class="options__text"
+														>Производство товаров повседневного спроса</span
+													></label
+												>
+											</div>
+										</div>
 									</div>
-									<div class="options__item">
-										<input
-											id="fare-cost-10"
-											class="options__input"
-											checked
-											type="radio"
-											value="1"
-											name="option" />
-										<label for="fare-cost-10" class="options__label"
-											><span class="options__text">Бьюти сфера</span></label
-										>
+								</div>
+								<div class="fare-cost__slide fare-cost__form swiper-slide">
+									<div class="fare-cost__form-title">Сфера деятельности вашей компании</div>
+									<div class="fare-cost__options">
+										<div class="options">
+											<div class="options__item">
+												<input
+													id="fare-cost-1"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-1" class="options__label"
+													><span class="options__text">Инфобизнес</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-2"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-2" class="options__label"
+													><span class="options__text">Розничная торговля</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-3"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-3" class="options__label"
+													><span class="options__text">Оптовая торговля, B2B</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-4"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-4" class="options__label"
+													><span class="options__text"
+														>Производство товаров повседневного спроса</span
+													></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-5"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-5" class="options__label"
+													><span class="options__text"
+														>Производство сложных товаров и оборудования</span
+													></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-6"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-6" class="options__label"
+													><span class="options__text"
+														>Изготовление кухонь, пластиковые окна, жалюзи</span
+													></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-7"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-7" class="options__label"
+													><span class="options__text"
+														>HoReCa, общественное питание</span
+													></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-8"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-8" class="options__label"
+													><span class="options__text">Медицина</span></label
+												>
+											</div>
+										</div>
+										<div class="options">
+											<div class="options__item">
+												<input
+													id="fare-cost-9"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-9" class="options__label"
+													><span class="options__text">Туристический бизнес</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-10"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-10" class="options__label"
+													><span class="options__text">Бьюти сфера</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-11"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-11" class="options__label"
+													><span class="options__text"
+														>Строительство, недвижимость, ремонт</span
+													></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-12"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-12" class="options__label"
+													><span class="options__text">Сельское хозяйство</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-13"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-13" class="options__label"
+													><span class="options__text">Предоставление услуг</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-14"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-14" class="options__label"
+													><span class="options__text">IT-решения</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-15"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-15" class="options__label"
+													><span class="options__text"
+														>Спорт, творчество, образование</span
+													></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-16"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-16" class="options__label"
+													><span class="options__text">Игры, приложения</span></label
+												>
+											</div>
+										</div>
 									</div>
-									<div class="options__item">
-										<input
-											id="fare-cost-11"
-											class="options__input"
-											checked
-											type="radio"
-											value="1"
-											name="option" />
-										<label for="fare-cost-11" class="options__label"
-											><span class="options__text"
-												>Строительство, недвижимость, ремонт</span
-											></label
-										>
-									</div>
-									<div class="options__item">
-										<input
-											id="fare-cost-12"
-											class="options__input"
-											checked
-											type="radio"
-											value="1"
-											name="option" />
-										<label for="fare-cost-12" class="options__label"
-											><span class="options__text">Сельское хозяйство</span></label
-										>
-									</div>
-									<div class="options__item">
-										<input
-											id="fare-cost-13"
-											class="options__input"
-											checked
-											type="radio"
-											value="1"
-											name="option" />
-										<label for="fare-cost-13" class="options__label"
-											><span class="options__text">Предоставление услуг</span></label
-										>
-									</div>
-									<div class="options__item">
-										<input
-											id="fare-cost-14"
-											class="options__input"
-											checked
-											type="radio"
-											value="1"
-											name="option" />
-										<label for="fare-cost-14" class="options__label"
-											><span class="options__text">IT-решения</span></label
-										>
-									</div>
-									<div class="options__item">
-										<input
-											id="fare-cost-15"
-											class="options__input"
-											checked
-											type="radio"
-											value="1"
-											name="option" />
-										<label for="fare-cost-15" class="options__label"
-											><span class="options__text">Спорт, творчество, образование</span></label
-										>
-									</div>
-									<div class="options__item">
-										<input
-											id="fare-cost-16"
-											class="options__input"
-											checked
-											type="radio"
-											value="1"
-											name="option" />
-										<label for="fare-cost-16" class="options__label"
-											><span class="options__text">Игры, приложения</span></label
-										>
+								</div>
+								<div class="fare-cost__slide fare-cost__form swiper-slide">
+									<div class="fare-cost__form-title">Сфера деятельности вашей компании</div>
+									<div class="fare-cost__options">
+										<div class="options">
+											<div class="options__item">
+												<input
+													id="fare-cost-1"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-1" class="options__label"
+													><span class="options__text">Инфобизнес</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-2"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-2" class="options__label"
+													><span class="options__text">Розничная торговля</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-3"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-3" class="options__label"
+													><span class="options__text">Оптовая торговля, B2B</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-4"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-4" class="options__label"
+													><span class="options__text"
+														>Производство товаров повседневного спроса</span
+													></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-5"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-5" class="options__label"
+													><span class="options__text"
+														>Производство сложных товаров и оборудования</span
+													></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-6"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-6" class="options__label"
+													><span class="options__text"
+														>Изготовление кухонь, пластиковые окна, жалюзи</span
+													></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-7"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-7" class="options__label"
+													><span class="options__text"
+														>HoReCa, общественное питание</span
+													></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-8"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-8" class="options__label"
+													><span class="options__text">Медицина</span></label
+												>
+											</div>
+										</div>
+										<div class="options">
+											<div class="options__item">
+												<input
+													id="fare-cost-9"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-9" class="options__label"
+													><span class="options__text">Туристический бизнес</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-10"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-10" class="options__label"
+													><span class="options__text">Бьюти сфера</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-11"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-11" class="options__label"
+													><span class="options__text"
+														>Строительство, недвижимость, ремонт</span
+													></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-12"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-12" class="options__label"
+													><span class="options__text">Сельское хозяйство</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-13"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-13" class="options__label"
+													><span class="options__text">Предоставление услуг</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-14"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-14" class="options__label"
+													><span class="options__text">IT-решения</span></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-15"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-15" class="options__label"
+													><span class="options__text"
+														>Спорт, творчество, образование</span
+													></label
+												>
+											</div>
+											<div class="options__item">
+												<input
+													id="fare-cost-16"
+													class="options__input"
+													checked
+													type="radio"
+													value="1"
+													name="option" />
+												<label for="fare-cost-16" class="options__label"
+													><span class="options__text">Игры, приложения</span></label
+												>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
 							<div class="fare-cost__form-bottom">
 								<button class="fare-cost__form-next">Далее</button>
-								<div class="fare-cost__form-questions">Вопросов <span>1 из 4</span></div>
+								<div class="fare-cost__form-questions">Вопросов <span class="fare-cost__form-questions-count"></span></div>
 							</div>
 						</div>
 					</div>
@@ -2974,6 +3477,33 @@
 						<div class="fare-cost__img">
 							<img src="/images/fare-cost/house.svg" alt="" />
 						</div>
+					</div>
+				</div>
+				<div class="fare-cost__body-form">
+					<div class="fare-cost__body-form-title">Стоимость комплексного digital-маркетинга 
+						для вашего бизнеса</div>
+					<div class="fare-cost__body-form-price">от 150 000 ₽ в месяц</div>
+					<div class="fare-cost__body-form-text">Для составления более точного расчёта оставьте свои контактные данные, 
+						и мы составим для вас индивидуальную стратегию со сметой.</div>
+					<div class="order_ralative">
+						<div class="order_width">
+							<form class="order_form">
+								<div class="order_input">
+									<input type="text" size="40" placeholder="Ваше имя" />
+								</div>
+								<div class="order_input order_input_bg">
+									<input type="tel" inputmode="tel" data-phone-pattern placeholder="Ваш телефон" />
+								</div>
+								<div class="order_inner">
+									<div class="order_button">
+										<button class="button_class2">Отправить</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="fare-cost__body-form__background _ibg">
+						<img src="./images/fare-cost/background-form--success.svg" alt="">
 					</div>
 				</div>
 			</div>
@@ -3004,17 +3534,30 @@
 				<img class="theory__background-img--desktop" src="/images/theory/background.svg" alt="" />
 				<img class="theory__background-img--desktop-hover" src="/images/theory/background--hover.svg" alt="" />
 				<img class="theory__background-img--tablet" src="/images/theory/background--tablet.svg" alt="" />
-				<img class="theory__background-img--tablet-hover" src="/images/theory/background--tablet--hover.svg" alt="" />
+				<img
+					class="theory__background-img--tablet-hover"
+					src="/images/theory/background--tablet--hover.svg"
+					alt="" />
 				<img class="theory__background-img--mobile" src="/images/theory/background--mobile.svg" alt="" />
-				<img class="theory__background-img--mobile-hover" src="/images/theory/background--mobile--hover.svg" alt="" />
+				<img
+					class="theory__background-img--mobile-hover"
+					src="/images/theory/background--mobile--hover.svg"
+					alt="" />
 			</div>
 		</section>
 
 		<section class="order order--fix">
 			<div class="container">
 				<div class="order_ralative">
-					<div class="order_img">
-						<img src="images/order/01.svg" alt="" />
+					<div class="order_img" style="height: 120%">
+						<dotlottie-player
+							src="./lottie/digital/feedback.json"
+							background="transparent"
+							speed="0.4"
+							direction="1"
+							mode="normal"
+							autoplay
+							loop></dotlottie-player>
 					</div>
 					<div class="order_width">
 						<h2 class="title">Закажи звонок эксперта Technofix</h2>

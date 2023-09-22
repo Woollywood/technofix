@@ -172,4 +172,53 @@ window.addEventListener('load', (e) => {
 			},
 		});
 	}
+
+	if (document.querySelectorAll('[data-gsap]')) {
+		let elements = document.querySelectorAll('[data-gsap]');
+		elements.forEach((element) => {
+			let type = element.dataset.gsap;
+
+			let tween = null;
+			switch (type) {
+				case 'from-left':
+					tween = gsap.from(element, {
+						opacity: 0,
+						xPercent: -40,
+						scrollTrigger: {
+							trigger: element,
+							start: 'top 70%',
+							end: 'center center',
+							scrub: 1,
+							onLeave: (e) => {
+								element.classList.add('animation-completed');
+							},
+							onLeaveBack: (e) => {
+								element.classList.remove('animation-completed');
+							},
+						},
+					});
+					break;
+				case 'from-right':
+					tween = gsap.from(element, {
+						opacity: 0,
+						xPercent: 40,
+						scrollTrigger: {
+							trigger: element,
+							start: 'top 70%',
+							end: 'center center',
+							scrub: 1,
+							onLeave: (e) => {
+								element.classList.add('animation-completed');
+							},
+							onLeaveBack: (e) => {
+								element.classList.remove('animation-completed');
+							},
+						},
+					});
+					break;
+				default:
+					throw new Error('Unknown type of gsap data');
+			}
+		});
+	}
 });

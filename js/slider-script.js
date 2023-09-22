@@ -159,12 +159,83 @@ if (document.querySelector('.work-stages__slider')) {
 
 			slideNextTransitionStart: function (e) {
 				let slides = e.slides;
-				slides[0].parentNode.style.cssText += `--progress-width: ${(slides[0].clientWidth + 25) * (e.activeIndex + 1) + 40}px`;
+				slides[0].parentNode.style.cssText += `--progress-width: ${
+					(slides[0].clientWidth + 25) * (e.activeIndex + 1) + 40
+				}px`;
 			},
 
 			slidePrevTransitionStart: function (e) {
 				let slides = e.slides;
-				slides[0].parentNode.style.cssText += `--progress-width: ${(slides[0].clientWidth + 25) * (e.activeIndex + 1) + 40}px`;
+				slides[0].parentNode.style.cssText += `--progress-width: ${
+					(slides[0].clientWidth + 25) * (e.activeIndex + 1) + 40
+				}px`;
+			},
+		},
+	});
+}
+
+if (document.querySelector('.fare-cost__slider')) {
+	new Swiper('.fare-cost__slider', {
+		observer: true,
+		observeParents: true,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		speed: 800,
+
+		// Эффекты
+		effect: 'flip',
+
+		pagination: {
+			el: '.fare-cost__form-questions-count',
+			type: 'fraction',
+		},
+
+		// Кнопки "влево/вправо"
+		navigation: {
+			nextEl: '.fare-cost__form-next',
+		},
+		/*
+		// Брейкпоинты
+		breakpoints: {
+			640: {
+				slidesPerView: 1,
+				spaceBetween: 0,
+				autoHeight: true,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			1268: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			},
+		},
+		*/
+		// События
+		on: {
+			init: (e) => {
+				let button = document.querySelector('.fare-cost__form-next');
+
+				let buttonObserver = new MutationObserver((observerEvent) => {
+					button.disabled = false;
+
+					let container = document.querySelector('.fare-cost');
+					let oldHeight = container.offsetHeight;
+
+					button.addEventListener('mousedown', (eventClick) => {
+						container.classList.add('form-success');
+
+						container.style.height = oldHeight + 'px';
+						container.querySelector('.container').style.height = '100%';
+					});
+				});
+
+				buttonObserver.observe(button, { attributes: true, attributeFilter: ['disabled'] });
 			},
 		},
 	});

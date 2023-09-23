@@ -240,3 +240,37 @@ if (document.querySelector('.fare-cost__slider')) {
 		},
 	});
 }
+
+if (document.querySelector('.about-slider')) {
+	new Swiper('.about-slider', {
+		observer: true,
+		observeParents: true,
+		spaceBetween: 16,
+		speed: 800,
+
+		navigation: {
+			prevEl: '.about-slider__arrow-prev',
+			nextEl: '.about-slider__arrow-next',
+		},
+
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+			},
+			479: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			992: {
+				slidesPerView: 4,
+			},
+			1268: {
+				slidesPerView: 5,
+			},
+		},
+
+		on: {},
+	});
+}

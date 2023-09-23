@@ -270,4 +270,22 @@ window.addEventListener('load', (e) => {
 			}
 		});
 	}
+
+	if (document.querySelector('.whatserm')) {
+		let sermBody = document.querySelector('.serm');
+		let sermBlock = document.querySelector('.whatserm');
+		let pies = sermBlock.querySelectorAll('.pie');
+		gsap.from(sermBlock, {
+			xPercent: -100,
+			duration: 3,
+			ease: 'back',
+			scrollTrigger: {
+				sermBody,
+				start: '1px top',
+				onEnter: (e) => {
+					pies.forEach((pie) => pie.classList.add('_visible'));
+				},
+			},
+		});
+	}
 });

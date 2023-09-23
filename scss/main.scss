@@ -1592,6 +1592,15 @@ p {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	gap: 106px;
+
+	@media (max-width: 1280px) {
+		gap: 84px;
+	}
+
+	@media (max-width: 768px) {
+		gap: 36px;
+	}
 }
 
 .serm_head_block {
@@ -1624,11 +1633,91 @@ p {
 	padding: 0 4.5px 0 4.5px;
 }
 
+@property --percentage {
+	syntax: '<number>';
+	inherits: true;
+	initial-value: 0;
+}
+
+.pie {
+	--border-thickness: 22px;
+	@media (max-width: 479px) {
+		--border-thickness: 12px;
+	}
+	--color: #e63114;
+
+	position: relative;
+	width: 206px;
+	@media (max-width: 678px) {
+		width: 146px;
+	}
+	aspect-ratio: 1;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	color: #fff;
+	font-family: Inter;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: normal;
+
+	&::before {
+		content: '';
+		position: absolute;
+		border-radius: 50%;
+		inset: 0;
+		background: conic-gradient(#4b3485, 100%, #0000 0);
+		-webkit-mask: radial-gradient(
+			farthest-side,
+			#0000 calc(99% - var(--border-thickness)),
+			#000 calc(100% - var(--border-thickness))
+		);
+		mask: radial-gradient(
+			farthest-side,
+			#0000 calc(99% - var(--border-thickness)),
+			#000 calc(100% - var(--border-thickness))
+		);
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		border-radius: 50%;
+		inset: 0;
+		background: conic-gradient(var(--color), calc(var(--percentage) * 1%), #0000 0);
+		-webkit-mask: radial-gradient(
+			farthest-side,
+			#0000 calc(99% - var(--border-thickness)),
+			#000 calc(100% - var(--border-thickness))
+		);
+		mask: radial-gradient(
+			farthest-side,
+			#0000 calc(99% - var(--border-thickness)),
+			#000 calc(100% - var(--border-thickness))
+		);
+	}
+
+	&._visible {
+		&::after {
+			animation: fill-diagram 3s ease;
+		}
+	}
+}
+
+@keyframes fill-diagram {
+	from {
+		--percentage: 0;
+	}
+}
+
 .h_serm_block {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	padding: 0 14px 0 29px;
+	border: 1px solid transparent;
 	border-radius: 22px;
 	background: #2a1547;
 	height: 91px;
@@ -1811,6 +1900,12 @@ p {
 
 .whatserm_block {
 	width: 33.333333%;
+
+	@media (min-width: 641px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 }
 
 .whatserm_ellipse {
@@ -2091,7 +2186,7 @@ p {
 	}
 }
 
-.tarifsmm.tarifsmm--second {
+.tarifsmm {
 	.sermtarif__svg {
 		path {
 			transition: all 0.3s ease;
@@ -2110,7 +2205,7 @@ p {
 		}
 
 		.tarifsmm_icon {
-			background-color: #E63114;
+			background-color: #e63114;
 			transform: scale(1.2);
 		}
 	}

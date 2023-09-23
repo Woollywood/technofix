@@ -12,8 +12,20 @@ document.addEventListener('DOMContentLoaded', (e) => {
 	});
 
 	let tarifsPd = document.querySelectorAll('.tarifsmm_pd');
-	tarifsPd.forEach(block=> {
-		block.addEventListener('mouseenter', (e) => block.closest('.tarifsmm.tarifsmm--second').classList.add('_hover'));
-		block.addEventListener('mouseleave', (e) => block.closest('.tarifsmm.tarifsmm--second').classList.remove('_hover'));
-	})
+	tarifsPd.forEach((block) => {
+		block.addEventListener('mouseenter', (e) => {
+			let parentBlock = block.closest('.tarifsmm.tarifsmm--second');
+			if (!parentBlock) {
+				parentBlock = block.closest('.tarifsmm');
+			}
+			parentBlock.classList.add('_hover');
+		});
+		block.addEventListener('mouseleave', (e) => {
+			let parentBlock = block.closest('.tarifsmm.tarifsmm--second');
+			if (!parentBlock) {
+				parentBlock = block.closest('.tarifsmm');
+			}
+			parentBlock.classList.remove('_hover');
+		});
+	});
 });

@@ -1332,6 +1332,17 @@ p {
 
 .serm_head_wrap {
   display: flex;
+  gap: 106px;
+}
+@media (max-width: 1280px) {
+  .serm_head_wrap {
+    gap: 84px;
+  }
+}
+@media (max-width: 768px) {
+  .serm_head_wrap {
+    gap: 36px;
+  }
 }
 
 .serm_head_block {
@@ -1361,9 +1372,68 @@ p {
   padding: 0 4.5px 0 4.5px;
 }
 
+@property --percentage {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+.pie {
+  --border-thickness: 22px;
+  --color: #e63114;
+  position: relative;
+  width: 206px;
+  aspect-ratio: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+@media (max-width: 479px) {
+  .pie {
+    --border-thickness: 12px;
+  }
+}
+@media (max-width: 678px) {
+  .pie {
+    width: 146px;
+  }
+}
+.pie::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 0;
+  background: conic-gradient(#4b3485, 100%, rgba(0, 0, 0, 0) 0);
+  -webkit-mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(99% - var(--border-thickness)), #000 calc(100% - var(--border-thickness)));
+  mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(99% - var(--border-thickness)), #000 calc(100% - var(--border-thickness)));
+}
+.pie::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 0;
+  background: conic-gradient(var(--color), calc(var(--percentage) * 1%), rgba(0, 0, 0, 0) 0);
+  -webkit-mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(99% - var(--border-thickness)), #000 calc(100% - var(--border-thickness)));
+  mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(99% - var(--border-thickness)), #000 calc(100% - var(--border-thickness)));
+}
+.pie._visible::after {
+  animation: fill-diagram 3s ease;
+}
+
+@keyframes fill-diagram {
+  from {
+    --percentage: 0;
+  }
+}
 .h_serm_block {
   display: flex;
   padding: 0 14px 0 29px;
+  border: 1px solid transparent;
   border-radius: 22px;
   background: #2a1547;
   height: 91px;
@@ -1515,6 +1585,13 @@ p {
 
 .whatserm_block {
   width: 33.333333%;
+}
+@media (min-width: 641px) {
+  .whatserm_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .whatserm_ellipse {
@@ -1759,17 +1836,17 @@ p {
   animation: pulse-tarif ease 4s infinite;
 }
 
-.tarifsmm.tarifsmm--second .sermtarif__svg path {
+.tarifsmm .sermtarif__svg path {
   transition: all 0.3s ease;
 }
-.tarifsmm.tarifsmm--second .tarifsmm_icon {
+.tarifsmm .tarifsmm_icon {
   transition: all 0.3s ease;
 }
-.tarifsmm.tarifsmm--second._hover .sermtarif__svg path {
+.tarifsmm._hover .sermtarif__svg path {
   fill: #fff;
 }
-.tarifsmm.tarifsmm--second._hover .tarifsmm_icon {
-  background-color: #E63114;
+.tarifsmm._hover .tarifsmm_icon {
+  background-color: #e63114;
   transform: scale(1.2);
 }
 

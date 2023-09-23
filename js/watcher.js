@@ -208,4 +208,5 @@ function digitsCounter() {
 
 	document.addEventListener('watcherCallback', digitsCounterAction);
 }
+
 digitsCounter();

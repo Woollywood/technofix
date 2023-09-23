@@ -1,38 +1,87 @@
 gsap.registerPlugin(ScrollTrigger);
 
 window.addEventListener('load', (e) => {
-	let blocks = document.querySelectorAll('.work-stages__block');
-
 	let mm = gsap.matchMedia();
-	mm.add('(min-width: 1067px)', () => {
-		gsap.to('.progress-stages__scale', {
-			y: '100%',
-			duration: 3,
-			ease: 'Power0.easeNone',
-			scrollTrigger: {
-				trigger: '.progress-stages',
-				start: 'top center',
-				end: 'bottom top',
-				scrub: true,
-			},
-		});
+	let progressLine = document.querySelector('.progress-stages__scale');
+	if (progressLine) {
+		prepareBlocks();
 
-		blocks.forEach((block) => {
-			gsap.to(block, {
+		let circles = Array.from(document.querySelectorAll('.progress-stages__circle')).slice(1);
+		let firstCircle = document.querySelector('.progress-stages__circle');
+		firstCircle.style.cssText = 'animation: none;';
+		let circlesProgress = [];
+		mm.add('(min-width: 1067px)', () => {
+			gsap.to(progressLine, {
+				y: '100%',
+				duration: 3,
+				ease: 'Power0.easeNone',
 				scrollTrigger: {
-					trigger: block,
-					start: `${block.dataset.scrollTrigger ?? 25}% 50%`,
+					trigger: '.progress-stages',
+					start: 'top center',
+					end: 'bottom top',
+					scrub: true,
+
 					onEnter: (e) => {
-						block.classList.add('block-stages--active');
+						firstCircle.classList.add('_achieved');
+						getRelatedBlock(firstCircle.dataset.relatedBlockId).classList.add('block-stages--active');
 					},
 
 					onLeaveBack: (e) => {
-						block.classList.remove('block-stages--active');
+						firstCircle.classList.remove('_achieved');
+						getRelatedBlock(firstCircle.dataset.relatedBlockId).classList.remove('block-stages--active');
+					},
+
+					onUpdate: (e) => {
+						let lineBox = progressLine.getBoundingClientRect();
+						circles.forEach((circle) => {
+							let circleBox = circle.getBoundingClientRect();
+
+							if (e.direction === 1) {
+								if (lineBox.bottom > circleBox.top && !circlesProgress.includes(circle)) {
+									circlesProgress.push(circle);
+									circle.classList.add('_achieved');
+									getRelatedBlock(circle.dataset.relatedBlockId).classList.add(
+										'block-stages--active'
+									);
+								}
+							} else {
+								if (lineBox.bottom < circleBox.top && circlesProgress.includes(circle)) {
+									circlesProgress.splice(circlesProgress.indexOf(circle), 1);
+									circle.classList.remove('_achieved');
+									getRelatedBlock(circle.dataset.relatedBlockId).classList.remove(
+										'block-stages--active'
+									);
+								}
+							}
+						});
 					},
 				},
 			});
 		});
-	});
+
+		function prepareBlocks() {
+			let cols = document.querySelectorAll('.work-stages__col');
+			let circles = document.querySelectorAll('.progress-stages__circle');
+
+			cols.forEach((col, colIndex) => {
+				let blocks = col.querySelectorAll('.work-stages__block');
+
+				let blockIndex = colIndex;
+				blocks.forEach((block) => {
+					block.dataset.blockId = blockIndex;
+					blockIndex += 2;
+				});
+			});
+
+			circles.forEach((circle, index) => {
+				circle.dataset.relatedBlockId = index;
+			});
+		}
+
+		function getRelatedBlock(id) {
+			return document.querySelector(`[data-block-id="${id}"]`);
+		}
+	}
 
 	let isAnimated = false;
 	if (document.querySelector('.approach')) {

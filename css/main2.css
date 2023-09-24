@@ -428,6 +428,10 @@ ul.tabs li.active:before {
   font-size: 18px;
   line-height: 22px;
   color: #fff;
+  transition: all 0.3s ease;
+}
+.cases_border_title:hover {
+  color: #E63114;
 }
 
 .cases_border_suptitle {
@@ -861,7 +865,7 @@ ul.tabs li.active:before {
 
 .gallery-item {
   position: absolute;
-  z-index: 3;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;

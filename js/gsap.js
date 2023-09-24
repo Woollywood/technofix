@@ -288,4 +288,60 @@ window.addEventListener('load', (e) => {
 			},
 		});
 	}
+
+	if (document.querySelector('.art_wrap')) {
+		let mainBlock = document.querySelector('.art_wrap');
+		let parentNavPanel = mainBlock.querySelector('.art_block2');
+		let navPanel = mainBlock.querySelector('.art_mr');
+		let relatedLine = mainBlock.querySelector('.art_restagle2');
+
+		prepareBlocks();
+
+		function prepareBlocks() {
+			let contentBlocks = mainBlock.querySelectorAll('.art_block__item');
+			contentBlocks.forEach((contentBlock, index) => {
+				contentBlock.dataset.contentBlockId = index;
+				contentBlock.id = `content-block-${index}`;
+			});
+
+			let navBlocks = mainBlock.querySelectorAll('.art_naw_li');
+			navBlocks.forEach((navBlock, index) => {
+				navBlock.dataset.navBlockId = index;
+				navBlock.dataset.goto = `#content-block-${index}`;
+			});
+
+			relatedLine.style.height = navBlocks[0].offsetHeight + 'px';
+
+			contentBlocks.forEach((contentBlock) => {
+				ScrollTrigger.create({
+					trigger: contentBlock,
+					start: 'top top',
+					markers: true,
+					onEnter: (e) => {
+						let currentId = contentBlock.dataset.contentBlockId;
+						let currentNav = mainBlock.querySelector(`[data-nav-block-id="${currentId}"]`);
+
+						relatedLineMove(relatedLine, currentNav, navBlocks);
+					},
+
+					onLeaveBack: (e) => {
+						let currentId = contentBlock.dataset.contentBlockId;
+						let currentNav = mainBlock.querySelector(`[data-nav-block-id="${currentId}"]`);
+
+						relatedLineMove(relatedLine, currentNav, navBlocks);
+					},
+				});
+			});
+		}
+
+		function relatedLineMove(line, relatedBlock, relatedBlocks) {
+			let achievedIndex = +relatedBlock.dataset.navBlockId;
+			let navBlocksAchieved = Array.from(relatedBlocks).slice(0, achievedIndex + 1);
+
+			let navBox = navBlocksAchieved[navBlocksAchieved.length - 1].getBoundingClientRect();
+			let lineHeight = navBox.top + navBox.height - navPanel.getBoundingClientRect().top;
+
+			line.style.height = lineHeight + 'px';
+		}
+	}
 });

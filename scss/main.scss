@@ -576,7 +576,7 @@ p {
 
 	&:hover {
 		span {
-			color: #E63114;
+			color: #e63114;
 		}
 	}
 }
@@ -594,7 +594,15 @@ p {
 	color: #d0c1e8;
 
 	&:hover {
-		color: #E63114;
+		color: #e63114;
+	}
+}
+
+.tabs {
+	li {
+		&:hover {
+			color: #e63114;
+		}
 	}
 }
 
@@ -609,7 +617,7 @@ p {
 	color: #ffffff;
 
 	&:hover {
-		color: #E63114;
+		color: #e63114;
 	}
 }
 
@@ -709,7 +717,7 @@ p {
 .art_top_block {
 	.art_top_title {
 		&:hover {
-			color: #E63114;
+			color: #e63114;
 		}
 	}
 }
@@ -1452,7 +1460,7 @@ p {
 	transition: all 0.3s ease;
 
 	&:hover {
-		color: #E63114;
+		color: #e63114;
 	}
 }
 
@@ -1505,7 +1513,7 @@ p {
 		transition: all 0.3s ease;
 
 		&:hover {
-			color: #E63114;
+			color: #e63114;
 		}
 	}
 }
@@ -1515,7 +1523,7 @@ p {
 	width: 100%;
 	height: 436px;
 	border-radius: 12px;
-	border: 3px solid #E63114;
+	border: 3px solid #e63114;
 	background: url(<path-to-image>), lightgray 50% / cover no-repeat;
 	overflow: hidden;
 
@@ -1589,7 +1597,7 @@ p {
 	input,
 	textarea {
 		&:hover {
-			border: 1px solid #E63114;
+			border: 1px solid #e63114;
 		}
 	}
 }
@@ -10555,4 +10563,41 @@ html {
 			transform: translateX(-20px);
 		}
 	}
+}
+
+.related-tab-line {
+	height: 5px;
+	transform: translateY(50%);
+	border-radius: 3px;
+	background: #e63114;
+	transition: all 0.3s ease;
+}
+
+.art_block {
+	&__content {
+	}
+}
+
+.art_naw_li {
+	border: 1px solid transparent;
+
+	&.active {
+		border-radius: 12px;
+		border: 1px solid #e63114;
+	}
+}
+
+.art_restagle2 {
+	transition: all 0.3s ease;
+}
+
+.art-hover-line {
+	position: absolute;
+	top: 0;
+	left: -33px;
+	border-radius: 3px;
+	background: #E63114;
+	height: 100%;
+	width: 5px;
+	transition: all 0.3s ease;
 }

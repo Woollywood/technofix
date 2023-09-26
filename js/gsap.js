@@ -121,7 +121,24 @@ window.addEventListener('load', (e) => {
 							onComplete: () => {
 								block.classList.add('approach__block--active');
 								circleStaticList[index].forEach((circle) => (circle.style.display = 'none'));
-								circleAnimatedList[index].forEach((circle) => (circle.style.display = 'block'));
+								circleAnimatedList[index].forEach((circle) => {
+									circle.style.display = 'block';
+
+									if (circle.classList.contains('circle--animated-outer')) {
+										let circleBox = circle.getBoundingClientRect();
+										let animationEffectBlock = document.createElement('div');
+										animationEffectBlock.style.cssText += `
+										--x: ${circleBox.left + window.scrollX}px;
+										--y: ${circleBox.top + window.scrollY}px;
+										--w: ${circleBox.width}px;
+									`;
+
+										animationEffectBlock.classList.add('achieved-stages-circle');
+										document.body.append(animationEffectBlock);
+
+										setTimeout(() => (animationEffectBlock.style.display = 'none'), 600);
+									}
+								});
 							},
 						});
 					});
@@ -233,11 +250,11 @@ window.addEventListener('load', (e) => {
 					tween = gsap.from(element, {
 						opacity: 0,
 						xPercent: -40,
+						duration: 2.5,
 						scrollTrigger: {
 							trigger: element,
 							start: 'top 70%',
 							end: 'center center',
-							scrub: 1,
 							onLeave: (e) => {
 								element.classList.add('animation-completed');
 							},
@@ -251,11 +268,11 @@ window.addEventListener('load', (e) => {
 					tween = gsap.from(element, {
 						opacity: 0,
 						xPercent: 40,
+						duration: 2.5,
 						scrollTrigger: {
 							trigger: element,
 							start: 'top 70%',
 							end: 'center center',
-							scrub: 1,
 							onLeave: (e) => {
 								element.classList.add('animation-completed');
 							},
@@ -278,7 +295,6 @@ window.addEventListener('load', (e) => {
 		gsap.from(sermBlock, {
 			xPercent: -100,
 			duration: 3,
-			ease: 'back',
 			scrollTrigger: {
 				sermBody,
 				start: '1px top',
@@ -316,7 +332,6 @@ window.addEventListener('load', (e) => {
 				ScrollTrigger.create({
 					trigger: contentBlock,
 					start: 'top top',
-					markers: true,
 					onEnter: (e) => {
 						let currentId = contentBlock.dataset.contentBlockId;
 						let currentNav = mainBlock.querySelector(`[data-nav-block-id="${currentId}"]`);

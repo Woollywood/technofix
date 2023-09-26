@@ -61,6 +61,10 @@ textarea {
 	font-family: inherit;
 }
 
+body {
+	overflow-x: hidden;
+}
+
 input::-ms-clear {
 	display: none;
 }

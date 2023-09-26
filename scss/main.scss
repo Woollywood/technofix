@@ -1349,10 +1349,27 @@ p {
 }
 
 .back__404 {
+	position: relative;
+	z-index: 500;
 	font-family: 'Inter-SemiBold';
 	display: block;
 	text-align: center;
 	margin: 0 0 30px 0;
+
+	svg {
+		fill: #fff;
+		transition: all 0.3s ease;
+	}
+
+	transition: all 0.3s ease;
+	&:hover {
+		color: #e63114;
+
+		svg {
+			transform: translateX(12px);
+			fill: #e63114;
+		}
+	}
 }
 
 .feedback__img {
@@ -8321,6 +8338,43 @@ html {
 	display: none;
 }
 
+.achieved-stages-circle {
+	--b: 6px;
+
+	position: absolute;
+	z-index: 200;
+	top: var(--y);
+	left: var(--x);
+	width: var(--w);
+	aspect-ratio: 1;
+	background-color: transparent;
+	animation: achieved-circle 0.6s ease;
+
+	&::before {
+		content: '';
+		position: absolute;
+		border-radius: 50%;
+		inset: 0;
+		background: conic-gradient(#e63114 100%, #0000 0);
+		-webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+		mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+	}
+}
+
+@keyframes achieved-circle-stages {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.6);
+	}
+
+	100% {
+		transform: scale(0);
+	}
+}
+
 @media (min-width: 421.98px) {
 	.stages {
 		display: none;
@@ -10596,7 +10650,7 @@ html {
 	top: 0;
 	left: -33px;
 	border-radius: 3px;
-	background: #E63114;
+	background: #e63114;
 	height: 100%;
 	width: 5px;
 	transition: all 0.3s ease;

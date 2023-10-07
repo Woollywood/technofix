@@ -1,3 +1,12 @@
+const lenis = new Lenis();
+
+function raf(time) {
+	lenis.raf(time);
+	requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
 let headerButton = document.querySelector('.header__servicosi');
 if (headerButton) {
 	headerButton.addEventListener('mouseenter', (e) => {

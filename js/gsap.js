@@ -255,6 +255,7 @@ window.addEventListener('load', (e) => {
 							trigger: element,
 							start: 'top 70%',
 							end: 'center center',
+							scrub: true,
 							onLeave: (e) => {
 								element.classList.add('animation-completed');
 							},
@@ -273,6 +274,7 @@ window.addEventListener('load', (e) => {
 							trigger: element,
 							start: 'top 70%',
 							end: 'center center',
+							scrub: true,
 							onLeave: (e) => {
 								element.classList.add('animation-completed');
 							},

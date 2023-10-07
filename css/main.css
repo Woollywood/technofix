@@ -7,6 +7,26 @@
 */
 @import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
 @import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 @font-face {
   font-family: "Inter-Black";
   src: url("../fonts/Inter-Black.ttf?-kwf309");
@@ -1974,13 +1994,39 @@ p {
 .sermtarif_ellipses {
   text-align: center;
 }
+@media (max-width: 1050px) and (min-width: 640px) {
+  .sermtarif_ellipses {
+    transform: rotate(-90deg) translateX(11%) !important;
+  }
+}
+@media (max-width: 640px) {
+  .sermtarif_ellipses {
+    transform: rotate(0deg) translateY(-36px) !important;
+  }
+}
 
+@media (max-width: 640px) {
+  .sermtarif_inner {
+    overflow: visible !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .slick-list {
+    padding-top: 26px !important;
+  }
+}
 .sermtarif_wrap {
   max-width: 1216px;
   margin: 0 auto;
   align-items: flex-end;
   display: flex;
   margin-top: 18px;
+}
+@media (max-width: 1050px) {
+  .sermtarif_wrap {
+    gap: 20px;
+  }
 }
 
 .sermtarif_block {
@@ -2018,11 +2064,13 @@ p {
 }
 
 .sermtarif_ellipse {
+  position: relative;
+  z-index: 2 !important;
   transform: translateY(-30px);
   width: 100px;
   height: 100px;
   background: linear-gradient(274.75deg, rgb(31, 16, 73) -38.36%, rgb(21, 11, 51) 53.27%);
-  border: 1px solid #5e149e;
+  border: 1px solid #5e149e !important;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -2031,6 +2079,12 @@ p {
   transition: all 0.3s ease;
   position: relative;
   z-index: 2;
+}
+@media (max-width: 1050px) {
+  .sermtarif_ellipse {
+    background: linear-gradient(274.75deg, rgb(31, 16, 73) -38.36%, rgb(21, 11, 51) 53.27%) !important;
+    border: 1px solid #5e149e !important;
+  }
 }
 
 .sermtarif_border {

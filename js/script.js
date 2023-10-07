@@ -7,6 +7,15 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
+document.addEventListener('click', (e) => {
+	const target = e.target;
+
+	if (target.closest('.our-services__item-bottom--left')) {
+		const block = target.closest('.our-services__item-bottom--left');
+		block.classList.toggle('clicked');
+	}
+});
+
 let headerButton = document.querySelector('.header__servicosi');
 if (headerButton) {
 	headerButton.addEventListener('mouseenter', (e) => {

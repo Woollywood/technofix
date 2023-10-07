@@ -630,7 +630,7 @@
 						</div>
 						<div class="digital__block">
 							<div class="digital__block-light">
-								<img src="./images/home/background-light.svg" alt="" />
+								
 							</div>
 							<div class="digital__content">
 								<div class="digital__title">
@@ -1564,9 +1564,11 @@
 									<img src="images/profit/layer.svg" alt="" />
 								</div>
 								<div class="profit__item-big-content">
-									<div class="profit__item-big-title">Узнайте об акциях и спец предложениях.</div>
+									<div class="profit__item-big-title">
+										Узнайте об акциях и&nbsp;спец предложениях.
+									</div>
 									<div class="profit__item-big-text">Продвижение бизнеса может быть выгоднее!</div>
-									<a class="profit__item-big__button button" href="#">ПЕРЕЗВОНИТЬ?</a>
+									<a class="profit__item-big__button button" href="#">ПЕРЕЗВОНИТЬ<span>?</span> </a>
 								</div>
 							</div>
 						</div>
@@ -1619,9 +1621,34 @@
 				</div>
 			</section>
 
-			<section class="order">
+			<section class="order order--background-none">
 				<div class="container">
 					<div class="order_ralative order_ralative--fix">
+						<div class="order_width order_width--fix">
+							<h2 class="title">Закажи звонок эксперта Technofix</h2>
+							<div class="title_order title_order_width">
+								Перезвоним и расскажем как увеличить прибыль <br />
+								компании средствами digital-маркетинга.
+							</div>
+							<form class="order_form">
+								<div class="order_input order_input_bg3">
+									<input type="text" size="40" placeholder="Ваше имя" />
+								</div>
+								<div class="order_input order_input_bg">
+									<input type="tel" inputmode="tel" data-phone-pattern placeholder="Ваш телефон" />
+								</div>
+								<div class="order_inner">
+									<div class="order_inner__light"></div>
+									<div class="order_button">
+										<button class="button_class2">Отправить</button>
+									</div>
+									<div class="order_inner_title">
+										Нажимая кнопку отправить вы соглашаетесь <br />с нашей
+										<a href="#">политикой конфиденциальности.</a>
+									</div>
+								</div>
+							</form>
+						</div>
 						<div class="order_img10 order_img10--fix">
 							<svg
 								class="order-animation"
@@ -9886,30 +9913,6 @@
 								</defs>
 							</svg>
 						</div>
-						<div class="order_width order_width--fix">
-							<h2 class="title">Закажи звонок эксперта Technofix</h2>
-							<div class="title_order title_order_width">
-								Перезвоним и расскажем как увеличить прибыль <br />
-								компании средствами digital-маркетинга.
-							</div>
-							<form class="order_form">
-								<div class="order_input order_input_bg3">
-									<input type="text" size="40" placeholder="Ваше имя" />
-								</div>
-								<div class="order_input order_input_bg">
-									<input type="tel" inputmode="tel" data-phone-pattern placeholder="Ваш телефон" />
-								</div>
-								<div class="order_inner">
-									<div class="order_button">
-										<button class="button_class2">Отправить</button>
-									</div>
-									<div class="order_inner_title">
-										Нажимая кнопку отправить вы соглашаетесь <br />с нашей
-										<a href="#">политикой конфиденциальности.</a>
-									</div>
-								</div>
-							</form>
-						</div>
 					</div>
 				</div>
 				<div class="order_img11">
@@ -10155,10 +10158,10 @@
 		</script>
 
 		<script>
-			if (window.innerWidth >= 1200) {
-				let serviceItemList = document.querySelectorAll('.our-services__item');
-				serviceItemList.forEach((item) => {
-					item.addEventListener('mouseenter', (e) => {
+			let serviceItemList = document.querySelectorAll('.our-services__item');
+			serviceItemList.forEach((item) => {
+				item.addEventListener('mouseenter', (e) => {
+					if (window.innerWidth >= 1200) {
 						const parent = e.target.parentNode;
 						const itemId = +e.target.dataset.itemId;
 
@@ -10180,19 +10183,21 @@
 								parent.style.gridTemplateColumns = '1fr 1fr 1fr 1fr 28%';
 								break;
 						}
-					});
+					}
 				});
+			});
 
-				serviceItemList.forEach((item) => {
-					item.addEventListener('mouseleave', (e) => {
+			serviceItemList.forEach((item) => {
+				item.addEventListener('mouseleave', (e) => {
+					if (window.innerWidth >= 1200) {
 						const parent = e.target.parentNode;
 						const itemId = e.target.dataset.itemId;
 
 						e.target.classList.remove('_hover');
 						parent.style.gridTemplateColumns = '';
-					});
+					}
 				});
-			}
+			});
 		</script>
 
 		<script src="js/watcher.js"></script>

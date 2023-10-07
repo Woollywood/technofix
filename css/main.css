@@ -879,6 +879,12 @@ p {
   line-height: 19px;
   color: #ffffff;
 }
+@media (max-width: 560px) {
+  .footer_bottom-title {
+    max-width: 196px;
+    margin: 0 auto;
+  }
+}
 
 .footer_bottom-ul {
   display: flex;

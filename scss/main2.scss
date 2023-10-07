@@ -184,6 +184,21 @@
 	padding: 67px 0 70px 0;
 	background: #20113a url(../images/images/order.svg) center no-repeat;
 	background-size: cover;
+
+	@media (max-width: 1024px) {
+		padding-top: 50px !important;
+	}
+
+	@media (max-width: 560px) {
+		padding-top: 31px !important;
+	}
+
+	&--background-none {
+		@media (max-width: 560px) {
+			background: none !important;
+			background-color: #20113a !important;
+		}
+	}
 }
 
 .order--fix .order_input {
@@ -270,10 +285,39 @@
 }
 
 .order_ralative--fix {
-	flex: 0 0 70%;
-	display: flex;
-	flex-direction: row-reverse;
-	justify-content: space-between;
+	@media (min-width: 712px) {
+		position: relative;
+		flex: 0 0 70%;
+		display: grid;
+		grid-template-columns: 1fr 40%;
+
+		.title {
+			white-space: nowrap;
+		}
+	}
+
+	.order-animation {
+		@media (max-width: 1500px) {
+			transform: scale(1.3);
+		}
+	}
+
+	.order_img10--fix {
+		display: block !important;
+		@media (max-width: 712px) {
+			display: none !important;
+		}
+
+		@media (max-width: 1036px) {
+			position: absolute !important;
+			top: 30%;
+			right: 0;
+			left: unset !important;
+			width: 387px;
+			height: 402px;
+			transform: scale(1.4);
+		}
+	}
 }
 
 .order_width {
@@ -354,6 +398,7 @@
 }
 
 .order_inner {
+	position: relative;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -361,6 +406,23 @@
 	-ms-flex-align: center;
 	align-items: center;
 	padding: 29px 0 0 0;
+
+	&__light {
+		@media (min-width: 560px) {
+			display: none;
+		}
+
+		position: absolute;
+		z-index: -1;
+		left: 50%;
+		top: 100%;
+		transform: translate(-50%, -50%);
+		width: 387px;
+		height: 220px;
+		border-radius: 50%;
+		background: rgba(63, 16, 145, 0.40);
+		filter: blur(46px);
+	}
 }
 
 .button_class2 {
@@ -501,7 +563,7 @@ ul.tabs li:hover {
 
 	transition: all 0.3s ease;
 	&:hover {
-		color: #E63114;
+		color: #e63114;
 	}
 }
 
@@ -1025,7 +1087,7 @@ ul.tabs li:hover {
 	height: 279px;
 
 	&::before {
-		content: "";
+		content: '';
 		position: absolute;
 		z-index: 2;
 		top: 0;
@@ -1033,8 +1095,8 @@ ul.tabs li:hover {
 		width: 100%;
 		height: 100%;
 		border-radius: 15px;
-		border: 1px solid #E63114;
-		background: rgba(36, 17, 67, 0.80);
+		border: 1px solid #e63114;
+		background: rgba(36, 17, 67, 0.8);
 		cursor: pointer;
 	}
 }
@@ -3816,9 +3878,9 @@ ul.tabs2 li.active:before {
 .promotion_pd {
 	position: relative;
 	padding: 0 0 30px 0;
-	
+
 	&::before {
-		content: "";
+		content: '';
 		position: absolute;
 		z-index: -1;
 		bottom: 0;

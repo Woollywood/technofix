@@ -146,6 +146,22 @@
   background: #20113a url(../images/images/order.svg) center no-repeat;
   background-size: cover;
 }
+@media (max-width: 1024px) {
+  .order {
+    padding-top: 50px !important;
+  }
+}
+@media (max-width: 560px) {
+  .order {
+    padding-top: 31px !important;
+  }
+}
+@media (max-width: 560px) {
+  .order--background-none {
+    background: none !important;
+    background-color: #20113a !important;
+  }
+}
 
 .order--fix .order_input {
   max-width: 607px;
@@ -227,11 +243,40 @@
   position: relative;
 }
 
-.order_ralative--fix {
-  flex: 0 0 70%;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
+@media (min-width: 712px) {
+  .order_ralative--fix {
+    position: relative;
+    flex: 0 0 70%;
+    display: grid;
+    grid-template-columns: 1fr 40%;
+  }
+  .order_ralative--fix .title {
+    white-space: nowrap;
+  }
+}
+@media (max-width: 1500px) {
+  .order_ralative--fix .order-animation {
+    transform: scale(1.3);
+  }
+}
+.order_ralative--fix .order_img10--fix {
+  display: block !important;
+}
+@media (max-width: 712px) {
+  .order_ralative--fix .order_img10--fix {
+    display: none !important;
+  }
+}
+@media (max-width: 1036px) {
+  .order_ralative--fix .order_img10--fix {
+    position: absolute !important;
+    top: 30%;
+    right: 0;
+    left: unset !important;
+    width: 387px;
+    height: 402px;
+    transform: scale(1.4);
+  }
 }
 
 .order_width {
@@ -292,9 +337,27 @@
 }
 
 .order_inner {
+  position: relative;
   display: flex;
   align-items: center;
   padding: 29px 0 0 0;
+}
+.order_inner__light {
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%);
+  width: 387px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(63, 16, 145, 0.4);
+  filter: blur(46px);
+}
+@media (min-width: 560px) {
+  .order_inner__light {
+    display: none;
+  }
 }
 
 .button_class2 {
@@ -421,7 +484,7 @@ ul.tabs li:last-child {
   transition: all 0.3s ease;
 }
 .cases_border_title:hover {
-  color: #E63114;
+  color: #e63114;
 }
 
 .cases_border_suptitle {
@@ -899,7 +962,7 @@ ul.tabs li:last-child {
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  border: 1px solid #E63114;
+  border: 1px solid #e63114;
   background: rgba(36, 17, 67, 0.8);
   cursor: pointer;
 }

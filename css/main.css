@@ -2093,6 +2093,101 @@ p {
   }
 }
 
+.sermtarif--seo .sermtarif_border__note {
+  display: none;
+}
+@media (max-width: 1050px) {
+  .sermtarif--seo .sermtarif_border__pc {
+    display: none;
+  }
+  .sermtarif--seo .sermtarif_border__note {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 68px;
+         column-gap: 68px;
+    row-gap: 27px;
+  }
+  .sermtarif--seo .sermtarif_border__note .sermtarif_border__left, .sermtarif--seo .sermtarif_border__note .sermtarif_border__right {
+    align-self: flex-end;
+  }
+  .sermtarif--seo .sermtarif_border__note .sermtarif_border__title {
+    color: #fff;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 130.023%; /* 23.404px */
+    text-transform: uppercase;
+  }
+  .sermtarif--seo .sermtarif_border__note .sermtarif_border__title:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .sermtarif--seo .sermtarif_border__note .sermtarif_border__text {
+    color: #d0c1e8;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 130.023%; /* 18.203px */
+  }
+  .sermtarif--seo .sermtarif_border__note .sermtarif_border__text:not(:last-child) {
+    margin-bottom: 12px;
+  }
+  .sermtarif--seo .sermtarif_border__note .sermtarif_border__text:last-child {
+    padding-bottom: 28px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+  }
+  .sermtarif--seo .sermtarif_border__note .sermtarif_border__footer {
+    grid-column: span 2;
+    display: grid;
+    gap: 68px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .sermtarif--seo .sermtarif_border__note .sermtarif_border__price {
+    color: #fff;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130.023%; /* 20.804px */
+    justify-self: flex-start;
+  }
+  .sermtarif--seo .sermtarif_border__note .sermtarif_border__button {
+    width: 145px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: flex-start;
+    color: #fff;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 133.023%; /* 18.623px */
+    border-radius: 15px;
+    background: #e63114;
+    transition: all 0.3s ease;
+  }
+  .sermtarif--seo .sermtarif_border__note .sermtarif_border__button:hover {
+    background-color: #fff;
+    color: #e63114;
+  }
+}
+
+@media (max-width: 1050px) and (min-width: 640px) {
+  .tarifsmm--second {
+    padding: 0 !important;
+  }
+}
+@media (max-width: 640px) {
+  .tarifsmm--second {
+    padding-top: 15px;
+  }
+}
+
 .sermtarif_border {
   position: relative;
   z-index: 1;
@@ -7439,12 +7534,82 @@ html {
     font-size: 13px;
   }
 }
+.sermtarif_border__mob-title {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 130.023%; /* 23.404px */
+  text-transform: uppercase;
+}
+.sermtarif_border__mob-title:not(:last-child) {
+  margin-bottom: 10px;
+}
+.sermtarif_border__mob-text {
+  color: #d0c1e8;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 130.023%; /* 18.203px */
+}
+.sermtarif_border__mob-text--italic {
+  font-style: italic;
+}
+.sermtarif_border__mob-text:not(:last-child) {
+  margin-bottom: 12px;
+}
+.sermtarif_border__mob-sep {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.09);
+}
+.sermtarif_border__mob-sep:not(:last-child) {
+  margin-bottom: 20px;
+}
+.sermtarif_border__mob-price {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130.023%; /* 20.804px */
+}
+.sermtarif_border__mob-price:not(:last-child) {
+  margin-bottom: 24px;
+}
+.sermtarif_border__mob-button {
+  border-radius: 15px;
+  background: #e63114;
+  color: #fff;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 133.023%; /* 18.623px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+.sermtarif_border__mob-button:hover {
+  background-color: #fff;
+  color: #e63114;
+}
+
 .calculator__body {
   padding-top: 50px;
   margin-bottom: 62px;
 }
 @media (max-width: 712px) {
   .calculator__body {
+    padding-top: 42px;
     margin-bottom: 20px;
   }
 }

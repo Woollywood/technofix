@@ -1397,6 +1397,14 @@ ul.tabs li:last-child {
   max-width: 100%;
   text-align: left;
 }
+.seo-increase__row-text--input {
+  text-align: center;
+}
+@media (max-width: 568px) {
+  .seo-increase__row-text--input {
+    font-size: 18px !important;
+  }
+}
 
 .seo-increase__row-button {
   display: block;
@@ -1406,8 +1414,8 @@ ul.tabs li:last-child {
   background: #301d4e;
   border: 1px solid transparent;
   transition: all 0.3s ease;
+  overflow: hidden;
 }
-
 .seo-increase__row-button:hover {
   border: 1px solid #e63114;
 }

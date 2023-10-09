@@ -1643,6 +1643,14 @@ ul.tabs li:hover {
 	font-weight: 700;
 	line-height: 130.023%; /* 23.404px */
 
+	&--input {
+		text-align: center;
+
+		@media (max-width: 568px) {
+			font-size: 18px !important;
+		}
+	}
+
 	background-color: transparent;
 	max-width: 100%;
 	text-align: left;
@@ -1656,10 +1664,11 @@ ul.tabs li:hover {
 	background: #301d4e;
 	border: 1px solid transparent;
 	transition: all 0.3s ease;
-}
+	overflow: hidden;
 
-.seo-increase__row-button:hover {
-	border: 1px solid #e63114;
+	&:hover {
+		border: 1px solid #e63114;
+	}
 }
 
 .seo-increase__left-sub-text {

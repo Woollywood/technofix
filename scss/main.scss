@@ -2366,7 +2366,7 @@ p {
 .sermtarif_ellipses {
 	text-align: center;
 
-	@media (max-width: 1050px) and (min-width: 640px){
+	@media (max-width: 1050px) and (min-width: 640px) {
 		transform: rotate(-90deg) translateX(11%) !important;
 	}
 
@@ -2489,7 +2489,124 @@ p {
 }
 
 .sermtarif {
-	&__svg {
+	&--seo {
+		.sermtarif_border__note {
+			display: none;
+		}
+
+		@media (max-width: 1050px) {
+			.sermtarif_border__pc {
+				display: none;
+			}
+
+			.sermtarif_border__note {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				column-gap: 68px;
+				row-gap: 27px;
+
+				.sermtarif_border {
+					&__left,
+					&__right {
+						align-self: flex-end;
+					}
+
+					&__title {
+						color: #fff;
+						font-family: Inter;
+						font-size: 18px;
+						font-style: normal;
+						font-weight: 800;
+						line-height: 130.023%; /* 23.404px */
+						text-transform: uppercase;
+
+						&:not(:last-child) {
+							margin-bottom: 10px;
+						}
+					}
+
+					&__text {
+						color: #d0c1e8;
+						font-family: Inter;
+						font-size: 14px;
+						font-style: italic;
+						font-weight: 400;
+						line-height: 130.023%; /* 18.203px */
+
+						&:not(:last-child) {
+							margin-bottom: 12px;
+						}
+
+						&:last-child {
+							padding-bottom: 28px;
+							border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+						}
+					}
+
+					&__sep {
+					}
+
+					&__footer {
+						grid-column: span 2;
+
+						display: grid;
+						gap: 68px;
+						grid-template-columns: 1fr 1fr;
+						align-items: center;
+					}
+
+					&__price {
+						color: #fff;
+						text-align: center;
+						font-family: Inter;
+						font-size: 16px;
+						font-style: normal;
+						font-weight: 700;
+						line-height: 130.023%; /* 20.804px */
+
+						justify-self: flex-start;
+					}
+
+					&__button {
+						width: 145px;
+						height: 55px;
+
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						justify-self: flex-start;
+
+						color: #fff;
+						font-family: Inter;
+						font-size: 14px;
+						font-style: normal;
+						font-weight: 900;
+						line-height: 133.023%; /* 18.623px */
+
+						border-radius: 15px;
+						background: #e63114;
+						transition: all 0.3s ease;
+
+						&:hover {
+							background-color: #fff;
+							color: #e63114;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.tarifsmm {
+	&--second {
+		@media (max-width: 1050px) and (min-width: 640px) {
+			padding: 0 !important;
+		}
+
+		@media (max-width: 640px) {
+			padding-top: 15px;
+		}
 	}
 }
 
@@ -6556,7 +6673,6 @@ html {
 }
 
 @media (max-width: 834px) {
-	
 	.swiper__svg {
 		display: block;
 	}
@@ -9379,13 +9495,94 @@ html {
 	}
 }
 
-.calculator {
+.sermtarif_border {
+	&__mob-title {
+		color: #fff;
+		text-align: center;
+		font-family: Inter;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 800;
+		line-height: 130.023%; /* 23.404px */
+		text-transform: uppercase;
+
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__mob-text {
+		color: #d0c1e8;
+		text-align: center;
+		font-family: Inter;
+		font-size: 14px;
+		font-style: italic;
+		font-weight: 400;
+		line-height: 130.023%; /* 18.203px */
+
+		&--italic {
+			font-style: italic;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+	}
+
+	&__mob-sep {
+		width: 100%;
+		height: 1px;
+		background-color: rgba(255, 255, 255, 0.09);
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__mob-price {
+		color: #fff;
+		text-align: center;
+		font-family: Inter;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 130.023%; /* 20.804px */
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__mob-button {
+		border-radius: 15px;
+		background: #e63114;
+		color: #fff;
+		font-family: Inter;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 900;
+		line-height: 133.023%; /* 18.623px */
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 18px;
+
+		width: 100%;
+		transition: all 0.3s ease;
+
+		&:hover {
+			background-color: #fff;
+			color: #e63114;
+		}
+	}
 }
 
 .calculator__body {
 	padding-top: 50px;
 	margin-bottom: 62px;
 	@media (max-width: 712px) {
+		padding-top: 42px;
 		margin-bottom: 20px;
 	}
 }

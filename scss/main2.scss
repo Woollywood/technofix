@@ -3051,15 +3051,39 @@ ul.tabs2 li.active:before {
 }
 
 .chat_reklama_border {
+	position: relative;
 	width: 432px;
-	background: url(../images/vi_reklama/background-left.svg) center center no-repeat;
-	background-size: contain;
 	padding: 19px 32px 18px 64px;
-}
 
-.chat_reklama_border:hover {
-	background: url(../images/vi_reklama/background-left--hover.svg) center center no-repeat;
-	background-size: contain;
+	&:hover {
+		.chat_reklama_border__image {
+			svg path {
+				stroke: #e63114;
+			}
+		}
+	}
+
+	&__image {
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		svg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: fill;
+
+			path {
+				transition: all 0.3s ease;
+			}
+		}
+	}
 }
 
 .chat_reklama_title {
@@ -3087,10 +3111,17 @@ ul.tabs2 li.active:before {
 }
 
 .chat_reklama_border2 {
+	position: relative;
 	width: 415px;
-	background: url(../images/vi_reklama/background-right.svg) center center;
-	background-size: cover;
 	padding: 19px 64px 18px 32px;
+
+	&:hover {
+		.chat_reklama_border__image {
+			svg path {
+				stroke: #e63114;
+			}
+		}
+	}
 }
 
 .chat_reklama_block2 {

@@ -218,6 +218,12 @@
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
 		padding: 30px 0 0 0;
+
+		&--digital {
+			.sermtarif_block {
+				padding: 96px 0 0 0;
+			}
+		}
 	}
 
 	.sermtarif_block2 {

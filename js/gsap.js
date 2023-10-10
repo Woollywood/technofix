@@ -315,6 +315,18 @@ window.addEventListener('load', (e) => {
 
 		prepareBlocks();
 
+		if (window.innerWidth > 900) {
+			function relatedLineMove(line, relatedBlock, relatedBlocks) {
+				let achievedIndex = +relatedBlock.dataset.navBlockId;
+				let navBlocksAchieved = Array.from(relatedBlocks).slice(0, achievedIndex + 1);
+
+				let navBox = navBlocksAchieved[navBlocksAchieved.length - 1].getBoundingClientRect();
+				let lineHeight = navBox.top + navBox.height - navPanel.getBoundingClientRect().top;
+
+				line.style.height = lineHeight + 'px';
+			}
+		}
+
 		function prepareBlocks() {
 			let contentBlocks = mainBlock.querySelectorAll('.art_block__item');
 			contentBlocks.forEach((contentBlock, index) => {
@@ -328,37 +340,29 @@ window.addEventListener('load', (e) => {
 				navBlock.dataset.goto = `#content-block-${index}`;
 			});
 
-			relatedLine.style.height = navBlocks[0].offsetHeight + 'px';
+			if (window.innerWidth > 900) {
+				relatedLine.style.height = navBlocks[0].offsetHeight + 'px';
 
-			contentBlocks.forEach((contentBlock) => {
-				ScrollTrigger.create({
-					trigger: contentBlock,
-					start: 'top top',
-					onEnter: (e) => {
-						let currentId = contentBlock.dataset.contentBlockId;
-						let currentNav = mainBlock.querySelector(`[data-nav-block-id="${currentId}"]`);
+				contentBlocks.forEach((contentBlock) => {
+					ScrollTrigger.create({
+						trigger: contentBlock,
+						start: 'top top',
+						onEnter: (e) => {
+							let currentId = contentBlock.dataset.contentBlockId;
+							let currentNav = mainBlock.querySelector(`[data-nav-block-id="${currentId}"]`);
 
-						relatedLineMove(relatedLine, currentNav, navBlocks);
-					},
+							relatedLineMove(relatedLine, currentNav, navBlocks);
+						},
 
-					onLeaveBack: (e) => {
-						let currentId = contentBlock.dataset.contentBlockId;
-						let currentNav = mainBlock.querySelector(`[data-nav-block-id="${currentId}"]`);
+						onLeaveBack: (e) => {
+							let currentId = contentBlock.dataset.contentBlockId;
+							let currentNav = mainBlock.querySelector(`[data-nav-block-id="${currentId}"]`);
 
-						relatedLineMove(relatedLine, currentNav, navBlocks);
-					},
+							relatedLineMove(relatedLine, currentNav, navBlocks);
+						},
+					});
 				});
-			});
-		}
-
-		function relatedLineMove(line, relatedBlock, relatedBlocks) {
-			let achievedIndex = +relatedBlock.dataset.navBlockId;
-			let navBlocksAchieved = Array.from(relatedBlocks).slice(0, achievedIndex + 1);
-
-			let navBox = navBlocksAchieved[navBlocksAchieved.length - 1].getBoundingClientRect();
-			let lineHeight = navBox.top + navBox.height - navPanel.getBoundingClientRect().top;
-
-			line.style.height = lineHeight + 'px';
+			}
 		}
 	}
 });

@@ -79,17 +79,21 @@ document.addEventListener('DOMContentLoaded', (e) => {
 			navBlock.append(hoverLine);
 
 			navBlock.addEventListener('mouseenter', (e) => {
-				hoverLine.style.cssText = `
+				if (window.innerWidth > 900) {
+					hoverLine.style.cssText = `
 					opacity: 1;
 					visibility: visible;
 				`;
+				}
 			});
 
 			navBlock.addEventListener('mouseleave', (e) => {
-				hoverLine.style.cssText = `
+				if (window.innerWidth > 900) {
+					hoverLine.style.cssText = `
 					opacity: 0;
 					visibility: hidden;
 				`;
+				}
 			});
 		});
 	}

@@ -179,11 +179,12 @@ if (document.querySelector('.fare-cost__slider')) {
 		observer: true,
 		observeParents: true,
 		slidesPerView: 1,
-		spaceBetween: 0,
+		spaceBetween: 10,
 		speed: 800,
+		allowTouchMove: false,
 
-		// Эффекты
-		effect: 'flip',
+		// // Эффекты
+		// effect: 'flip',
 
 		pagination: {
 			el: '.fare-cost__form-questions-count',

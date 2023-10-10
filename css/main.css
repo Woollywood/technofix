@@ -8011,13 +8011,22 @@ html {
 }
 
 .fare-cost {
-  padding: 34px 0 142px;
+  padding: 34px 0 40px;
+}
+@media (max-width: 560px) {
+  .fare-cost {
+    padding-bottom: 20px;
+  }
 }
 .fare-cost.form-success {
   background-color: #271447;
 }
 .fare-cost__slider-wrapper {
   padding-top: 0;
+  margin: 0 !important;
+}
+.fare-cost__slide {
+  width: 100% !important;
 }
 .fare-cost__body-form {
   position: relative;
@@ -8094,6 +8103,11 @@ html {
   line-height: normal;
   margin-bottom: 11px;
 }
+@media (max-width: 560px) {
+  .fare-cost__title {
+    text-align: center;
+  }
+}
 
 .fare-cost__text {
   color: #d0c1e8;
@@ -8104,6 +8118,11 @@ html {
   line-height: 130.023%; /* 20.804px */
   margin-bottom: 24px;
 }
+@media (max-width: 560px) {
+  .fare-cost__text {
+    text-align: center;
+  }
+}
 
 .fare-cost__form-title {
   color: #fff;
@@ -8113,6 +8132,12 @@ html {
   font-weight: 700;
   line-height: normal;
   margin-bottom: 28px;
+}
+@media (max-width: 560px) {
+  .fare-cost__form-title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
 }
 
 .fare-cost__options {
@@ -8196,7 +8221,7 @@ html {
   }
 }
 .fare-cost__slider {
-  margin-top: -82px;
+  top: 0 !important;
 }
 
 .fare-cost__img img {

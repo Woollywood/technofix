@@ -175,6 +175,9 @@ p {
 .seeds {
   padding: 40px 0 0 0;
 }
+.seeds--promotion {
+  background: rgba(25, 4, 58, 0.35);
+}
 
 .seeds_ul {
   display: flex;
@@ -917,6 +920,12 @@ p {
   padding: 24px 0 23px 0;
   background: #301d4e;
 }
+.article--policy .politica__number {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .ellipse-path:hover {
   fill: linear-gradient(338deg, #ec604a 22.91%, #de6652 68.73%);
@@ -1191,6 +1200,29 @@ p {
 .feedback {
   position: relative !important;
 }
+.feedback--contacts .container {
+  position: relative;
+}
+.feedback--contacts .container .feedback__light {
+  position: absolute;
+  top: 0;
+  right: 16%;
+  width: 451px;
+  height: 446px;
+  border-radius: 50%;
+  background: rgba(63, 16, 145, 0.4);
+  filter: blur(83px);
+}
+@media (max-width: 560px) {
+  .feedback--contacts .container .feedback__light {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .feedback--contacts .container .feedback__light {
+    right: -36%;
+  }
+}
 
 .img__404 {
   text-align: center;
@@ -1221,6 +1253,7 @@ p {
 .contact__body {
   margin: 19px 0 19px 0;
   color: #d0c1e8;
+  line-height: 130%;
 }
 
 .contact__wrap {
@@ -1488,6 +1521,7 @@ p {
 
 .promotion {
   padding: 30px 0 30px 0;
+  background: rgba(25, 4, 58, 0.35);
 }
 
 .prom__main {
@@ -1660,6 +1694,15 @@ p {
 .btn:active {
   background: none;
   border: 1px solid #e63114;
+}
+
+.main--smm {
+  padding-bottom: 52px;
+}
+@media (max-width: 991px) {
+  .main--smm {
+    padding-bottom: 32px;
+  }
 }
 
 .s_service {
@@ -2358,6 +2401,12 @@ html {
 /*---------------------------ГЛАВНЫЕ КЛАССЫ-----------------------------------------*/
 .header {
   max-width: 100vw;
+}
+.header--reklama {
+  background: rgba(25, 4, 58, 0.3);
+}
+.header--promotion {
+  background: rgba(25, 4, 58, 0.35);
 }
 
 .header--absolute {
@@ -7824,6 +7873,34 @@ html {
   background: url(../images/calculator/earth.svg) 26px 50% no-repeat !important;
 }
 
+.order--digital .order__light {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(-50%);
+  width: 451px;
+  height: 533px;
+  border-radius: 50%;
+  background: rgba(63, 16, 145, 0.4);
+  filter: blur(83px);
+}
+@media (max-width: 560px) {
+  .order--digital .order__light {
+    display: none;
+  }
+}
+@media (max-width: 1528px) {
+  .order--digital .order__light {
+    transform: translateX(-30%);
+  }
+}
+@media (max-width: 1048px) {
+  .order--digital .order__light {
+    transform: translateX(0);
+    right: -52%;
+  }
+}
+
 .order.order--calculator {
   border-radius: 22px;
   background: linear-gradient(319deg, rgba(129, 38, 200, 0) 0%, rgba(138, 20, 230, 0.06) 100%);
@@ -8236,7 +8313,7 @@ html {
   }
 }
 .theory {
-  background: rgba(25, 4, 58, 0.95);
+  background: linear-gradient(337deg, rgba(129, 38, 200, 0) -74.44%, rgba(138, 20, 230, 0.06) 88.43%);
   position: relative;
 }
 

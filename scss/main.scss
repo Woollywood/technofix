@@ -196,6 +196,10 @@ p {
 
 .seeds {
 	padding: 40px 0 0 0;
+
+	&--promotion {
+		background: rgba(25, 4, 58, 0.35);
+	}
 }
 
 .seeds_ul {
@@ -1081,6 +1085,15 @@ p {
 .article {
 	padding: 24px 0 23px 0;
 	background: #301d4e;
+
+	&--policy {
+		.politica__number {
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
 }
 
 .ellipse-path:hover {
@@ -1389,6 +1402,30 @@ p {
 
 .feedback {
 	position: relative !important;
+
+	&--contacts {
+		.container {
+			position: relative;
+
+			.feedback__light {
+				@media (max-width: 560px) {
+					display: none;
+				}
+
+				position: absolute;
+				top: 0;
+				right: 16%;
+				@media (max-width: 991px) {
+					right: -36%;
+				}
+				width: 451px;
+				height: 446px;
+				border-radius: 50%;
+				background: rgba(63, 16, 145, 0.4);
+				filter: blur(83px);
+			}
+		}
+	}
 }
 
 .img__404 {
@@ -1443,6 +1480,7 @@ p {
 .contact__body {
 	margin: 19px 0 19px 0;
 	color: #d0c1e8;
+	line-height: 130%;
 }
 
 .contact__wrap {
@@ -1769,6 +1807,7 @@ p {
 
 .promotion {
 	padding: 30px 0 30px 0;
+	background: rgba(25, 4, 58, 0.35);
 }
 
 .prom__main {
@@ -1978,6 +2017,12 @@ p {
 }
 
 .main {
+	&--smm {
+		padding-bottom: 52px;
+		@media (max-width: 991px) {
+			padding-bottom: 32px;
+		}
+	}
 }
 
 .s_service {
@@ -2788,6 +2833,14 @@ html {
 /*---------------------------ГЛАВНЫЕ КЛАССЫ-----------------------------------------*/
 .header {
 	max-width: 100vw;
+
+	&--reklama {
+		background: rgba(25, 4, 58, 0.3);
+	}
+
+	&--promotion {
+		background: rgba(25, 4, 58, 0.35);
+	}
 }
 
 .header--absolute {
@@ -9868,6 +9921,33 @@ html {
 	background: url(../images/calculator/earth.svg) 26px 50% no-repeat !important;
 }
 
+.order {
+	&--digital {
+		.order__light {
+			@media (max-width: 560px) {
+				display: none;
+			}
+
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform: translateX(-50%);
+			@media (max-width: 1528px) {
+				transform: translateX(-30%);
+			}
+			@media (max-width: 1048px) {
+				transform: translateX(0);
+				right: -52%;
+			}
+			width: 451px;
+			height: 533px;
+			border-radius: 50%;
+			background: rgba(63, 16, 145, 0.4);
+			filter: blur(83px);
+		}
+	}
+}
+
 .order.order--calculator {
 	border-radius: 22px;
 	background: -o-linear-gradient(131deg, rgba(129, 38, 200, 0) 0%, rgba(138, 20, 230, 0.06) 100%);
@@ -10384,7 +10464,7 @@ html {
 }
 
 .theory {
-	background: rgba(25, 4, 58, 0.95);
+	background: linear-gradient(337deg, rgba(129, 38, 200, 0) -74.44%, rgba(138, 20, 230, 0.06) 88.43%);
 	position: relative;
 }
 

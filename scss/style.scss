@@ -4574,6 +4574,11 @@ html {
 	gap: 20px;
 	-ms-grid-rows: auto 20px auto 20px 1fr;
 	grid-template-rows: auto auto 1fr;
+
+	.seo-cards__text {
+		max-width: 344px;
+		margin: 0 auto;
+	}
 }
 
 .seo-cards__icon {

@@ -3660,6 +3660,10 @@ html {
   gap: 20px;
   grid-template-rows: auto auto 1fr;
 }
+.seo-cards__item .seo-cards__text {
+  max-width: 344px;
+  margin: 0 auto;
+}
 
 .seo-cards__icon {
   text-align: center;

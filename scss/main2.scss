@@ -405,6 +405,12 @@
 
 .order_input {
 	padding: 17px 0 0 0;
+
+	&--address {
+		input {
+			background: url(../images/address.svg) 28px 50% no-repeat !important;
+		}
+	}
 }
 
 .order_input input {
@@ -1507,6 +1513,7 @@ ul.tabs li:hover {
 
 .seo-increase__title {
 	margin-bottom: 37px;
+	text-transform: uppercase;
 }
 
 .seo-increase__buttons {
@@ -2873,6 +2880,8 @@ ul.tabs2 li.active:before {
 	font-size: 25px;
 	line-height: 30px;
 	color: #fff;
+
+	max-width: 528px;
 }
 
 .w_rekalama_inner {

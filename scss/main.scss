@@ -1250,19 +1250,30 @@ p {
 .social__fixed {
 	position: fixed;
 	left: 35px;
-}
 
-.social__fixed a {
-	display: block;
-	transition: all 0.3s ease;
-}
+	svg {
+		fill: #7141b2;
+		transition: all 0.3s ease;
+	}
 
-.social__fixed li:hover a {
-	padding-left: 20px;
-}
+	a {
+		display: block;
+		transition: all 0.3s ease;
+	}
 
-.social__fixed ul li {
-	margin: 40px 0;
+	li {
+		margin: 40px 0;
+
+		&:hover {
+			a {
+				padding-left: 20px;
+			}
+
+			svg {
+				fill: #e63114;
+			}
+		}
+	}
 }
 
 .line_top {

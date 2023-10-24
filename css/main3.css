@@ -892,14 +892,22 @@ p {
   position: fixed;
   left: 35px;
 }
-
+.social__fixed svg {
+  fill: #7141b2;
+  transition: all 0.3s ease;
+}
 .social__fixed a {
   display: block;
   transition: all 0.3s ease;
 }
-
+.social__fixed li {
+  margin: 40px 0;
+}
 .social__fixed li:hover a {
   padding-left: 20px;
+}
+.social__fixed li:hover svg {
+  fill: #e63114;
 }
 
 .first-block__top-background {
@@ -923,10 +931,6 @@ p {
   height: 100%;
   -o-object-fit: fill;
      object-fit: fill;
-}
-
-.social__fixed ul li {
-  margin: 40px 0;
 }
 
 .line_top {
@@ -2207,7 +2211,7 @@ html {
   height: 540px;
   transform: translate(20%, -20%);
   border-radius: 50%;
-  background: #3F1091;
+  background: #3f1091;
   filter: blur(64px);
 }
 @media (max-width: 1400px) {

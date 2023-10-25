@@ -1579,6 +1579,42 @@ p {
   }
 }
 
+@media (max-width: 1560px) {
+  .smm .promotion .title {
+    margin-right: -32px;
+  }
+  .smm .promotion .serm_head_suptitle {
+    margin-right: -94px;
+  }
+}
+
+@media (max-width: 1560px) and (min-width: 1201px) {
+  .digital .promotion .title {
+    margin-right: -134px;
+  }
+  .digital .promotion .serm_head_suptitle {
+    margin-right: -130px;
+  }
+}
+@media (max-width: 1201px) {
+  .digital .promotion .title {
+    max-width: 692px;
+    margin: 0 auto;
+    margin-bottom: 22px;
+    font-size: 32px;
+  }
+}
+@media (max-width: 991px) {
+  .digital .promotion .title {
+    font-size: 22px;
+    margin-bottom: 18px;
+  }
+  .digital .promotion .serm_head_suptitle {
+    font-size: 14px;
+    margin-bottom: 27px;
+  }
+}
+
 .serm_head_block {
   width: 50%;
 }
@@ -1753,7 +1789,7 @@ p {
   margin: 0 0 20px 0;
 }
 .serivice__block p {
-  line-height: 130%;
+  line-height: 130% !important;
 }
 
 .serivice__inner {
@@ -1767,7 +1803,6 @@ p {
   border-image-slice: 1;
   background-clip: padding-box;
   border-width: 1px;
-  height: 327px;
 }
 
 .serivice__inner:before {
@@ -2159,12 +2194,6 @@ p {
   position: relative;
   z-index: 2;
 }
-@media (max-width: 1050px) {
-  .sermtarif_ellipse {
-    background: linear-gradient(274.75deg, rgb(31, 16, 73) -38.36%, rgb(21, 11, 51) 53.27%) !important;
-    border: 1px solid #5e149e !important;
-  }
-}
 
 .sermtarif--seo .sermtarif_border__note {
   display: none;
@@ -2411,6 +2440,18 @@ p {
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (max-width: 991px) {
+  .about-page .swiper-controlls {
+    display: none !important;
+  }
+}
+.about-page .swiper-slide {
+  width: 100% !important;
+}
+.about-page .swiper-wrapper {
+  margin: 0 !important;
 }
 
 /*------------------ПОДКЛЮЧЕНИЕ ШРИФТОВ---------------------------------------------*/
@@ -6996,6 +7037,9 @@ html {
   font-weight: 700;
   line-height: 143.023%; /* 20.023px */
 }
+.block-stages__right-title:not(:last-child) {
+  margin-bottom: 8px;
+}
 
 .block-stages__right-text {
   color: #d0c1e8;
@@ -7693,7 +7737,7 @@ html {
   }
 }
 
-@media (min-width: 842px) {
+@media (min-width: 802px) {
   .calculator__body {
     display: grid;
     gap: 88px;
@@ -7742,16 +7786,39 @@ html {
 .calculator__range-input-scale {
   position: relative;
   width: 100%;
-  height: 28px;
+  height: 8px;
 }
-.calculator__range-input-scale svg {
+
+.calculator__range-input-scale-icon svg {
   position: absolute;
-  top: 0;
+  z-index: -1;
+  top: -3px;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 8px;
   -o-object-fit: fill;
      object-fit: fill;
+}
+
+.calculator__range-input-scale-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .calculator__range-input-scale-list {
+    max-width: 278px;
+  }
+}
+
+.calculator__range-input-scale-item {
+  color: #d0c1e8;
+  font-family: Inter;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130.023%; /* 14.303px */
 }
 
 .calculator__options {
@@ -7818,10 +7885,12 @@ html {
     margin-bottom: 28px;
   }
 }
-@media (min-width: 842px) {
+@media (min-width: 802px) {
   .calculator__calculator--mobile {
     display: none;
   }
+}
+@media (min-width: 856px) {
   .calculator__button {
     flex: 0 0 258px;
   }
@@ -7862,7 +7931,7 @@ html {
   background: linear-gradient(319deg, rgba(129, 38, 200, 0) 0%, rgba(138, 20, 230, 0.06) 100%);
 }
 
-@media (max-width: 842px) {
+@media (max-width: 802px) {
   .calculator__calculator-img {
     display: none;
   }
@@ -8574,6 +8643,11 @@ html {
   padding: 44px 68px;
   max-width: 1264px;
   margin: 0 auto;
+}
+@media (max-width: 560px) {
+  .our_clients__inner-slider {
+    padding: 33px 68px 42px;
+  }
 }
 
 .about-slider {

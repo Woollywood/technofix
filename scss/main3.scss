@@ -2227,10 +2227,12 @@ html {
 	flex: 0 0 30%;
 	transform: scale(1.3);
 
-	top: unset !important;
-	left: unset !important;
-	right: unset !important;
-	bottom: unset !important;
+	@media (min-width: 1037px) {
+		top: unset !important;
+		left: unset !important;
+		right: unset !important;
+		bottom: unset !important;
+	}
 }
 
 .order_img10__light {
@@ -7141,6 +7143,12 @@ html {
 	border-top: 1px solid rgba(255, 255, 255, 0.09);
 	margin-bottom: 40px;
 
+	&__item-bottom-list {
+		@media (max-width: 1442px) {
+			margin-top: -12px;
+		}
+	}
+
 	@media (max-width: 479px) {
 		padding-top: 32px;
 		border-top: 0;
@@ -7771,6 +7779,10 @@ html {
 
 	border-radius: 12px;
 	overflow: hidden;
+
+	@media (max-width: 991px) {
+		padding-bottom: 75%;
+	}
 }
 
 .our-cases__img img {
@@ -7986,10 +7998,18 @@ html {
 		padding-top: 36px;
 	}
 
+	@media (max-width: 900px) {
+		font-size: 32px !important;
+	}
+
 	@media (max-width: 560px) {
+		font-size: 22px !important;
 		margin: 0 auto;
-		margin-bottom: 63px;
 		max-width: 232px;
+	}
+
+	@media (max-width: 900px) {
+		margin-bottom: 29px;
 	}
 }
 
@@ -8086,7 +8106,10 @@ html {
 
 	.profit__item-big-text {
 		max-width: 234px;
-		margin: 0 auto;
+		@media (min-width: 860px) {
+			margin: 0 auto;
+			margin-bottom: 30px;
+		}
 		margin-bottom: 30px;
 		text-align: center;
 	}

@@ -1420,7 +1420,7 @@ p {
 
 	&--contacts {
 		background: #20113a url(../images/images/order.svg) center no-repeat !important;
-    background-size: cover !important;
+		background-size: cover !important;
 
 		.container {
 			position: relative;
@@ -1874,6 +1874,59 @@ p {
 	}
 }
 
+.smm {
+	@media (max-width: 1560px) {
+		.promotion {
+			.title {
+				margin-right: -32px;
+			}
+
+			.serm_head_suptitle {
+				margin-right: -94px;
+			}
+		}
+	}
+}
+
+.digital {
+	@media (max-width: 1560px) and (min-width: 1201px) {
+		.promotion {
+			.title {
+				margin-right: -134px;
+			}
+
+			.serm_head_suptitle {
+				margin-right: -130px;
+			}
+		}
+	}
+
+	@media (max-width: 1201px) {
+		.promotion {
+			.title {
+				max-width: 692px;
+				margin: 0 auto;
+				margin-bottom: 22px;
+				font-size: 32px;
+			}
+		}
+	}
+
+	@media (max-width: 991px) {
+		.promotion {
+			.title {
+				font-size: 22px;
+				margin-bottom: 18px;
+			}
+
+			.serm_head_suptitle {
+				font-size: 14px;
+				margin-bottom: 27px;
+			}
+		}
+	}
+}
+
 .serm_head_block {
 	width: 50%;
 
@@ -2084,7 +2137,7 @@ p {
 	margin: 0 0 20px 0;
 
 	p {
-		line-height: 130%;
+		line-height: 130% !important;
 	}
 }
 
@@ -2100,7 +2153,6 @@ p {
 	border-image-slice: 1;
 	background-clip: padding-box;
 	border-width: 1px;
-	height: 327px;
 }
 
 .serivice__inner:before {
@@ -2564,12 +2616,6 @@ p {
 	transition: all 0.3s ease;
 	position: relative;
 	z-index: 2;
-
-	@media (max-width: 1050px) {
-		background: -o-linear-gradient(175.25deg, rgb(31 16 73) -38.36%, rgb(21 11 51) 53.27%) !important;
-		background: linear-gradient(274.75deg, rgb(31 16 73) -38.36%, rgb(21 11 51) 53.27%) !important;
-		border: 1px solid #5e149e !important;
-	}
 }
 
 .sermtarif {
@@ -2850,6 +2896,22 @@ p {
 
 html {
 	scroll-behavior: smooth;
+}
+
+.about-page {
+	@media (max-width: 991px) {
+		.swiper-controlls {
+			display: none !important;
+		}
+	}
+
+	.swiper-slide {
+		width: 100% !important;
+	}
+
+	.swiper-wrapper {
+		margin: 0 !important;
+	}
 }
 
 /*------------------ПОДКЛЮЧЕНИЕ ШРИФТОВ---------------------------------------------*/
@@ -8806,6 +8868,10 @@ html {
 	font-style: normal;
 	font-weight: 700;
 	line-height: 143.023%; /* 20.023px */
+
+	&:not(:last-child) {
+		margin-bottom: 8px;
+	}
 }
 
 .block-stages__right-text {
@@ -9679,7 +9745,7 @@ html {
 	}
 }
 
-@media (min-width: 842px) {
+@media (min-width: 802px) {
 	.calculator__body {
 		display: -ms-grid;
 		display: grid;
@@ -9742,16 +9808,39 @@ html {
 .calculator__range-input-scale {
 	position: relative;
 	width: 100%;
-	height: 28px;
+	height: 8px;
+}
 
+.calculator__range-input-scale-icon {
 	svg {
 		position: absolute;
-		top: 0;
+		z-index: -1;
+		top: -3px;
 		left: 0;
 		width: 100%;
-		height: 100%;
+		height: 8px;
 		object-fit: fill;
 	}
+}
+
+.calculator__range-input-scale-list {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+
+	@media (max-width: 991px) {
+		max-width: 278px;
+	}
+}
+
+.calculator__range-input-scale-item {
+	color: #d0c1e8;
+	font-family: Inter;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 130.023%; /* 14.303px */
 }
 
 .calculator__options {
@@ -9854,11 +9943,13 @@ html {
 	}
 }
 
-@media (min-width: 842px) {
+@media (min-width: 802px) {
 	.calculator__calculator--mobile {
 		display: none;
 	}
+}
 
+@media (min-width: 856px) {
 	.calculator__button {
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 258px;
@@ -9917,7 +10008,7 @@ html {
 	background: linear-gradient(319deg, rgba(129, 38, 200, 0) 0%, rgba(138, 20, 230, 0.06) 100%);
 }
 
-@media (max-width: 842px) {
+@media (max-width: 802px) {
 	.calculator__calculator-img {
 		display: none;
 	}
@@ -10776,6 +10867,10 @@ html {
 		padding: 44px 68px;
 		max-width: 1264px;
 		margin: 0 auto;
+
+		@media (max-width: 560px) {
+			padding: 33px 68px 42px;
+		}
 	}
 }
 

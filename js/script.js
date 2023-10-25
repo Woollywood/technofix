@@ -663,7 +663,7 @@ var swiper1 = new Swiper('.swiper2', {
 	},
 });
 if (window.innerWidth < 768) {
-	document.querySelector('.ripple__bundle22').classList.add('active');
-	document.querySelector('.digital__way12').classList.add('active');
-	document.querySelector('.digital__way13').classList.add('active');
+	document.querySelector('.ripple__bundle22')?.classList.add('active');
+	document.querySelector('.digital__way12')?.classList.add('active');
+	document.querySelector('.digital__way13')?.classList.add('active');
 }

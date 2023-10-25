@@ -1906,10 +1906,14 @@ html {
   position: relative !important;
   flex: 0 0 30%;
   transform: scale(1.3);
-  top: unset !important;
-  left: unset !important;
-  right: unset !important;
-  bottom: unset !important;
+}
+@media (min-width: 1037px) {
+  .order_img10--fix {
+    top: unset !important;
+    left: unset !important;
+    right: unset !important;
+    bottom: unset !important;
+  }
 }
 
 .order_img10__light {
@@ -5701,6 +5705,11 @@ html {
   border-top: 1px solid rgba(255, 255, 255, 0.09);
   margin-bottom: 40px;
 }
+@media (max-width: 1442px) {
+  .our-services__item-bottom-list {
+    margin-top: -12px;
+  }
+}
 @media (max-width: 479px) {
   .our-services {
     padding-top: 32px;
@@ -6194,6 +6203,11 @@ html {
   border-radius: 12px;
   overflow: hidden;
 }
+@media (max-width: 991px) {
+  .our-cases__img {
+    padding-bottom: 75%;
+  }
+}
 
 .our-cases__img img {
   position: absolute;
@@ -6370,11 +6384,21 @@ html {
     padding-top: 36px;
   }
 }
+@media (max-width: 900px) {
+  .profit__title {
+    font-size: 32px !important;
+  }
+}
 @media (max-width: 560px) {
   .profit__title {
+    font-size: 22px !important;
     margin: 0 auto;
-    margin-bottom: 63px;
     max-width: 232px;
+  }
+}
+@media (max-width: 900px) {
+  .profit__title {
+    margin-bottom: 29px;
   }
 }
 
@@ -6446,9 +6470,14 @@ html {
 }
 .profit__item-big .profit__item-big-text {
   max-width: 234px;
-  margin: 0 auto;
   margin-bottom: 30px;
   text-align: center;
+}
+@media (min-width: 860px) {
+  .profit__item-big .profit__item-big-text {
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
 }
 
 .profit__item-small {

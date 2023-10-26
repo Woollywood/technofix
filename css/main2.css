@@ -1401,6 +1401,22 @@ ul.tabs li:last-child {
   max-width: 100%;
   text-align: left;
 }
+.seo-increase__row-text::-moz-placeholder {
+  color: #fff;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130.023%; /* 23.404px */
+}
+.seo-increase__row-text::placeholder {
+  color: #fff;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130.023%; /* 23.404px */
+}
 .seo-increase__row-text--input {
   text-align: center;
 }
@@ -3026,7 +3042,7 @@ ul.tabs2 li.active:before {
 
 .raz_reklama_li:before {
   content: "";
-  background: url(../images/images/raz_reklama_li.svg) 0 0 no-repeat;
+  background: url(../images/usl/li.svg) 0 0 no-repeat;
   width: 14px;
   height: 14px;
 }

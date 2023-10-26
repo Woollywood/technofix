@@ -131,17 +131,19 @@ if (document.querySelector('.work-stages__slider')) {
 
 				slides.forEach((slide, index) => (slide.dataset.slideIndex = dataIndex[index]));
 
-				if (window.innerWidth <= 1068) {
-					let wrapperWidth = slides.reduce(
-						(width, slide) => (width += slide.clientWidth + Number.parseInt(slide.style.marginRight)),
-						0
-					);
-					slides[0].parentNode.style.cssText += `--wrapper-width: ${wrapperWidth}px`;
-					slides[0].parentNode.style.cssText += `--slide-width: ${slides[0].clientWidth}px`;
-					slides[0].parentNode.style.cssText += `--progress-width: ${slides[0].clientWidth + 25 + 40}px`;
-					document.querySelector('.work-stages__slider-wrapper-outer').style.cssText +=
+				try {
+					if (window.innerWidth <= 1068) {
+						let wrapperWidth = slides.reduce(
+							(width, slide) => (width += slide.clientWidth + Number.parseInt(slide.style.marginRight)),
+							0
+						);
+						slides[0].parentNode.style.cssText += `--wrapper-width: ${wrapperWidth}px`;
 						slides[0].parentNode.style.cssText += `--slide-width: ${slides[0].clientWidth}px`;
-				}
+						slides[0].parentNode.style.cssText += `--progress-width: ${slides[0].clientWidth + 25 + 40}px`;
+						document.querySelector('.work-stages__slider-wrapper-outer').style.cssText +=
+							slides[0].parentNode.style.cssText += `--slide-width: ${slides[0].clientWidth}px`;
+					}
+				} catch (error) {}
 
 				window.addEventListener('resize', (resizeEv) => {
 					if (window.innerWidth <= 1068) {

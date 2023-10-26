@@ -136,6 +136,7 @@
 	border: 1px solid #5418a3;
 	max-height: 360px;
 	overflow: hidden;
+	padding-right: 4px;
 }
 
 .select__scroll {
@@ -155,7 +156,7 @@
 	flex-direction: column;
 
 	&::-webkit-scrollbar {
-		width: 12px;
+		width: 4px;
 	}
 
 	&::-webkit-scrollbar-track {
@@ -163,7 +164,7 @@
 	}
 
 	&::-webkit-scrollbar-thumb {
-		background-color: #e63114;
+		background-color: #8b7d7b;
 		border-radius: 12px;
 	}
 }

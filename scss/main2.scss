@@ -2909,6 +2909,14 @@ ul.tabs2 li.active:before {
 .w_rekalama {
 	margin: -40px 0 0 0;
 	padding: 40px 0 90px 0;
+
+	&--new-background {
+		background-color: rgba(25, 4, 58, 0.3);
+	}
+}
+
+.wrapper-reklama {
+	background-color: rgba(#19043a, 0.25);
 }
 
 .w_rekalama_wrap {

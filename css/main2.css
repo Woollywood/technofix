@@ -2490,6 +2490,13 @@ ul.tabs2 li.active:before {
   margin: -40px 0 0 0;
   padding: 40px 0 90px 0;
 }
+.w_rekalama--new-background {
+  background-color: rgba(25, 4, 58, 0.3);
+}
+
+.wrapper-reklama {
+  background-color: rgba(25, 4, 58, 0.25);
+}
 
 .w_rekalama_wrap {
   display: flex;

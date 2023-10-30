@@ -39,7 +39,34 @@ if (document.querySelector('.our-cases__slider-top .our-cases__slider')) {
 	});
 }
 
-if (document.querySelector('.our-clients__slider')) {
+if (document.querySelector('#our-clients__slider')) {
+	let swiperTop = new Swiper('#our-clients__slider', {
+		// Указываем класс нужного слайдера
+		// Подключаем модули слайдера
+		// для конкретного случая
+		observer: true,
+		observeParents: true,
+		spaceBetween: 20,
+		// autoHeight: true,
+		speed: 800,
+
+		navigation: {
+			prevEl: '.swiper-button-prev-custom',
+			nextEl: '.swiper-button-next-custom',
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 2,
+			},
+			560: {
+				slidesPerView: 3,
+			},
+			960: {
+				slidesPerView: 5,
+			},
+		},
+	});
+} else if (document.querySelector('.our-clients__slider')) {
 	let swiperTop = new Swiper('.our-clients__slider', {
 		// Указываем класс нужного слайдера
 		// Подключаем модули слайдера
@@ -275,5 +302,29 @@ if (document.querySelector('.about-slider')) {
 		},
 
 		on: {},
+	});
+}
+
+if (document.querySelector('.cases-bottom__slider')) {
+	new Swiper('.cases-bottom__slider', {
+		observer: true,
+		observeParents: true,
+		spaceBetween: 20,
+		speed: 800,
+
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+			},
+			375: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 3,
+			},
+			1268: {
+				slidesPerView: 5,
+			},
+		},
 	});
 }

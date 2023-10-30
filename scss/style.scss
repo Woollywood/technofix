@@ -4297,7 +4297,7 @@ html {
 	@media (max-width: 1240px) {
 		padding: 132px 0 43px;
 	}
-	background: url(../images/seo-main/background.png);
+	background: url(../images/seo-main/background.svg);
 	background-size: cover;
 }
 
@@ -4368,12 +4368,17 @@ html {
 		margin-right: -100px;
 	}
 
+	@media (max-width: 939px) {
+		margin-bottom: 0;
+	}
+
 	@media (max-width: 712px) {
 		font-size: 14px;
 		text-align: center;
 		max-width: unset;
 		margin-bottom: 17px;
 	}
+
 }
 
 .seo-main__row {

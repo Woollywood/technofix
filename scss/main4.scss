@@ -6386,9 +6386,6 @@ html {
 		left: 45.5%;
 		width: 360px;
 	}
-	.swiper-slide {
-		width: auto !important;
-	}
 
 	.digital__card-chart.active {
 		width: 154.34px;
@@ -8569,9 +8566,18 @@ html {
 }
 
 .container--clients {
-	padding-top: 51px;
-	padding-bottom: 38px;
+	padding-top: 36px !important;
+	padding-bottom: 51px !important;
 	border-top: 1px solid rgba(255, 255, 255, 0.09);
+
+	@media (max-width: 936px) {
+		padding-top: 29px !important;
+		padding-bottom: 46px !important;
+	}
+
+	@media (max-width: 536px) {
+		padding-bottom: 35px !important;
+	}
 }
 
 .our-clients__title {
@@ -8637,12 +8643,6 @@ html {
 .our-clients__slider {
 	top: 0 !important;
 	display: block !important;
-}
-
-.container--clients {
-	padding-top: 51px !important;
-	padding-bottom: 38px !important;
-	border-top: 1px solid rgba(255, 255, 255, 0.09);
 }
 
 .our-clients__title {
@@ -8840,12 +8840,6 @@ html {
 	.smm .swiper-wrapper,
 	.digital .swiper-wrapper {
 		margin: 0 !important;
-	}
-
-	.serm .swiper-slide,
-	.smm .swiper-slide,
-	.digital .swiper-slide {
-		width: 100% !important;
 	}
 }
 
@@ -9892,10 +9886,6 @@ html {
 		padding-top: 42px;
 		margin-bottom: 20px;
 	}
-
-	@media (max-width: 842px) {
-		margin-bottom: 0 !important;
-	}
 }
 
 @media (min-width: 802px) {
@@ -10151,10 +10141,6 @@ html {
 
 .calculator__calculator-img {
 	position: relative;
-
-	@media (max-width: 842px) and (min-width: 720px) {
-		transform: translateY(10%);
-	}
 }
 
 .calculator__calculator--mobile {
@@ -11000,10 +10986,6 @@ html {
 	position: relative;
 	gap: 64px;
 	align-items: center;
-
-	@media (max-width: 560px) {
-		gap: 20px;
-	}
 }
 
 .w_rekalama_block {
@@ -11024,7 +11006,7 @@ html {
 	&__background {
 		flex: 1 1 auto;
 
-		@media (max-width: 1112px) and (min-width: 812px) {
+		@media (max-width: 1112px) {
 			transform: scale(1.1);
 			position: absolute;
 			z-index: -1;
@@ -11033,8 +11015,12 @@ html {
 			width: 56%;
 		}
 
-		@media (max-width: 868px) and (min-width: 812px) {
+		@media (max-width: 868px) {
 			transform: scale(1.4);
+		}
+
+		@media (max-width: 812px) {
+			display: none;
 		}
 	}
 }
@@ -11081,7 +11067,6 @@ html {
 
 	&__slide {
 		position: relative;
-		width: auto !important;
 		height: 279px !important;
 		padding: 10px;
 		border-radius: 14.062px;

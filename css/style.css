@@ -3378,7 +3378,7 @@ html {
   position: relative;
   z-index: 1;
   padding: 164px 0;
-  background: url(../images/seo-main/background.png);
+  background: url(../images/seo-main/background.svg);
   background-size: cover;
 }
 @media (max-width: 1240px) {
@@ -3464,6 +3464,11 @@ html {
 @media (min-width: 1344px) {
   .seo-main__text {
     margin-right: -100px;
+  }
+}
+@media (max-width: 939px) {
+  .seo-main__text {
+    margin-bottom: 0;
   }
 }
 @media (max-width: 712px) {

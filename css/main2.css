@@ -356,6 +356,9 @@
   z-index: 1;
   max-width: 760px;
 }
+.order_width .title {
+  font-size: 32px !important;
+}
 
 .order_width--fix {
   position: relative;

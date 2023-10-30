@@ -165,7 +165,15 @@
 
 	.h_serm_img {
 		text-align: center;
-		padding: 44px 0 0 0;
+		@media (max-width: 846px) {
+			@media (min-width: 720px) {
+				margin-top: -32px;
+			}
+
+			@media (max-width: 720px) {
+				margin-top: -16px;
+			}
+		}
 	}
 
 	.h_serm_wrap {

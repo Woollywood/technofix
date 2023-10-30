@@ -121,8 +121,19 @@
   }
   .h_serm_img {
     text-align: center;
-    padding: 44px 0 0 0;
   }
+}
+@media screen and (max-width: 1200px) and (max-width: 846px) and (min-width: 720px) {
+  .h_serm_img {
+    margin-top: -32px;
+  }
+}
+@media screen and (max-width: 1200px) and (max-width: 846px) and (max-width: 720px) {
+  .h_serm_img {
+    margin-top: -16px;
+  }
+}
+@media screen and (max-width: 1200px) {
   .h_serm_wrap {
     max-width: 645px;
     margin: 0 auto 32px auto;

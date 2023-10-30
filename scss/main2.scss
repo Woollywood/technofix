@@ -403,6 +403,10 @@
 	position: relative;
 	z-index: 1;
 	max-width: 760px;
+
+	.title {
+		font-size: 32px !important;
+	}
 }
 
 .order_width--fix {

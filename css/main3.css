@@ -4513,7 +4513,7 @@ html {
     margin-top: 20px;
   }
   .digital__title span {
-    font-size: 14px;
+    font-size: 22px;
     line-height: 17px;
     margin-top: 25px;
   }
@@ -5577,6 +5577,9 @@ html {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+}
+.for-whome__item-top-title--fix {
+  display: block;
 }
 @media (max-width: 560px) {
   .for-whome__item-top-title .mobile-text {

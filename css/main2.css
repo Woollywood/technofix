@@ -193,6 +193,44 @@
     background-color: #20113a !important;
   }
 }
+@media (max-width: 860px) and (min-width: 712px) {
+  .order--main-fix .order_width {
+    max-width: 417px;
+  }
+  .order--main-fix .title_order {
+    margin-right: -32px;
+  }
+}
+@media (max-width: 560px) {
+  .order--main-fix .container .title {
+    max-width: 260px !important;
+    font-size: 22px !important;
+  }
+}
+@media (max-width: 460px) {
+  .order--adv .container .title {
+    max-width: 260px;
+    font-size: 22px !important;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .order--adv .container .title_order {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 460px) {
+  .order--serm .container .title {
+    max-width: 260px;
+    font-size: 22px !important;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .order--serm .container .title_order {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
 
 .order--fix .order_input {
   max-width: 607px;
@@ -742,6 +780,14 @@ ul.tabs li:last-child {
 
 .art_img {
   padding: 40px 0 0 0;
+}
+@media (max-width: 460px) {
+  .art_img {
+    padding: 25px 0 0 0;
+  }
+  .art_img img {
+    height: 161px;
+  }
 }
 
 .art_pd2 {
@@ -2892,6 +2938,16 @@ ul.tabs2 li.active:before {
   justify-content: center;
   text-align: center;
 }
+@media (max-width: 1050px) {
+  .usl_reklama_icon {
+    transform: scale(1.5);
+  }
+}
+@media (max-width: 640px) {
+  .usl_reklama_icon {
+    transform: scale(1.2);
+  }
+}
 
 .usl_reklama_suptitle2 span {
   font-family: "Inter-Medium";
@@ -3388,8 +3444,27 @@ ul.tabs2 li.active:before {
 
 .kak_reklama_ellipce_absolute {
   position: absolute;
+  z-index: 6;
   top: -75px;
   right: -50px;
+}
+@media (max-width: 1560px) {
+  .kak_reklama_ellipce_absolute {
+    top: -65px !important;
+    right: -44px !important;
+  }
+}
+@media (max-width: 440px) {
+  .kak_reklama_ellipce_absolute {
+    top: -3% !important;
+    right: 3% !important;
+  }
+}
+@media (max-width: 380px) {
+  .kak_reklama_ellipce_absolute {
+    top: 0 !important;
+    right: 0 !important;
+  }
 }
 
 /*tss_reklama*/

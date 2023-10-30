@@ -1839,6 +1839,9 @@ p {
   height: 91px;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(124deg, #240D40 -24.75%, rgba(36, 13, 64, 0) 121.35%);
+  -webkit-backdrop-filter: blur(3.8372461796px);
+          backdrop-filter: blur(3.8372461796px);
 }
 
 .h_serm_block p {
@@ -2413,7 +2416,7 @@ p {
   border: 1px solid #791ac3;
   padding: 86px 27px 41px 27px;
   border-radius: 55px 55px 22px 22px;
-  background: #2d154f;
+  background: linear-gradient(337deg, rgba(129, 38, 200, 0) -74.44%, rgba(138, 20, 230, 0.06) 88.43%) !important;
   margin-top: -82px;
 }
 
@@ -6911,6 +6914,29 @@ html {
     padding-bottom: 42px;
   }
 }
+@media (max-width: 460px) {
+  .work-stages--smm {
+    padding-bottom: 27px !important;
+  }
+  .work-stages--smm .block-stages__title {
+    display: block !important;
+  }
+  .work-stages--smm .block-stages__title span {
+    display: block !important;
+  }
+  .work-stages--smm .block-stages__left {
+    display: none;
+  }
+  .work-stages--smm .block-stages__part {
+    display: block;
+  }
+  .work-stages--smm .work-stages__block {
+    padding: 26px !important;
+  }
+  .work-stages--smm .block-stages__right-text {
+    max-width: 90%;
+  }
+}
 
 .work-stages--smm .block-stages__part svg {
   opacity: 0;
@@ -8149,7 +8175,7 @@ html {
   margin-bottom: 50px;
 }
 
-@media (min-width: 842px) {
+@media (min-width: 832px) {
   .order.order--calculator .order_form-bottom {
     display: grid;
     gap: 19px;

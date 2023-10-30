@@ -4517,6 +4517,10 @@ html {
 }
 
 .seo-main__right {
+	@media (max-width: 960px) and (min-width: 712px) {
+		transform: scale(1.2) translateY(-10%);
+	}
+
 	@media (max-width: 475px) {
 		margin: -50px 0 -72px;
 	}

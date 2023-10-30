@@ -239,6 +239,63 @@
 			background-color: #20113a !important;
 		}
 	}
+
+	&--main-fix {
+		@media (max-width: 860px) and (min-width: 712px) {
+			.order_width {
+				max-width: 417px;
+			}
+	
+			.title_order {
+				margin-right: -32px;
+			}
+		}
+
+		@media (max-width: 560px) {
+			.container {
+				.title {
+					max-width: 260px !important;
+					font-size: 22px !important;
+				}
+			}
+		}
+	}
+
+	&--adv {
+		@media (max-width: 460px) {
+			.container {
+				.title {
+					max-width: 260px;
+					font-size: 22px !important;
+					text-align: center;
+					margin: 0 auto;
+				}
+
+				.title_order {
+					text-align: center;
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+
+	&--serm {
+		@media (max-width: 460px) {
+			.container {
+				.title {
+					max-width: 260px;
+					font-size: 22px !important;
+					text-align: center;
+					margin: 0 auto;
+				}
+
+				.title_order {
+					text-align: center;
+					margin: 0 auto;
+				}
+			}
+		}
+	}
 }
 
 .order--fix .order_input {
@@ -856,6 +913,14 @@ ul.tabs li:hover {
 
 .art_img {
 	padding: 40px 0 0 0;
+
+	@media (max-width: 460px) {
+		padding: 25px 0 0 0;
+
+		img {
+			height: 161px;
+		}
+	}
 }
 
 .art_pd2 {
@@ -3360,6 +3425,14 @@ ul.tabs2 li.active:before {
 	-ms-flex-pack: center;
 	justify-content: center;
 	text-align: center;
+
+	@media (max-width: 1050px) {
+		transform: scale(1.5);
+	}
+
+	@media (max-width: 640px) {
+		transform: scale(1.2);
+	}
 }
 
 .usl_reklama_suptitle2 span {
@@ -3927,8 +4000,24 @@ ul.tabs2 li.active:before {
 
 .kak_reklama_ellipce_absolute {
 	position: absolute;
+	z-index: 6;
 	top: -75px;
 	right: -50px;
+
+	@media (max-width: 1560px) {
+		top: -65px !important;
+		right: -44px !important;
+	}
+
+	@media (max-width: 440px) {
+		top: -3% !important;
+		right: 3% !important;
+	}
+
+	@media (max-width: 380px) {
+		top: 0 !important;
+		right: 0 !important;
+	}
 }
 
 /*tss_reklama*/

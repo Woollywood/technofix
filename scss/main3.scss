@@ -5617,7 +5617,7 @@ html {
 		margin-top: 20px;
 	}
 	.digital__title span {
-		font-size: 14px;
+		font-size: 22px;
 		line-height: 17px;
 		margin-top: 25px;
 	}
@@ -6997,6 +6997,10 @@ html {
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
+
+	&--fix {
+		display: block;
+	}
 
 	.mobile-text {
 		@media (max-width: 560px) {

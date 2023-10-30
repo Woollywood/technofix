@@ -3610,6 +3610,11 @@ html {
   color: #e63114;
 }
 
+@media (max-width: 960px) and (min-width: 712px) {
+  .seo-main__right {
+    transform: scale(1.2) translateY(-10%);
+  }
+}
 @media (max-width: 475px) {
   .seo-main__right {
     margin: -50px 0 -72px;

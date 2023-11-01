@@ -394,6 +394,7 @@ html {
   stroke-dasharray: 5 100;
   stroke-dashoffset: -95;
 }
+
 @keyframes render {
   0% {
     stroke-dasharray: 0 100;
@@ -856,6 +857,7 @@ html {
   background-color: #0fb6e9;
   animation: line-decor1 20s infinite alternate;
 }
+
 @keyframes line-decor1 {
   0% {
     background-color: #0e6883;
@@ -907,6 +909,7 @@ html {
   background-color: #1d0fe9;
   animation: line-decor2 20s infinite alternate;
 }
+
 @keyframes line-decor2 {
   0% {
     background-color: #700939;
@@ -958,6 +961,7 @@ html {
   background-color: #e90fe9;
   animation: line-decor3 20s infinite alternate;
 }
+
 @keyframes line-decor3 {
   0% {
     background-color: #0f44b8;
@@ -1008,6 +1012,7 @@ html {
   background-color: #d838b0;
   animation: line-decor4 20s infinite alternate;
 }
+
 @keyframes line-decor4 {
   0% {
     background-color: #bb0f0f;
@@ -1057,6 +1062,7 @@ html {
   background-color: #0fb6e9;
   animation: line-decor5 20s infinite alternate;
 }
+
 @keyframes line-decor5 {
   0% {
     background-color: #091870;
@@ -1158,6 +1164,7 @@ html {
   background-color: #0fb6e9;
   animation: line-decor7 20s infinite alternate;
 }
+
 @keyframes line-decor7 {
   0% {
     background-color: #971818;
@@ -1208,6 +1215,7 @@ html {
   background-color: #0fb6e9;
   animation: line-decor8 20s infinite alternate;
 }
+
 @keyframes line-decor8 {
   0% {
     background-color: #831313;
@@ -1258,6 +1266,7 @@ html {
   background-color: #0fb6e9;
   animation: line-decor9 20s infinite alternate;
 }
+
 @keyframes line-decor9 {
   0% {
     background-color: #c50909;
@@ -1309,6 +1318,7 @@ html {
   background-color: #fd0000;
   animation: line-decor10 20s infinite alternate;
 }
+
 @keyframes line-decor10 {
   0% {
     background-color: #b10f25;
@@ -1360,6 +1370,7 @@ html {
   background-color: #5c16b8;
   animation: line-decor11 20s infinite alternate;
 }
+
 @keyframes line-decor11 {
   0% {
     background-color: #144f86;
@@ -1410,6 +1421,7 @@ html {
   background-color: #122fd1;
   animation: line-decor12 20s infinite alternate;
 }
+
 @keyframes line-decor12 {
   0% {
     background-color: #1cbde6;
@@ -1459,6 +1471,7 @@ html {
   background-color: #c41835;
   animation: line-decor13 20s infinite alternate;
 }
+
 @keyframes line-decor13 {
   0% {
     background-color: #1c1fe6;
@@ -1508,6 +1521,7 @@ html {
   background-color: #c41835;
   animation: line-decor14 20s infinite alternate;
 }
+
 @keyframes line-decor14 {
   0% {
     background-color: #1c1fe6;
@@ -1676,6 +1690,7 @@ html {
   border-radius: 50%;
   animation: pulse 1s linear infinite;
 }
+
 @keyframes pulse {
   0% {
     transform: scale(0.5);
@@ -2523,6 +2538,7 @@ html {
 .line__desktop {
   display: block;
 }
+
 @keyframes redline {
   from {
     transform: translateY(0);
@@ -2752,6 +2768,7 @@ html {
 .blueline path {
   animation: curve 32s linear 35s infinite blueline;
 }
+
 @keyframes blueline {
   0% {
     transform: rotateX(0deg) skewY(0deg);
@@ -2818,6 +2835,7 @@ html {
 #way3 {
   animation: strokeOffset 10s linear forwards;
 }
+
 @keyframes strokeOffset {
   to {
     stroke-dashoffset: 0;
@@ -2828,6 +2846,7 @@ html {
   stroke-dashoffset: 1000;
   animation: draw 5s linear forwards;
 }
+
 @keyframes draw {
   0% {
     stroke-dashoffset: 1000;
@@ -3378,18 +3397,24 @@ html {
   position: relative;
   z-index: 1;
   padding: 164px 0;
-  background: url(../images/seo-main/background.svg);
-  background-size: cover;
+  background: rgba(25, 4, 58, 0.2);
 }
-@media (max-width: 1240px) {
+@media (min-width: 712px) {
   .seo-main {
-    padding: 132px 0 43px;
+    background: url(../images/seo-main/background.svg);
+    background-size: cover;
   }
 }
 
+@media (max-width: 1240px) {
+  .seo-main {
+    padding: 132px 0 72px;
+  }
+}
 .seo-main__body {
   display: grid;
 }
+
 @media (min-width: 712px) {
   .seo-main__body {
     gap: 65px;
@@ -3409,13 +3434,11 @@ html {
     z-index: 1;
   }
 }
-
 @media (max-width: 712px) {
   .seo-main__left {
     display: grid;
   }
 }
-
 .seo-main__title {
   color: #fff;
   font-family: Inter;
@@ -3426,6 +3449,7 @@ html {
   text-transform: uppercase;
   margin-bottom: 17px;
 }
+
 @media (max-width: 1240px) {
   .seo-main__title {
     font-size: 26px;
@@ -3447,7 +3471,6 @@ html {
     display: none;
   }
 }
-
 .seo-main__text {
   color: #fff;
   font-family: Inter;
@@ -3457,6 +3480,7 @@ html {
   line-height: normal;
   margin-bottom: 47px;
 }
+
 @media (max-width: 1240px) {
   .seo-main__text {
     font-size: 18px;
@@ -3481,13 +3505,13 @@ html {
     margin-bottom: 17px;
   }
 }
-
 .seo-main__row {
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(3, 1fr);
   margin-bottom: 45px;
 }
+
 @media (max-width: 1344px) {
   .seo-main__row {
     grid-template-columns: repeat(2, 1fr);
@@ -3498,7 +3522,6 @@ html {
     margin-bottom: 17px;
   }
 }
-
 .seo-main__item {
   border-radius: 16px;
   border: 1px solid transparent;
@@ -3510,6 +3533,7 @@ html {
   grid-template-rows: repeat(3, 1fr);
   justify-content: center;
 }
+
 @media (max-width: 1240px) {
   .seo-main__item {
     grid-template-rows: repeat(3, auto);
@@ -3534,7 +3558,7 @@ html {
     grid-template-rows: 1fr 1fr;
     justify-content: flex-start;
     -moz-column-gap: 27px;
-         column-gap: 27px;
+    column-gap: 27px;
     row-gap: 9px;
   }
 }
@@ -3561,7 +3585,6 @@ html {
     grid-row-start: 2;
   }
 }
-
 .seo-main__item-text {
   color: #fff;
   text-align: center;
@@ -3601,12 +3624,12 @@ html {
   justify-self: flex-start;
   transition: all 0.3s ease;
 }
+
 @media (max-width: 712px) {
   .seo-main__button {
     justify-self: center;
   }
 }
-
 .seo-main__button:hover {
   background: #fff;
   color: #e63114;
@@ -3627,7 +3650,6 @@ html {
     margin: -100px 0 -140px;
   }
 }
-
 .seo-main__right svg {
   overflow: visible;
   max-width: 100%;
@@ -3640,6 +3662,11 @@ html {
 .seo-cards {
   padding: 45px 0 50px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+@media (max-width: 712px) {
+  .seo-cards {
+    padding-top: 29px;
+  }
 }
 
 .seo-cards__body {
@@ -3672,6 +3699,7 @@ html {
   gap: 20px;
   grid-template-rows: auto auto 1fr;
 }
+
 .seo-cards__item .seo-cards__text {
   max-width: 344px;
   margin: 0 auto;

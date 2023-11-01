@@ -1,6 +1,7 @@
 .hover-border {
   transition: all 0.3s ease;
 }
+
 .hover-border:hover {
   border: 1px solid #e63114;
 }
@@ -8,6 +9,7 @@
 .hover-gradient-border {
   position: relative;
 }
+
 .hover-gradient-border::before {
   content: "";
   position: absolute;
@@ -21,6 +23,7 @@
   mask-composite: exclude;
   transition: all 0.3s ease;
 }
+
 .hover-gradient-border:hover::before {
   opacity: 1;
   visibility: visible;
@@ -34,6 +37,7 @@
 .fade-out {
   opacity: 0;
 }
+
 .animation-completed .fade-out {
   opacity: 1;
   animation: fade-out ease 2s;

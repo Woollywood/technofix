@@ -3405,6 +3405,8 @@ html {
 @media (max-width: 712px) {
   .seo-main__body {
     gap: 32px;
+    position: relative;
+    z-index: 1;
   }
 }
 

@@ -858,7 +858,7 @@
 		border: 1px solid #791ac3;
 		padding: 41px 27px 41px 20px;
 		border-radius: 22px 55px 55px 22px;
-		background: rgb(30 6 69);
+		background: #2c144f;
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
@@ -2239,6 +2239,10 @@
 
 /* Galaxy S8+*/
 @media screen and (max-width: 480px) {
+	.order_width .title {
+    text-align: center;
+    font-size: 22px !important;
+  }
 	ul.tabs li {
 		margin: 0 10px 0 0;
 		cursor: pointer;

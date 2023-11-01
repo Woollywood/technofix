@@ -115,6 +115,7 @@ body {
   font-family: "Inter-Regular";
   color: #fff;
   font-size: 14px;
+  line-height: normal;
 }
 
 img {
@@ -1052,6 +1053,7 @@ p {
   color: #d0c1e8;
   font-size: 14px;
   margin: 0 0 19px 0;
+  line-height: normal;
 }
 
 .article__link {
@@ -7602,6 +7604,11 @@ html {
   top: 44.5%;
   left: 17.65%;
 }
+@media (min-width: 1900px) {
+  .approach__block--1 {
+    top: 48.5%;
+  }
+}
 
 .approach__block-line {
   position: absolute;
@@ -7618,6 +7625,11 @@ html {
 .approach__block--2 {
   top: 21.8%;
   left: 39.8%;
+}
+@media (min-width: 1900px) {
+  .approach__block--2 {
+    top: 25.8%;
+  }
 }
 
 .approach__block--2 .approach__block-line {
@@ -8189,7 +8201,13 @@ html {
   }
 }
 .work-stages__slider-wrapper {
+  padding: 0 !important;
   min-width: 0;
+}
+@media (max-width: 856px) {
+  .work-stages__slider-wrapper {
+    padding-top: 20px !important;
+  }
 }
 
 @media (min-width: 568px) {
@@ -8803,7 +8821,8 @@ html {
 }
 @media (max-width: 868px) and (min-width: 812px) {
   .w_rekalama_button__background {
-    transform: scale(1.4);
+    transform: scale(1.3);
+    right: -28%;
   }
 }
 

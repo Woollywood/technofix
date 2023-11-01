@@ -323,7 +323,7 @@
 
 .tss_reklama_sl .slick-prev {
 	box-sizing: content-box;
-	left: 0;
+	left: 9px;
 	bottom: 0;
 	top: 85%;
 	width: 44px;
@@ -360,7 +360,7 @@
 
 .tss_reklama_sl .slick-next {
 	left: auto;
-	right: 0;
+	right: 15px;
 	width: 44px;
 	height: 44px;
 	top: auto;

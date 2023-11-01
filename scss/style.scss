@@ -4315,6 +4315,8 @@ html {
 
 	@media (max-width: 712px) {
 		gap: 32px;
+		position: relative;
+    z-index: 1;
 	}
 }
 

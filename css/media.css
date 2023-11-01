@@ -135,7 +135,7 @@
 }
 @media screen and (max-width: 1200px) {
   .h_serm_wrap {
-    max-width: 645px;
+    max-width: 100%;
     margin: 0 auto 32px auto;
   }
   .serm_head_block h1 {

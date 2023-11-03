@@ -2033,6 +2033,18 @@ html {
 
 .digital {
   position: relative;
+
+	@media (max-width: 843px) {
+		.swiper-button-prev {
+			transform: translateX(50%);
+		}
+	}
+
+	@media (max-width: 460px) {
+		.swiper-button-prev {
+			transform: translateX(0);
+		}
+	}
 }
 
 .header__burger {

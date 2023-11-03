@@ -5294,6 +5294,20 @@ html {
 .for-whome {
   margin-bottom: 47px;
 }
+@media (max-width: 960px) {
+  .for-whome {
+    padding-top: 52px !important;
+  }
+}
+@media (max-width: 460px) {
+  .for-whome {
+    padding-top: 0 !important;
+  }
+  .for-whome__title {
+    padding-bottom: 0 !important;
+    margin-bottom: 26px;
+  }
+}
 
 @media (max-width: 834px) {
   .for-whome {
@@ -5558,7 +5572,7 @@ html {
 .for-whome__item-top-image {
   display: flex;
   justify-content: center;
-  margin-bottom: 37px;
+  margin-bottom: 17px;
 }
 
 @media (max-width: 460px) {
@@ -6030,6 +6044,16 @@ html {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+}
+@media (max-width: 991px) and (min-width: 795px) {
+  .our-services__item-bottom-img {
+    transform: scale(1.84);
+  }
+}
+@media (max-width: 460px) {
+  .our-services__item-bottom-img {
+    transform: scale(1.2);
+  }
 }
 
 .our-services__item-bottom-img img {

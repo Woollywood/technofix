@@ -383,6 +383,11 @@ p {
   border: 1px solid #492c88;
   overflow: hidden;
 }
+@media (max-width: 460px) {
+  .blog_border {
+    background: linear-gradient(337deg, rgba(12, 6, 29, 0.35) -74.44%, rgba(12, 6, 29, 0) 88.43%) !important;
+  }
+}
 
 @media (max-width: 822px) {
   .blog_border {

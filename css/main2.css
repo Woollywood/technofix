@@ -3497,6 +3497,12 @@ ul.tabs2 li.active:before {
   padding: 60px 0 50px 0;
   background: #301d4e;
 }
+@media (max-width: 480px) {
+  .tss_reklama .slick-prev {
+    top: unset !important;
+    bottom: 100px !important;
+  }
+}
 
 .tss_reklama_wrap {
   display: flex;

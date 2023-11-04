@@ -383,12 +383,12 @@ p {
   border: 1px solid #492c88;
   overflow: hidden;
 }
+
 @media (max-width: 460px) {
   .blog_border {
-    background: linear-gradient(337deg, rgba(12, 6, 29, 0.35) -74.44%, rgba(12, 6, 29, 0) 88.43%) !important;
+    background: linear-gradient(120deg, rgba(68, 16, 67, 0.95) -74.44%, rgba(84, 24, 163, 0.45) 88.43%) !important;
   }
 }
-
 @media (max-width: 822px) {
   .blog_border {
     display: flex;
@@ -883,8 +883,6 @@ p {
 .footer_contact-bold {
   font-family: "Inter-Bold";
 }
-
-
 
 .footer_time {
   padding: 30px 0 0 0;
@@ -7712,16 +7710,11 @@ html {
   left: 17.65%;
 }
 
-
-
 @media (min-width: 1900px) {
   .approach__block--1 {
     top: 49.5%;
   }
 }
-
-
-
 @media (max-width: 1630px) {
   .approach__block--1 {
     top: 41.5% !important;
@@ -7755,8 +7748,6 @@ html {
     top: 26.8%;
   }
 }
-
-
 .approach__block--2 .approach__block-line {
   top: 82.5%;
   left: 2%;
@@ -7774,9 +7765,6 @@ html {
     left: 58.3%;
   }
 }
-
-
-
 .approach__block--3 .approach__block-line {
   top: -34%;
   left: 2%;
@@ -7797,24 +7785,19 @@ html {
 @media (min-width: 2400px) {
   .approach__block--2 {
     top: 34.8%;
+  }
+  .approach__block--3 {
+    bottom: 5%;
+    left: 58.5%;
+  }
+  .approach__block--1 {
+    top: 53.5%;
+  }
+  .approach__block--4 {
+    top: 3.7%;
+    left: 68.7%;
+  }
 }
-
-.approach__block--3 {
-  bottom: 5%;
-  left: 58.5%;
-}
-
-.approach__block--1 {
-  top: 53.5%;
-}
-
-.approach__block--4 {
-  top: 3.7%;
-  left: 68.7%;
-}
-
-}
-
 @media (max-width: 1760px) {
   .approach__block--3 {
     bottom: -33px;
@@ -9268,4 +9251,3 @@ html {
   width: 5px;
   transition: all 0.3s ease;
 }
-

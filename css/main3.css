@@ -2252,7 +2252,6 @@ html {
     transform: translate(40%, -30%);
     top: 112px;
   }
-
   .for-whome__button {
     margin-top: 0px !important;
   }
@@ -5298,6 +5297,7 @@ html {
 .for-whome {
   margin-bottom: 47px;
 }
+
 @media (max-width: 960px) {
   .for-whome {
     padding-top: 22px !important;
@@ -5312,7 +5312,6 @@ html {
     margin-bottom: 26px;
   }
 }
-
 @media (max-width: 834px) {
   .for-whome {
     padding-top: 103px;
@@ -6051,6 +6050,7 @@ html {
   align-items: center;
   margin: 0 auto;
 }
+
 @media (max-width: 991px) and (min-width: 795px) {
   .our-services__item-bottom-img {
     transform: scale(1.7);
@@ -6058,7 +6058,7 @@ html {
     -moz-transform: scale(1.7);
     -ms-transform: scale(1.7);
     -o-transform: scale(1.7);
-}
+  }
 }
 @media (max-width: 460px) {
   .our-services__item-bottom-img {
@@ -6067,9 +6067,8 @@ html {
     -moz-transform: scale(1.4);
     -ms-transform: scale(1.4);
     -o-transform: scale(1.4);
+  }
 }
-}
-
 .our-services__item-bottom-img img {
   display: block;
   max-width: 100%;

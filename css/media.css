@@ -388,6 +388,11 @@
 }
 /* стили для sm-устройств */
 @media screen and (max-width: 992px) {
+
+  .seo-cards__item .seo-cards__text {
+    max-width: 100%;
+    margin: 0 auto;
+}
   .article__block {
     width: 316px;
   }
@@ -401,6 +406,13 @@
   }
 }
 @media screen and (max-width: 900px) {
+
+
+  .swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: var(--swiper-navigation-sides-offset,-19px);
+    left: auto;
+}
+
   .article__img img {
     display: none;
   }
@@ -451,6 +463,15 @@
 }
 /* Ipad*/
 @media screen and (max-width: 768px) {
+
+  .swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: var(--swiper-navigation-sides-offset,10px);
+    left: auto;
+}
+  
+  .seocards__point::before {
+    background-size: auto;
+  }
   .popup__servicios {
     display: none !important;
   }

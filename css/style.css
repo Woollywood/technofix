@@ -3418,7 +3418,7 @@ html {
 
 @media (max-width: 1240px) {
   .seo-main {
-    padding: 132px 0 72px;
+    padding: 132px 0 0px;
   }
 }
 .seo-main__body {

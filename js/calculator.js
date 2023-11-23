@@ -94,7 +94,7 @@ class Calculator {
 	}
 
 	calculateResult() {
-		this.resultRender(this._selectValue * ranges.get('result')[this._requestsValue][this._ageValue]);
+		this.resultRender(Math.round(this._selectValue * ranges.get('result')[this._requestsValue][this._ageValue]));
 	}
 
 	resultRender(value) {

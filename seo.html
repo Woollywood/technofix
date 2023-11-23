@@ -3164,7 +3164,7 @@
 											<div class="calculator__range-input-wrapper">
 												<input
 													class="calculator__range-input styled-slider slider-progress"
-													type="range" />
+													type="range" data-calculator-input="requests"/>
 												<div class="calculator__range-input-scale">
 													<div class="calculator__range-input-scale-icon">
 														<svg
@@ -3195,7 +3195,7 @@
 											<div class="calculator__range-input-wrapper">
 												<input
 													class="calculator__range-input styled-slider slider-progress"
-													type="range" />
+													type="range" data-calculator-input="age"/>
 												<div class="calculator__range-input-scale">
 													<div class="calculator__range-input-scale-icon">
 														<svg
@@ -3222,16 +3222,17 @@
 										<div class="calculator__range">
 											<div class="calculator__range-title calculator__form-title">Тематика</div>
 											<select name="form[]" data-class-modif="form">
-												<option value="1" selected>Интернет-магазин</option>
-												<option value="2">Интернет-магазин</option>
-												<option value="3">Интернет-магазин</option>
-												<option value="4">Интернет-магазин</option>
-												<option value="4">Интернет-магазин</option>
-												<option value="5">Интернет-магазин</option>
-												<option value="6">Интернет-магазин</option>
-												<option value="7">Интернет-магазин</option>
-												<option value="8">Интернет-магазин</option>
-												<option value="9">Интернет-магазин</option>
+												<option value="0" selected>Интернет-магазин</option>
+												<option value="1">Промышленность</option>
+												<option value="2">Строительство</option>
+												<option value="3">Недвижимость</option>
+												<option value="4">Юридические услуги</option>
+												<option value="5">Медицина</option>
+												<option value="6">Оказание услуг B2C</option>
+												<option value="7">Товары и услуги B2B</option>
+												<option value="8">Гостиницы и отели</option>
+												<option value="9">HoReCa, общепит</option>
+												<option value="10">Другое</option>
 											</select>
 										</div>
 									</div>
@@ -3245,7 +3246,7 @@
 						<div class="calculator__body-right">
 							<div class="calculator__calculator-img">
 								<img src="images/calculator/calculator.svg" alt="" />
-								<span class="calculator__calculator-sum">60 000</span>
+								<span class="calculator__calculator-sum" data-calculator-result>60 000</span>
 							</div>
 							<div class="calculator__calculator--mobile">
 								<div class="calculator__calculator-sum--mobile">
@@ -5743,6 +5744,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/ScrollTrigger.min.js"></script>
 		<script src="js/gsap.js"></script>
 		<script src="js/effects.js"></script>
+		<script src="js/calculator.js"></script>
 
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<script>

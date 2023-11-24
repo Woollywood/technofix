@@ -133,7 +133,7 @@ class Calculator {
 		const resultPrice =
 			priceLeft + (priceRight * this._requestsItems.offset - priceLeft * this._requestsItems.offset);
 
-		this.resultRender(Math.round(resultPrice));
+		this.resultRender(Math.round(this._selectValue * resultPrice));
 	}
 
 	resultRender(value) {

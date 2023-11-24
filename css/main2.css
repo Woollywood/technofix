@@ -10,7 +10,6 @@
   src: url("../fonts/Inter-Black.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-Black.ttf?-kwf309") format("woff"), url("../fonts/Inter-Black.ttf?-kwf309") format("truetype"), url("../fonts/Inter-Black.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Inter-Bold";
@@ -18,7 +17,6 @@
   src: url("../fonts/Inter-Bold.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-Bold.ttf?-kwf309") format("woff"), url("../fonts/Inter-Bold.ttf?-kwf309") format("truetype"), url("../fonts/Inter-Bold.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Inter-ExtraBold";
@@ -26,7 +24,6 @@
   src: url("../fonts/Inter-ExtraBold.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-ExtraBold.ttf?-kwf309") format("woff"), url("../fonts/Inter-ExtraBold.ttf?-kwf309") format("truetype"), url("../fonts/Inter-ExtraBold.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Inter-ExtraLight";
@@ -34,7 +31,6 @@
   src: url("../fonts/Inter-ExtraLight.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-ExtraLight.ttf?-kwf309") format("woff"), url("../fonts/Inter-ExtraLight.ttf?-kwf309") format("truetype"), url("../fonts/Inter-ExtraLight.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Inter-Light";
@@ -42,7 +38,6 @@
   src: url("../fonts/Inter-Light.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-Light.ttf?-kwf309") format("woff"), url("../fonts/Inter-Light.ttf?-kwf309") format("truetype"), url("../fonts/Inter-Light.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Inter-Medium";
@@ -50,7 +45,6 @@
   src: url("../fonts/Inter-Medium.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-Medium.ttf?-kwf309") format("woff"), url("../fonts/Inter-Medium.ttf?-kwf309") format("truetype"), url("../fonts/Inter-Medium.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Inter-Regular";
@@ -58,7 +52,6 @@
   src: url("../fonts/Inter-Regular.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-Regular.ttf?-kwf309") format("woff"), url("../fonts/Inter-Regular.ttf?-kwf309") format("truetype"), url("../fonts/Inter-Regular.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Inter-SemiBold";
@@ -66,7 +59,6 @@
   src: url("../fonts/Inter-SemiBold.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-SemiBold.ttf?-kwf309") format("woff"), url("../fonts/Inter-SemiBold.ttf?-kwf309") format("truetype"), url("../fonts/Inter-SemiBold.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Inter-Thin";
@@ -74,7 +66,6 @@
   src: url("../fonts/Inter-Thin.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-Thin.ttf?-kwf309") format("woff"), url("../fonts/Inter-Thin.ttf?-kwf309") format("truetype"), url("../fonts/Inter-Thin.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 /*stock*/
 .stock {
@@ -2066,6 +2057,7 @@ ul.tabs2 li.active:before {
   display: flex;
   padding: 36px 0 45px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 36px;
 }
 
 @media (max-width: 1560px) and (min-width: 991px) {
@@ -2087,6 +2079,9 @@ ul.tabs2 li.active:before {
 .ripd_block {
   width: 50%;
   padding: 0 70px 0 0;
+}
+.ripd_block .title:not(:last-child) {
+  margin-bottom: 48px;
 }
 
 .ripd_block:last-child {
@@ -2181,6 +2176,7 @@ ul.tabs2 li.active:before {
 .ripd_inner {
   padding: 48px 0 0 0;
   display: flex;
+  gap: 48px;
 }
 
 .ripd_inner_info {
@@ -3412,6 +3408,7 @@ ul.tabs2 li.active:before {
 
 .kak_reklama_block2 {
   padding: 10px 0 0 97px;
+  flex: 1 1 auto;
 }
 
 .kak_reklama_ellipce {
@@ -3419,10 +3416,12 @@ ul.tabs2 li.active:before {
   position: relative;
 }
 
-.kak_reklama_ellipce svg {
+.kak_reklama_ellipce canvas {
   position: relative;
   z-index: 5;
   max-width: 100%;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .kak_reklama_ellipce_text {

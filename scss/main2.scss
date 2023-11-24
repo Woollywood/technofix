@@ -2041,6 +2041,7 @@ ul.tabs2 li.active:before {
   display: flex;
   padding: 36px 0 45px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	gap: 36px;
 }
 @media (max-width: 1560px) and (min-width: 991px) {
   .ripd_wrap--background {
@@ -2062,6 +2063,12 @@ ul.tabs2 li.active:before {
 .ripd_block {
   width: 50%;
   padding: 0 70px 0 0;
+
+	.title {
+		&:not(:last-child) {
+			margin-bottom: 48px;
+		}
+	}
 }
 
 .ripd_block:last-child {
@@ -2156,6 +2163,7 @@ ul.tabs2 li.active:before {
 .ripd_inner {
   padding: 48px 0 0 0;
   display: flex;
+	gap: 48px;
 }
 
 .ripd_inner_info {
@@ -3378,6 +3386,7 @@ ul.tabs2 li.active:before {
 
 .kak_reklama_block2 {
   padding: 10px 0 0 97px;
+	flex: 1 1 auto;
 }
 
 .kak_reklama_ellipce {
@@ -3385,10 +3394,12 @@ ul.tabs2 li.active:before {
   position: relative;
 }
 
-.kak_reklama_ellipce svg {
+.kak_reklama_ellipce canvas {
   position: relative;
   z-index: 5;
   max-width: 100%;
+	width: 100% !important;
+	height: 100% !important;
 }
 
 .kak_reklama_ellipce_text {

@@ -13,7 +13,6 @@
   src: url("../fonts/Inter-Black.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-Black.ttf?-kwf309") format("woff"), url("../fonts/Inter-Black.ttf?-kwf309") format("truetype"), url("../fonts/Inter-Black.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Inter-Bold";
@@ -21,7 +20,6 @@
   src: url("../fonts/Inter-Bold.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-Bold.ttf?-kwf309") format("woff"), url("../fonts/Inter-Bold.ttf?-kwf309") format("truetype"), url("../fonts/Inter-Bold.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Inter-ExtraBold";
@@ -29,7 +27,6 @@
   src: url("../fonts/Inter-ExtraBold.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-ExtraBold.ttf?-kwf309") format("woff"), url("../fonts/Inter-ExtraBold.ttf?-kwf309") format("truetype"), url("../fonts/Inter-ExtraBold.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Inter-ExtraLight";
@@ -37,7 +34,6 @@
   src: url("../fonts/Inter-ExtraLight.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-ExtraLight.ttf?-kwf309") format("woff"), url("../fonts/Inter-ExtraLight.ttf?-kwf309") format("truetype"), url("../fonts/Inter-ExtraLight.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Inter-Light";
@@ -45,7 +41,6 @@
   src: url("../fonts/Inter-Light.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-Light.ttf?-kwf309") format("woff"), url("../fonts/Inter-Light.ttf?-kwf309") format("truetype"), url("../fonts/Inter-Light.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Inter-Medium";
@@ -53,7 +48,6 @@
   src: url("../fonts/Inter-Medium.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-Medium.ttf?-kwf309") format("woff"), url("../fonts/Inter-Medium.ttf?-kwf309") format("truetype"), url("../fonts/Inter-Medium.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Inter-Regular";
@@ -61,7 +55,6 @@
   src: url("../fonts/Inter-Regular.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-Regular.ttf?-kwf309") format("woff"), url("../fonts/Inter-Regular.ttf?-kwf309") format("truetype"), url("../fonts/Inter-Regular.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Inter-SemiBold";
@@ -69,7 +62,6 @@
   src: url("../fonts/Inter-SemiBold.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-SemiBold.ttf?-kwf309") format("woff"), url("../fonts/Inter-SemiBold.ttf?-kwf309") format("truetype"), url("../fonts/Inter-SemiBold.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Inter-Thin";
@@ -77,7 +69,6 @@
   src: url("../fonts/Inter-Thin.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-Thin.ttf?-kwf309") format("woff"), url("../fonts/Inter-Thin.ttf?-kwf309") format("truetype"), url("../fonts/Inter-Thin.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 * {
   box-sizing: border-box;
@@ -4172,7 +4163,7 @@ html {
     width: 175px;
   }
   .seocards__point {
-    width: 443px;
+    width: 411px;
     height: 200px;
   }
   .seocards__block {
@@ -4460,7 +4451,7 @@ html {
   }
   .seocards__point {
     padding: 27px 39px;
-    width: 297px;
+    width: 298px;
     height: 184px;
   }
   .swiper__seo.swiper-slide-active {
@@ -5064,20 +5055,7 @@ html {
   display: none;
 }
 
-@media (max-width: 836px) {
-
-  .seocards__point::before {
-    position: absolute;
-    content: "";
-    top: -1px;
-    z-index: 1;
-    left: -1px;
-    width: calc(100% + 2px);
-    height: calc(100% + 2px);
-    background: url(../images/seocards__fone.png) no-repeat;
-    background-size: cover;
-    border-radius: 22px;
-}
+@media (max-width: 834px) {
   .stages {
     margin-top: -74px;
     padding-top: 130px;
@@ -5601,8 +5579,6 @@ html {
 }
 
 @media (max-width: 460px) {
-
-
   .for-whome__item-top-image {
     margin-bottom: 0 !important;
   }
@@ -6083,15 +6059,6 @@ html {
     -ms-transform: scale(1.7);
     -o-transform: scale(1.7);
   }
-
-  .our-serv {
-    margin: 0 -16px 0 0;
-    transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
-}
 }
 @media (max-width: 460px) {
   .our-services__item-bottom-img {
@@ -6101,15 +6068,6 @@ html {
     -ms-transform: scale(1.4);
     -o-transform: scale(1.4);
   }
-
-  .our-serv {
-    transform: scale(1) !important;
-    -webkit-transform: scale(1) !important;
-    -moz-transform: scale(1) !important;
-    -ms-transform: scale(1) !important;
-    -o-transform: scale(1) !important;
-    margin: 0 -16px 0 0px;
-}
 }
 .our-services__item-bottom-img img {
   display: block;

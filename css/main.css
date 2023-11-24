@@ -33,14 +33,12 @@ html.lenis {
   src: url("../fonts/Inter-Black.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-Black.ttf?-kwf309") format("woff"), url("../fonts/Inter-Black.ttf?-kwf309") format("truetype"), url("../fonts/Inter-Black.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Pocket-Calculator";
   src: url("../fonts/PocketCalculator.ttf");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Inter-Bold";
@@ -48,7 +46,6 @@ html.lenis {
   src: url("../fonts/Inter-Bold.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-Bold.ttf?-kwf309") format("woff"), url("../fonts/Inter-Bold.ttf?-kwf309") format("truetype"), url("../fonts/Inter-Bold.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Inter-ExtraBold";
@@ -56,7 +53,6 @@ html.lenis {
   src: url("../fonts/Inter-ExtraBold.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-ExtraBold.ttf?-kwf309") format("woff"), url("../fonts/Inter-ExtraBold.ttf?-kwf309") format("truetype"), url("../fonts/Inter-ExtraBold.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Inter-ExtraLight";
@@ -64,7 +60,6 @@ html.lenis {
   src: url("../fonts/Inter-ExtraLight.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-ExtraLight.ttf?-kwf309") format("woff"), url("../fonts/Inter-ExtraLight.ttf?-kwf309") format("truetype"), url("../fonts/Inter-ExtraLight.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Inter-Light";
@@ -72,7 +67,6 @@ html.lenis {
   src: url("../fonts/Inter-Light.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-Light.ttf?-kwf309") format("woff"), url("../fonts/Inter-Light.ttf?-kwf309") format("truetype"), url("../fonts/Inter-Light.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Inter-Medium";
@@ -80,7 +74,6 @@ html.lenis {
   src: url("../fonts/Inter-Medium.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-Medium.ttf?-kwf309") format("woff"), url("../fonts/Inter-Medium.ttf?-kwf309") format("truetype"), url("../fonts/Inter-Medium.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Inter-Regular";
@@ -88,7 +81,6 @@ html.lenis {
   src: url("../fonts/Inter-Regular.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-Regular.ttf?-kwf309") format("woff"), url("../fonts/Inter-Regular.ttf?-kwf309") format("truetype"), url("../fonts/Inter-Regular.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Inter-SemiBold";
@@ -96,7 +88,6 @@ html.lenis {
   src: url("../fonts/Inter-SemiBold.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-SemiBold.ttf?-kwf309") format("woff"), url("../fonts/Inter-SemiBold.ttf?-kwf309") format("truetype"), url("../fonts/Inter-SemiBold.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Inter-Thin";
@@ -104,7 +95,6 @@ html.lenis {
   src: url("../fonts/Inter-Thin.ttf?#iefix-kwf309") format("embedded-opentype"), url("../fonts/Inter-Thin.ttf?-kwf309") format("woff"), url("../fonts/Inter-Thin.ttf?-kwf309") format("truetype"), url("../fonts/Inter-Thin.ttf?-kwf309#AA-Arial") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 * {
   box-sizing: border-box;
@@ -7730,10 +7720,10 @@ html {
     top: 41.5% !important;
   }
   .approach__block--2 {
-    top: 13.8% !important;
+    top: 16.8% !important;
   }
   .approach__block--4 {
-    top: 0.5% !important;
+    top: 2.6% !important;
   }
 }
 .approach__block-line {
@@ -7755,11 +7745,11 @@ html {
 
 @media (min-width: 1900px) {
   .approach__block--2 {
-    top: 24.8%;
+    top: 26.8%;
   }
 }
 .approach__block--2 .approach__block-line {
-  top: 90.5%;
+  top: 82.5%;
   left: 2%;
   height: 200px;
 }
@@ -7772,12 +7762,12 @@ html {
 @media (min-width: 1900px) {
   .approach__block--3 {
     bottom: 1%;
-    left: 58.8%;
+    left: 58.3%;
   }
 }
 .approach__block--3 .approach__block-line {
   top: -34%;
-  left: 0%;
+  left: 2%;
   height: 50px;
 }
 
@@ -7787,7 +7777,7 @@ html {
 }
 
 .approach__block--4 .approach__block-line {
-  top: 108%;
+  top: 102%;
   left: 2%;
   height: 30px;
 }
@@ -7797,21 +7787,21 @@ html {
     top: 34.8%;
   }
   .approach__block--3 {
-    bottom: 7%;
-    left: 58.8%;
+    bottom: 5%;
+    left: 58.5%;
   }
   .approach__block--1 {
-    top: 56.5%;
+    top: 53.5%;
   }
   .approach__block--4 {
-    top: 5.7%;
+    top: 3.7%;
     left: 68.7%;
   }
 }
 @media (max-width: 1760px) {
   .approach__block--3 {
     bottom: -33px;
-    left: 58.7%;
+    left: 58%;
   }
 }
 .approach__block--active .approach__block-title {

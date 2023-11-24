@@ -2289,88 +2289,7 @@
 								<div class="kak_reklama_ellipce_absolute_restagle"></div>
 								<div class="kak_reklama_ellipce_absolute_restagle2"></div>
 							</div>
-							<svg
-								width="527"
-								height="526"
-								viewBox="0 0 527 526"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path
-									class="circle--path-hover"
-									d="M269.519 1.07035C336.637 2.59269 400.624 29.8059 448.271 77.1145C496.035 124.539 523.709 188.515 525.564 255.778L473.324 281.406L420.675 254.957C418.665 215.436 401.823 178.122 373.504 150.462C345.303 122.917 307.792 106.969 268.402 105.757L294.695 53.5647L294.806 53.3442L294.698 53.122L269.519 1.07035Z"
-									fill="url(#paint0_linear_853_170)"
-									stroke="#552692" />
-								<path
-									class="circle--path-hover"
-									d="M251.449 435.69L259.582 419.675C220.05 418.679 182.356 402.787 154.049 375.185C125.743 347.582 108.916 310.307 106.939 270.827L53.8079 244.135L1.00234 269.959C0.988805 270.221 0.988805 270.484 1.00234 270.745L53.7266 244.731L106.722 270.854L53.8079 244.731L1.00234 270.745C2.98204 338.141 30.8317 402.191 78.7774 449.615C126.723 497.039 191.087 524.199 258.524 525.465L232.664 472.678L251.449 435.69Z"
-									fill="url(#paint1_linear_853_170)" />
-								<path
-									d="M232.855 472.678L251.451 435.69L232.855 472.678ZM232.855 472.678L258.689 525.465H258.716L232.855 472.678Z"
-									stroke="#1D1D1B"
-									stroke-width="0.36" />
-								<path
-									d="M259.496 419.675L251.445 435.69L259.496 419.675Z"
-									stroke="#1D1D1B"
-									stroke-width="0.36" />
-								<path
-									class="circle--path-hover"
-									d="M420.271 267.06C419.261 306.567 403.358 344.235 375.747 372.52C348.135 400.805 310.854 417.618 271.369 419.594L244.966 472.055L244.668 472.624L270.501 525.383C338.06 523.596 402.329 495.843 449.94 447.896C497.551 399.949 524.838 335.5 526.126 267.954L473.32 293.778L420.271 267.06Z"
-									fill="url(#paint2_linear_853_170)" />
-								<path
-									d="M244.668 472.678L244.966 472.109L244.668 472.678Z"
-									stroke="#1D1D1B"
-									stroke-width="0.36" />
-								<path
-									d="M244.965 472.109L271.368 419.594L244.965 472.109Z"
-									stroke="#1D1D1B"
-									stroke-width="0.36" />
-								<path
-									class="circle--path-hover"
-									d="M106.72 258.958C107.746 219.426 123.68 181.742 151.33 153.46C178.979 125.178 216.299 108.386 255.811 106.451L282.539 53.3397L256.625 0.553223H255.811L281.862 53.2584L255.811 106.235L281.943 53.3126L255.811 0.553223C188.393 2.53878 124.324 30.3805 76.8846 78.3074C29.445 126.234 2.27277 190.571 1 257.982L53.8056 232.131L106.72 258.958Z"
-									fill="url(#paint3_linear_853_170)" />
-								<defs>
-									<linearGradient
-										id="paint0_linear_853_170"
-										x1="446.72"
-										y1="117.635"
-										x2="1210.65"
-										y2="853.162"
-										gradientUnits="userSpaceOnUse">
-										<stop stop-color="#36166B" />
-										<stop offset="1" stop-color="#E63114" />
-									</linearGradient>
-									<linearGradient
-										id="paint1_linear_853_170"
-										x1="276.898"
-										y1="384.256"
-										x2="14.913"
-										y2="215.589"
-										gradientUnits="userSpaceOnUse">
-										<stop stop-color="#462183" />
-										<stop offset="1" stop-color="#6A42AD" />
-									</linearGradient>
-									<linearGradient
-										id="paint2_linear_853_170"
-										x1="487.872"
-										y1="281.665"
-										x2="263.562"
-										y2="497.28"
-										gradientUnits="userSpaceOnUse">
-										<stop stop-color="#6A42AD" />
-										<stop offset="1" stop-color="#7D50CA" />
-									</linearGradient>
-									<linearGradient
-										id="paint3_linear_853_170"
-										x1="55.4835"
-										y1="297.894"
-										x2="282.691"
-										y2="73.5843"
-										gradientUnits="userSpaceOnUse">
-										<stop stop-color="#391772" />
-										<stop offset="1" stop-color="#4E2691" />
-									</linearGradient>
-								</defs>
-							</svg>
+							<canvas id="reklama-pie-chart"></canvas>
 
 							<div class="kak_reklama_ellipce_text">
 								<div class="kak_reklama_ellipce_title">
@@ -2742,11 +2661,13 @@
 			</div>
 		</footer>
 
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 		<script src="js/anime.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/ScrollTrigger.min.js"></script>
 		<script src="js/gsap.js"></script>
 		<script src="js/effects.js"></script>
+		<script src="js/charts.js"></script>
 
 		<script src="js/watcher.js"></script>
 		<script src="js/phone-validate.js"></script>

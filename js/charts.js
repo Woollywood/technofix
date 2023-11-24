@@ -66,6 +66,28 @@ function seoIncreaseChart() {
 function ripdPieChart() {
 	const ctx = document.getElementById('ripd-pie-chart');
 
+	const gradients = [
+		ctx.getContext('2d').createLinearGradient(0, 0, 0, 400),
+		ctx.getContext('2d').createLinearGradient(0, 0, 0, 400),
+		ctx.getContext('2d').createLinearGradient(0, 0, 0, 400),
+		ctx.getContext('2d').createLinearGradient(0, 0, 0, 400),
+		ctx.getContext('2d').createLinearGradient(0, 0, 0, 400),
+	];
+	gradients[0].addColorStop(0.4, '#EC604A');
+	gradients[0].addColorStop(1, '#DE6652');
+
+	gradients[1].addColorStop(0, '#E24E36');
+	gradients[1].addColorStop(1, '#C9442F');
+
+	gradients[2].addColorStop(0, '#E63114');
+	gradients[2].addColorStop(1, '#BB2912');
+
+	gradients[3].addColorStop(0, '#A9210C');
+	gradients[3].addColorStop(1, '#96210E');
+
+	gradients[4].addColorStop(0, '#A9210C');
+	gradients[4].addColorStop(1, '#76180A');
+
 	if (!ctx) {
 		return;
 	}
@@ -76,8 +98,9 @@ function ripdPieChart() {
 			datasets: [
 				{
 					data: [240, 50, 50, 200, 460],
-					backgroundColor: ['#ec604a ', '#e24e36 ', '#e63114', '#a9210c', '#76180A'],
+					backgroundColor: [...gradients],
 					hoverOffset: 4,
+					borderWidth: 0,
 				},
 			],
 		},
@@ -201,6 +224,21 @@ function ripdLineChart() {
 function reklamaPieChar() {
 	const ctx = document.getElementById('reklama-pie-chart');
 
+	const gradients = [
+		ctx.getContext('2d').createLinearGradient(0, 0, 0, 400),
+		ctx.getContext('2d').createLinearGradient(0, 0, 0, 400),
+		ctx.getContext('2d').createLinearGradient(0, 0, 0, 400),
+		ctx.getContext('2d').createLinearGradient(0, 0, 0, 400),
+	];
+	gradients[0].addColorStop(0.4, '#36166B');
+	gradients[0].addColorStop(1, '#E63114');
+	gradients[1].addColorStop(0, '#6A42AD');
+	gradients[1].addColorStop(1, '#7D50CA');
+	gradients[2].addColorStop(0, '#462183');
+	gradients[2].addColorStop(1, '#6A42AD');
+	gradients[3].addColorStop(0, '#391772');
+	gradients[3].addColorStop(1, '#4E2691');
+
 	if (!ctx) {
 		return;
 	}
@@ -211,8 +249,9 @@ function reklamaPieChar() {
 			datasets: [
 				{
 					data: [50, 50, 50, 50],
-					backgroundColor: ['#391772  ', '#36166B  ', '#6A42AD ', '#462183 '],
 					hoverOffset: 4,
+					backgroundColor: [...gradients],
+					spacing: 26,
 				},
 			],
 		},
@@ -222,30 +261,8 @@ function reklamaPieChar() {
 					display: false,
 				},
 			},
+			datasetRadiusBuffer: 25,
+			cutoutPercentage: 75,
 		},
 	});
-}
-
-// Utils
-function createRadialGradient3(context, c1, c2, c3) {
-	const chartArea = context.chart.chartArea;
-	if (!chartArea) {
-		return;
-	}
-
-	const chartWidth = chartArea.right - chartArea.left;
-	const chartHeight = chartArea.bottom - chartArea.top;
-
-	const width = chartWidth;
-	const height = chartHeight;
-	const centerX = (chartArea.left + chartArea.right) / 2;
-	const centerY = (chartArea.top + chartArea.bottom) / 2;
-	const r = Math.min((chartArea.right - chartArea.left) / 2, (chartArea.bottom - chartArea.top) / 2);
-	const ctx = context.chart.ctx;
-	const gradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, r);
-	gradient.addColorStop(0, c1);
-	gradient.addColorStop(0.5, c2);
-	gradient.addColorStop(1, c3);
-
-	return gradient;
 }

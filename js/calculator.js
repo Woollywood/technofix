@@ -79,12 +79,34 @@ class Calculator {
 	}
 
 	requestsHandler(value) {
-		this._requestsValue = ranges.get('requests').find((val) => val >= value * 10);
+		const rangeItem = ranges.get('requests');
+
+		const rightValue = rangeItem.find((val) => val >= value * 10);
+		const leftValue = rangeItem[rangeItem.findIndex((val) => val >= value * 10) - 1] ?? 200;
+		const offset = (value * 10 - leftValue) / 200;
+
+		this._requestsItems = {
+			leftValue,
+			rightValue,
+			offset,
+		};
+
 		this.calculateResult();
 	}
 
 	ageHandler(value) {
-		this._ageValue = ranges.get('age').find((val) => val >= value / 10);
+		const rangeItem = ranges.get('age');
+
+		const rightValue = rangeItem.find((val) => val > value / 10) ?? 10;
+		const leftValue = rangeItem[rangeItem.findIndex((val) => val > value / 10) - 1] ?? 7;
+		const offset = (value / 10 - leftValue) / (rightValue - leftValue);
+
+		this._ageValueItems = {
+			leftValue,
+			rightValue,
+			offset,
+		};
+
 		this.calculateResult();
 	}
 
@@ -94,7 +116,24 @@ class Calculator {
 	}
 
 	calculateResult() {
-		this.resultRender(Math.round(this._selectValue * ranges.get('result')[this._requestsValue][this._ageValue]));
+		const resultItem = ranges.get('result');
+
+		const priceLeft =
+			resultItem[this._requestsItems?.leftValue][this._ageValueItems?.leftValue] +
+			(resultItem[this._requestsItems?.leftValue][this._ageValueItems?.rightValue] -
+				resultItem[this._requestsItems?.leftValue][this._ageValueItems?.leftValue]) *
+				this._ageValueItems?.offset;
+
+		const priceRight =
+			resultItem[this._requestsItems?.rightValue][this._ageValueItems?.leftValue] +
+			(resultItem[this._requestsItems?.rightValue][this._ageValueItems?.rightValue] -
+				resultItem[this._requestsItems?.rightValue][this._ageValueItems?.leftValue]) *
+				this._ageValueItems?.offset;
+
+		const resultPrice =
+			priceLeft + (priceRight * this._requestsItems.offset - priceLeft * this._requestsItems.offset);
+
+		this.resultRender(Math.round(resultPrice));
 	}
 
 	resultRender(value) {

@@ -3,6 +3,13 @@ ranges.set('requests', [200, 400, 600, 800, 1000]);
 ranges.set('age', [0, 2, 5, 7, 10]);
 ranges.set('select', [1, 1.2, 1.2, 1.6, 1.4, 1.15, 1, 1.1, 1.15, 1.1, 1.05]);
 ranges.set('result', {
+	0: {
+		0: 0,
+		2: 0,
+		5: 0,
+		7: 0,
+		10: 0,
+	},
 	200: {
 		0: 67000,
 		2: 64000,
@@ -82,7 +89,7 @@ class Calculator {
 		const rangeItem = ranges.get('requests');
 
 		const rightValue = rangeItem.find((val) => val >= value * 10);
-		const leftValue = rangeItem[rangeItem.findIndex((val) => val >= value * 10) - 1] ?? 200;
+		const leftValue = rangeItem[rangeItem.findIndex((val) => val >= value * 10) - 1] ?? 0;
 		const offset = (value * 10 - leftValue) / 200;
 
 		this._requestsItems = {
@@ -129,6 +136,9 @@ class Calculator {
 			(resultItem[this._requestsItems?.rightValue][this._ageValueItems?.rightValue] -
 				resultItem[this._requestsItems?.rightValue][this._ageValueItems?.leftValue]) *
 				this._ageValueItems?.offset;
+
+		console.log(this._requestsItems);
+		console.log('');
 
 		const resultPrice =
 			priceLeft + (priceRight * this._requestsItems.offset - priceLeft * this._requestsItems.offset);

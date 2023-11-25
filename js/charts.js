@@ -66,6 +66,10 @@ function seoIncreaseChart() {
 function ripdPieChart() {
 	const ctx = document.getElementById('ripd-pie-chart');
 
+	if (!ctx) {
+		return;
+	}
+
 	const gradients = [
 		ctx.getContext('2d').createLinearGradient(0, 0, 0, 400),
 		ctx.getContext('2d').createLinearGradient(0, 0, 0, 400),
@@ -223,6 +227,8 @@ function ripdLineChart() {
 
 function reklamaPieChar() {
 	const ctx = document.getElementById('reklama-pie-chart');
+
+	console.log(ctx);
 
 	const gradients = [
 		ctx.getContext('2d').createLinearGradient(0, 0, 0, 400),

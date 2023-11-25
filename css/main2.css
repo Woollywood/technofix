@@ -2174,7 +2174,6 @@ ul.tabs2 li.active:before {
 }
 
 .ripd_inner {
-  padding: 48px 0 0 0;
   display: flex;
   gap: 48px;
 }
@@ -2191,10 +2190,6 @@ ul.tabs2 li.active:before {
 
 .title_ripd_wd {
   max-width: 362px;
-}
-
-.ripd_ellipse {
-  margin: -48px 0 -48px -45px;
 }
 
 .ripd_ul {
@@ -3420,8 +3415,13 @@ ul.tabs2 li.active:before {
   position: relative;
   z-index: 5;
   max-width: 100%;
-  width: 100% !important;
-  height: 100% !important;
+  width: !important;
+  height: !important;
+}
+@media (max-width: 991px) and (min-width: 451px) {
+  .kak_reklama_ellipce canvas {
+    transform: scale(0.8);
+  }
 }
 
 .kak_reklama_ellipce_text {
@@ -3488,16 +3488,44 @@ ul.tabs2 li.active:before {
     right: -44px !important;
   }
 }
-@media (max-width: 440px) {
+@media (max-width: 991px) {
   .kak_reklama_ellipce_absolute {
-    top: -3% !important;
-    right: 3% !important;
+    top: 6% !important;
+    right: 5% !important;
   }
 }
-@media (max-width: 380px) {
+@media (max-width: 698px) {
   .kak_reklama_ellipce_absolute {
     top: 0 !important;
-    right: 0 !important;
+    right: 5% !important;
+  }
+}
+@media (max-width: 585px) {
+  .kak_reklama_ellipce_absolute {
+    top: -3% !important;
+    right: 22% !important;
+  }
+}
+
+@media (max-width: 572px) {
+  .kak_reklama_ellipce_text {
+    max-width: 128px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 500px) {
+  .kak_reklama_block2 {
+    padding-top: 98px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .kak_reklama_ellipce_absolute {
+    top: -22% !important;
+    right: 11% !important;
   }
 }
 /*tss_reklama*/
